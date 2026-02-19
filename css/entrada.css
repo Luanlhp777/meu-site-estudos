@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url("../images/estrelas.png") no-repeat center center/cover;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 15, 30, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.content p {
+    color: #cbd5e1;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.btn-entrar {
+    text-decoration: none;
+    padding: 12px 35px;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn-entrar:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 0 15px #38bdf8;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Análise e Projeto de Sistemas</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="../../entrada.html" class="logo">Luan Araujo</a>
+        <ul>
+            <li><a href="../../index.html">Início</a></li>
+            <li><a href="../../sobre.html">Sobre Mim</a></li>
+            <li><a href="../../projetos.html">Projetos</a></li>
+            <li><a href="../index.html">Diário de Estudos</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Análise e Projeto de Sistemas</h1>
+        <p>Anotações e evolução da disciplina</p>
+    </header>
+
+    <div class="area-voltar">
+        <a href="index.html" class="btn-voltar">← Voltar</a>
+    </div>
+
+    <main class="conteudo-interno">
+
+        <section class="registro-container">
+
+            <h2>Registrar Aula</h2>
+
+            <div class="form-aula">
+                <input type="date" id="dataAula">
+                <textarea id="conteudoAula" placeholder="Digite o conteúdo estudado..."></textarea>
+                <button onclick="registrarAula()">Salvar Aula</button>
+            </div>
+
+        </section>
+
+        <section class="lista-aulas">
+            <h2>Aulas Registradas</h2>
+            <div id="aulasSalvas"></div>
+        </section>
+
+    </main>
+
+    <script>
+        const materiaId = "analise-projeto";
+    </script>
+    <script src="../../js/registro-aulas.js"></script>
+
+    <div id="footer-container"></div>
+    <script src="/Projeto Web/meu-site-estudos/js/load-components.js"></script>
+
+</body>
+
+</html>
