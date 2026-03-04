@@ -153,6 +153,90 @@ nav a:hover {
     color: inherit;
 }
 
+/*CARD AULAS*/
+
+.card-aula {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-aula:hover {
+    border-color: #38bdf8;
+}
+
+.card-header {
+    padding: 18px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-header span {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.card-body {
+    padding: 0 20px 20px 20px;
+    display: none;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.card-body.ativo {
+    display: block;
+}
+
+/*CARD TITULO*/
+
+.data-aula {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #38bdf8;
+}
+
+.icone {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* Badge da data */
+
+.badge-data {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: #38bdf8;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.card-header {
+    padding: 18px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icone {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
 
 /* =====================================================
    APRESENTAÇÃO (SOBRE)
