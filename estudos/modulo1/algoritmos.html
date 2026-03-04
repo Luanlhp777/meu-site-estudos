@@ -34,11 +34,31 @@
 
     </main>
 
+    <!-- Modal para exibir a imagem em tamanho grande -->
+    <div id="imagemModal" class="modal" onclick="fecharModal()">
+        <span class="fechar" onclick="fecharModal()">×</span>
+        <img id="imagemGrande" class="imagem-grande" src="" alt="Imagem Grande">
+    </div>
+
     <script src="../../js/aulas/algoritmos.js"></script>
     <script src="../../js/render-aulas.js"></script>
 
     <script>
         renderizarAulas(aulasAlgoritmos, "lista-aulas");
+
+        // Função para abrir o modal
+        function abrirModal(imagemSrc) {
+            const modal = document.getElementById("imagemModal");
+            const imagem = document.getElementById("imagemGrande");
+            imagem.src = imagemSrc;
+            modal.style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function fecharModal() {
+            const modal = document.getElementById("imagemModal");
+            modal.style.display = "none";
+        }
     </script>
 
 </body>

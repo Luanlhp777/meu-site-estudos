@@ -8,6 +8,14 @@ function renderizarAulas(lista, containerId) {
             const card = document.createElement("div");
             card.classList.add("card-aula");
 
+            // Verifique se há imagens associadas à aula e crie um container de imagens
+            let imagensHTML = '';
+            if (aula.imagens && aula.imagens.length > 0) {
+                imagensHTML = aula.imagens.map(imagem => {
+                    return `<img src="${imagem}" alt="Imagem da Aula" class="aula-imagem" onclick="abrirModal('${imagem}')" />`;
+                }).join('');
+            }
+
             card.innerHTML = `
                 <div class="card-header" onclick="toggleAula(${index})">
                     <span class="badge-data">
@@ -18,6 +26,9 @@ function renderizarAulas(lista, containerId) {
 
                 <div class="card-body" id="aula-${index}">
                     <p>${aula.conteudo}</p>
+                    <div class="imagens-container">
+                        ${imagensHTML}
+                    </div>
                 </div>
             `;
 
