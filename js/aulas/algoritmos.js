@@ -19,9 +19,8 @@ const aulasAlgoritmos = [
     {
         data: "2026-03-03",
         titulo: "Programação e Algoritmos",
-        conteudo: `A aula abordou que o JavaScript não é uma linguagem tipada, ou seja, não exige a definição explícita do tipo das variáveis. Também foi explicado o conceito de biblioteca de códigos, onde desenvolvedores criam conjuntos reutilizáveis de funcionalidades.
-        Foi apresentado o NPM (Node Package Manager), gerenciador de pacotes do Node.js, utilizado para instalar dependências no projeto. Para isso, é necessário estar dentro da pasta do projeto. O comando "npm init -y" prepara o ambiente criando o arquivo package.json, que registra as dependências do projeto. Em seguida, utilizamos "npm i prompt-sync" para instalar o pacote.
-        Após a instalação, criamos arquivos como conversao.js para realizar conversão de dados em valores numéricos e float.js para trabalhar com números decimais.
-        Também foi reforçado o uso de estruturas condicionais com if e else, onde, se a condição for verdadeira, executa-se um bloco de comandos; caso contrário, executa-se o bloco alternativo. Dentro dessas estruturas podem existir instruções como console.log, laços de repetição, estruturas de decisão como case, funções e procedimentos.`
+        conteudo: `A aula abordou conceitos de JavaScript e o uso de pacotes com Node.js. Foi explicado que o JavaScript é uma linguagem tipada (com tipagem dinâmica) e que é possível utilizar bibliotecas, que são conjuntos de códigos prontos criados para facilitar o desenvolvimento.
+        Foi apresentado o NPM (Node Package Manager), que é o gerenciador de pacotes do Node.js. Para instalar dependências, é necessário estar dentro da pasta do projeto. O comando npm init -y cria o arquivo package.json, preparando o projeto para receber pacotes. Em seguida, utilizamos npm i prompt-sync para instalar uma biblioteca. O arquivo package.json registra as dependências do projeto.
+        Durante a prática, criamos o arquivo conversao.js para realizar conversão de dados e o arquivo float.js para trabalhar com números decimais. Também revisamos a estrutura condicional if/else, utilizada para executar blocos de comandos conforme uma condição, podendo conter instruções como console.log, laços de repetição, funções, procedimentos e outras estruturas de controle.`
     },
 ];
