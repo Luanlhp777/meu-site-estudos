@@ -42,4 +42,17 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/0303img3.png"
         ]
     },
+    {
+        data: "2026-03-04",
+        titulo: "Programação e Algoritmos",
+        conteudo: `Na aula de hoje, iniciamos o trabalho no VSCode, instalando os pacotes .json e as dependências necessárias para o projeto. 
+        Foi abordado o uso de operadores em JavaScript, onde o sinal de **=** é usado para atribuição de valores, enquanto **==** é para comparar a igualdade de valores e **!=** serve para verificar a diferença entre dois valores.
+        Criamos o arquivo **parImpar.js**, que verifica se o número digitado é par ou ímpar. Utilizamos a estrutura condicional **if/else** e o operador de módulo **%** para calcular o resto da divisão (ex: numero % 2 == 0).
+        Também criamos o arquivo **media.js** para calcular a média de duas notas, definindo as notas e dividindo o resultado por 2.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/0403img1.png",
+            "../../images/imgAlgoritmos/0403img2.png"
+        ]
+    }
 ];
