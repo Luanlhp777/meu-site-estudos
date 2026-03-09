@@ -514,3 +514,21 @@ body {
     transform: scale(1.05);
     /* Aumenta um pouco a imagem ao passar o mouse */
 }
+
+/*CARD DOCUMENTOS DO CURSO*/
+
+.documentos-cards {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.documentos-cards .card {
+    width: 220px;
+    padding: 12px;
+    text-align: center;
+}
+
+.card-link {
+    text-decoration: none;
+}
