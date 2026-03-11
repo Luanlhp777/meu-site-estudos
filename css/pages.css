@@ -1,0 +1,71 @@
+/* =====================================================
+   PÁGINA SOBRE
+===================================================== */
+
+.apresentacao {
+    padding: 40px 0;
+}
+
+.apresentacao h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+/* =====================================================
+   LISTA DE SKILLS
+===================================================== */
+
+.lista-skills {
+    list-style: none;
+}
+
+.lista-skills li {
+    background: #1e293b;
+
+    margin-bottom: 10px;
+
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    border: 1px solid #334155;
+}
+
+/* ===================================================
+    Cards dos documentos do curso 
+=====================================================*/
+
+.documentos-cards {
+    display: flex;
+    /* Coloca os cards lado a lado */
+    gap: 15px;
+    /* Espaço entre os cards */
+    margin-top: 15px;
+    /* Espaço acima da linha de cards */
+    flex-wrap: wrap;
+    /* Permite quebrar linha se não couber na tela */
+    justify-content: flex-start;
+    /* Cards começam alinhados à esquerda */
+}
+
+.documentos-cards .card {
+    width: 180px;
+    /* Tamanho menor dos cards */
+    padding: 10px;
+    /* Reduz padding interno */
+    text-align: center;
+    /* Texto centralizado */
+    font-size: 0.9rem;
+    /* Ajusta tamanho da fonte */
+    border-radius: 10px;
+    /* Mesma aparência dos outros cards */
+    border: 1px solid #334155;
+    background-color: #1e293b;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.documentos-cards .card:hover {
+    transform: translateY(-3px);
+    /* Pequena elevação ao passar o mouse */
+    border-color: #38bdf8;
+}

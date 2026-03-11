@@ -1,0 +1,90 @@
+/* =====================================================
+   LAYOUT PRINCIPAL
+===================================================== */
+
+main {
+    flex: 1;
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+/* Título padrão das seções */
+
+section h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    border-left: 4px solid #38bdf8;
+    padding-left: 10px;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+    background: #0b1120;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    border-bottom: 1px solid #1e293b;
+
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* =====================================================
+   HERO / HEADER
+===================================================== */
+
+.hero {
+    position: relative;
+
+    padding: 140px 20px 60px 20px;
+
+    text-align: center;
+
+    background: rgba(10, 15, 30, 0.35);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+
+    background: #0b1120;
+    border-top: 1px solid #1e293b;
+
+    color: #94a3b8;
+}

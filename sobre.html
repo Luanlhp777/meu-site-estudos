@@ -3,19 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mim</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
     <nav>
         <a href="index.html" class="logo">Luan Araujo</a>
-        <ul>
+
+        <!-- Botão do menu mobile -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <ul id="menu">
             <li><a href="inicio.html">Início</a></li>
             <li><a href="sobre.html">Sobre Mim</a></li>
             <li><a href="../meu-site-estudos/projetos/projetos.html">Projetos</a></li>
-            <li><a href="../meu-site-estudos/estudos/index.html">Diário de Estudos</a></li>
+            <li><a href="../meu-site-estudos/estudos/estudos.html">Diário de Estudos</a></li>
         </ul>
 
     </nav>
@@ -89,7 +100,7 @@
             <a href="https://instagram.com/Luanlhp777" target="_blank" class="card-link">
                 <div class="card">
                     <h3>Instagram</h3>
-                    <p>Conteúdos e publicações relacionadas ao meu dia a dia.</p>
+                    <p>Perfil pessoal.</p>
                 </div>
             </a>
 
@@ -98,5 +109,7 @@
     </main>
 
 </body>
+
+<script src="js/menu.js"></script>
 
 </html>

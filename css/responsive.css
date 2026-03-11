@@ -1,0 +1,83 @@
+/* =====================================================
+   RESPONSIVIDADE MOBILE
+===================================================== */
+
+@media (max-width:768px) {
+
+    /* Navbar vira coluna */
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    /* Ajuste hero */
+
+    .hero {
+        padding: 100px 20px 40px 20px;
+    }
+
+    /* Cards em coluna */
+
+    .container-aulas {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste geral */
+
+    main {
+        padding: 20px;
+    }
+
+}
+
+/* =====================================================
+   MENU HAMBURGUER MOBILE
+===================================================== */
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* MOBILE */
+
+@media (max-width:768px) {
+
+    nav {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    /* mostra botão hamburguer */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* menu escondido */
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* menu aberto */
+
+    nav ul.ativo {
+        display: flex;
+    }
+
+}

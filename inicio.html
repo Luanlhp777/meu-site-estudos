@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Acadêmico - Luan</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- Layout do site -->
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- Componentes reutilizáveis -->
+    <link rel="stylesheet" href="css/components.css">
+    <!-- Estilos específicos das páginas -->
+    <link rel="stylesheet" href="css/pages.css">
+    <!-- Responsividade -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -13,11 +22,17 @@
     <!-- MENU -->
     <nav>
         <a href="index.html" class="logo">Luan Araujo</a>
-        <ul>
+
+        <!-- Botão do menu mobile -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <ul id="menu">
             <li><a href="inicio.html">Início</a></li>
             <li><a href="sobre.html">Sobre Mim</a></li>
             <li><a href="../meu-site-estudos/projetos/projetos.html">Projetos</a></li>
-            <li><a href="../meu-site-estudos/estudos/index.html">Diário de Estudos</a></li>
+            <li><a href="../meu-site-estudos/estudos/estudos.html">Diário de Estudos</a></li>
         </ul>
 
     </nav>
@@ -71,7 +86,7 @@
             </div>
         </a>
 
-        <a href="estudos/index.html" class="card-link">
+        <a href="estudos/estudos.html" class="card-link">
             <div class="card">
                 <h3>Diário de Estudos</h3>
                 <p>
@@ -113,5 +128,7 @@
     </section>
 
 </main>
+
+<script src="js/menu.js"></script>
 
 </html>
