@@ -54,5 +54,18 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/0403img1.png",
             "../../images/imgAlgoritmos/0403img2.png"
         ]
+    },
+    {
+        data: "2026-03-10",
+        titulo: "Programação e Algoritmos",
+        conteudo: `Na aula de hoje a turma foi dividida em grupos para responder questões e debater conceitos fundamentais de lógica de programação. Foram discutidos os conceitos de entrada, processamento e saída, utilizando como exemplo um programa que pergunta o nome e a idade de uma pessoa, armazena esses dados em variáveis, realiza uma concatenação e exibe uma mensagem de boas-vindas.
+        Também analisamos situações para identificar quando ocorre entrada (input) e saída (output) em um programa, além de revisar conceitos como variáveis, tipos de dados e conversão de texto para número. Foram discutidos tipos de dados como texto (string), número e booleano (true e false), além de exemplos de números inteiros e decimais.
+        Revisamos operadores aritméticos e relacionais, como soma, subtração, multiplicação, divisão, resto da divisão e comparações. Também aplicamos esses conceitos em exercícios de lógica, como verificar se uma pessoa é maior de idade, identificar se um número é par ou ímpar e descobrir qual é o maior entre dois números.
+        Durante a prática criamos o arquivo exemplo01.js para realizar uma conversão de quilômetros e o exemplo02.js para verificar se um aluno foi aprovado com base na nota e frequência, utilizando o operador lógico de conjunção (&&). Ao final da aula também foi introduzido o conceito de operadores lógicos, como a conjunção (&&), onde todas as condições precisam ser verdadeiras, e a disjunção ( || ), onde pelo menos uma condição precisa ser verdadeira.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/1003img1.png",
+            "../../images/imgAlgoritmos/1003img2.png"
+        ]
     }
 ];
