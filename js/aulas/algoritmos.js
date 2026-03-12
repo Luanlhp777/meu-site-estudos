@@ -67,5 +67,22 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/1003img1.png",
             "../../images/imgAlgoritmos/1003img2.png"
         ]
-    }
+    },
+    {
+        data: "2026-03-11",
+        titulo: "Programação e Algoritmos",
+        conteudo: `Na aula de hoje, realizamos três exercícios práticos de lógica de programação.
+        **Exercício 1**: Conversão de Quilos para Toneladas. O programa lê o peso em quilogramas e converte para toneladas utilizando a fórmula: **toneladas = quilos / 1000**.
+        **Exercício 2**: Cálculo da quantidade de tinta necessária para pintar uma parede. O programa solicita ao usuário a altura e largura da parede, calcula a área e, em seguida, calcula os litros de tinta necessários com a fórmula: **área = altura * largura** e **litros = área / 5** (sabendo que uma lata de tinta cobre 5 m² por litro).
+        **Exercício 3**: Identificação da Entrada, Processamento e Saída. Criamos um sistema simples de uma cantina escolar, onde o atendente informa o nome do produto, o preço unitário e a quantidade. O sistema processa esses dados e calcula o valor total da compra (preço * quantidade), exibindo o nome do produto e o valor total a ser pago.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/1103img1.png",
+            "../../images/imgAlgoritmos/1103img2.png",
+            "../../images/imgAlgoritmos/1103img3.png",
+            "../../images/imgAlgoritmos/1103img4.png",
+            "../../images/imgAlgoritmos/1103img5.png",
+            "../../images/imgAlgoritmos/1103img6.png"
+        ]
+    },
 ];
