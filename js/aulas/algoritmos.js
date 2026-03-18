@@ -85,4 +85,24 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/1103img6.png"
         ]
     },
+    {
+        data: "2026-03-17",
+        titulo: "Switch/Case",
+        conteudo: `Na aula de hoje estudamos a estrutura de decisão switch/case em JavaScript, utilizada para criar menus de opções e executar diferentes funcionalidades conforme a escolha do usuário.
+        Foi proposto um exercício prático para desenvolver um programa no terminal utilizando Node.js e a biblioteca prompt-sync para entrada de dados. O programa apresenta um menu com opções como saudação conforme a hora informada, soma de dois números decimais com exibição do resultado utilizando o método toFixed(2), soma de dois números inteiros com verificação se o resultado é par ou ímpar utilizando o operador %, além da opção de encerrar o programa.
+        Durante a atividade, revisamos conceitos importantes como entrada, processamento e saída de dados, uso de variáveis, operadores matemáticos, estrutura condicional if/else e a aplicação prática do switch/case para controle do fluxo do programa.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/1703img1.png",
+            "../../images/imgAlgoritmos/1703img2.png",
+            "../../images/imgAlgoritmos/1703img3.png",
+            "../../images/imgAlgoritmos/1703img4.png",
+            "../../images/imgAlgoritmos/1703img5.png",
+            "../../images/imgAlgoritmos/1703img6.png",
+            "../../images/imgAlgoritmos/1703img7.png",
+            "../../images/imgAlgoritmos/1703img8.png",
+            "../../images/imgAlgoritmos/1703img9.png",
+            "../../images/imgAlgoritmos/1703img10.png"
+        ]
+    },
 ];
