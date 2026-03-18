@@ -6,65 +6,60 @@ O site funciona como um diário técnico, onde registro conteúdos aprendidos em
 
 🔗 **Acesse online:**  
 https://luanlhp777.github.io/meu-site-estudos/
+https://luanlhp777.github.io/exercicios/
 
 ---
 
 ## 🎯 Objetivo
 
-- Documentar o aprendizado de forma estruturada
-- Praticar HTML, CSS e JavaScript
-- Aplicar organização de projeto real
-- Evoluir versionamento com Git e GitHub
+- Registrar minha evolução como desenvolvedor
+- Praticar estruturação de projetos web reais
+- Desenvolver lógica de programação e organização de código
+- Aplicar conceitos de HTML, CSS e JavaScript
+- Utilizar Git e GitHub no versionamento profissional
+- Criar base sólida para futuros projetos completos
 
 ---
 
-## 🧩 Estrutura do Projeto
-
-meu-site-estudos/
-│
-├── css/
-├── js/
-├── images/
-├── estudos/
-│ ├── modulo1/
-│ ├── modulo2/
-│ ├── modulo3/
-│
-├── index.html
-├── inicio.html
-├── sobre.html
-├── projetos.html
-└── README.md
-
----
 
 ## 💻 Tecnologias Utilizadas
 
 - HTML5
 - CSS3
 - JavaScript
+- Node.js
 - Git
+- GitHub
 - GitHub Pages
 
 ---
 
 ## 📚 Funcionalidades
 
-- Organização por módulos
-- Página individual para cada disciplina
-- Registro de aulas por matéria
-- Layout estruturado e responsivo
-- Footer dinâmico com redes sociais
+- Organização por módulos do curso
+- Páginas específicas para cada disciplina
+- Registro de aulas e exercícios
+- Layout responsivo
+- Estrutura pensada como projeto real
+
+---
+
+## 📈 Evolução do Projeto
+
+Este projeto está em constante evolução, acompanhando meu aprendizado.
+Novas funcionalidades, melhorias visuais e práticas de programação serão
+implementadas ao longo do curso.
 
 ---
 
 ## 🚀 Próximos Passos
 
-- Melhorias de UI/UX
-- Padronização futura com template JS
-- Melhorias de responsividade
-- Otimização de performance
-- Banco de Dados
+- Melhorias avançadas de UI/UX
+- Padronização visual completa
+- Criação de sistema de navegação dinâmica com JavaScript
+- Integração futura com banco de dados
+- Implementação de novos projetos práticos
+- Otimização de performance e SEO
 
 ---
 
@@ -72,4 +67,6 @@ meu-site-estudos/
 
 **Luan Araujo**  
 Estudante de Análise e Desenvolvimento de Sistemas  
-Foco em desenvolvimento front-end e back-end
+Foco em desenvolvimento Front-end e Back-end
+
+📌 Em constante evolução na área de tecnologia
