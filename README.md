@@ -6,7 +6,6 @@ O site funciona como um diário técnico, onde registro conteúdos aprendidos em
 
 🔗 **Acesse online:**  
 https://luanlhp777.github.io/meu-site-estudos/
-https://luanlhp777.github.io/exercicios/
 
 ---
 
