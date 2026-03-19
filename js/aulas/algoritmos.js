@@ -105,4 +105,12 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/1703img10.png"
         ]
     },
+    {
+        data: "2026-03-18",
+        titulo: "Switch/Case | Laço de Repetição for",
+        conteudo: `Na aula de hoje fizemos uma revisão da aula anterior e iniciamos o estudo sobre laços de repetição. Foi explicado que o laço de repetição serve para executar um bloco de código várias vezes automaticamente, evitando a repetição manual de instruções. Também foi destacado que todo laço de repetição precisa ter uma condição de parada, pois chega um momento em que ele deve finalizar sua execução.
+        Foi apresentada a estrutura do laço for em JavaScript, que é composta por três partes principais: inicialização, condição e incremento. Na inicialização definimos a variável de controle (exemplo: i = 1). Na condição determinamos até quando o laço continuará executando (exemplo: i < 10). No incremento atualizamos o valor da variável a cada repetição (exemplo: i + 1 ou i++).
+        Enquanto a condição for verdadeira, o bloco de código dentro do for será executado repetidamente. Quando a condição se tornar falsa, o laço é encerrado e o programa continua sua execução normalmente.
+        `,
+    }
 ];
