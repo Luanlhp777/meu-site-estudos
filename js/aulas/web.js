@@ -21,4 +21,12 @@ const aulasWeb = [
         titulo: "Formulário",
         conteudo: ` Aula de hoje montamos um formulário de curriculo em html. `
     },
+    {
+        data: "2026-03-20",
+        titulo: "CSS",
+        conteudo: ` Na aula de hoje tivemos uma introdução ao CSS, linguagem utilizada para estilizar páginas HTML e melhorar a aparência visual dos elementos. Aprendemos a aplicar estilos para formatação de textos, como alteração de cores, tamanhos de fonte, alinhamento e espaçamentos.
+        Também trabalhamos com a inserção e estilização de imagens, ajustando propriedades como largura (width) e altura (height) para melhor organização no layout. Foram realizados pequenos ajustes em parágrafos, controlando dimensões, margens e espaçamentos para melhorar a leitura e a estrutura da página.
+        Além disso, utilizamos a propriedade background para aplicar cores ou imagens de fundo nos elementos, tornando o design mais atrativo. Esses conceitos são fundamentais para a construção de interfaces web organizadas, responsivas e visualmente agradáveis.
+         `,
+    },
 ];
