@@ -88,3 +88,19 @@ footer {
 
     color: #94a3b8;
 }
+
+/* =====================================================
+   SEÇÕES DE TEXTO
+===================================================== */
+/* destaque leve no bloco */
+.navegacao-principal,
+.tecnologias,
+.objetivo,
+.apresentacao,
+.documentos,
+.intro {
+    background: rgba(15, 23, 42, 0.35);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+}
