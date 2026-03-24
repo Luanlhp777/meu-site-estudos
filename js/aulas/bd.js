@@ -17,5 +17,14 @@ const aulasBd = [
             "../../images/imgBd/derLivro.png",
             "../../images/imgBd/derConsulta.png"
         ]
+    },
+    {
+        data: "2026-03-23",
+        titulo: "Introdução ao SQL",
+        conteudo: `Na aula de hoje estudamos a linguagem SQL (Structured Query Language), utilizada para consultar, inserir, atualizar e controlar dados em um banco de dados. Foi explicado que o SQL não é uma linguagem de programação tradicional, mas sim uma linguagem declarativa, pois o usuário informa o que deseja obter do banco e não como o sistema deve executar a tarefa.
+        Durante a prática, utilizamos o MySQL Workbench para criar um banco de dados chamado escola com o comando CREATE DATABASE escola. Em seguida, selecionamos o banco com USE escola e criamos a tabela aluno, definindo os campos id_aluno como chave primária, nome como texto (VARCHAR) e idade como número inteiro.
+        Também foi apresentado o conceito de operações básicas conhecidas como CRUD, como SELECT para consultar dados, INSERT para inserir registros, UPDATE para atualizar informações e DELETE para remover dados. Foi destacado o cuidado no uso da cláusula WHERE, pois sua ausência pode alterar ou excluir todos os registros da tabela.
+        Além disso, foram introduzidos conceitos importantes como filtros com operadores, ordenação com ORDER BY, agrupamento de dados com GROUP BY e o uso de JOIN para relacionar tabelas, reforçando a importância das chaves primárias e estrangeiras para garantir a integridade dos dados no banco.
+        `
     }
 ];
