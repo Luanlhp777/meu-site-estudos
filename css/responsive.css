@@ -2,6 +2,25 @@
    RESPONSIVIDADE MOBILE
 ===================================================== */
 
+@media (max-width: 900px) {
+
+    /* Evita scroll lateral causado por elementos fixos */
+    body {
+        padding-top: 90px;
+        overflow-x: hidden;
+    }
+
+    /* Deixa a camada de código mais discreta em telas menores */
+    .codigo-fundo {
+        opacity: 0.1;
+    }
+
+    .codigo-fundo span {
+        font-size: 0.82rem;
+        animation-duration: 16s;
+    }
+}
+
 @media (max-width:768px) {
 
     /* Navbar vira coluna */
@@ -9,6 +28,16 @@
     nav {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
+    }
+
+    .hero-principal .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .hero-principal .hero-actions {
+        justify-content: flex-start;
     }
 
     nav ul {
@@ -20,7 +49,8 @@
     /* Ajuste hero */
 
     .hero {
-        padding: 100px 20px 40px 20px;
+        padding: 90px 20px;
+        min-height: auto;
     }
 
     /* Cards em coluna */
@@ -35,6 +65,48 @@
         padding: 20px;
     }
 
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-principal .hero-text p {
+        font-size: 1rem;
+    }
+
+}
+
+/* Telefones muito pequenos */
+@media (max-width: 520px) {
+
+    /* Mantém o efeito de código, mas mais leve e lento */
+    .codigo-fundo {
+        opacity: 0.08;
+    }
+
+    .codigo-fundo span {
+        font-size: 0.72rem;
+        animation-duration: 22s;
+    }
+
+    /* Espaço extra para a navbar quando quebra em 2 linhas */
+    body {
+        padding-top: 110px;
+    }
+
+    .hero {
+        padding: 120px 16px 60px 16px;
+        text-align: left;
+    }
+
+    .container-aulas,
+    .home-links {
+        gap: 16px;
+    }
+
+    .documentos-cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 /* =====================================================

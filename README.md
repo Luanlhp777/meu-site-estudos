@@ -40,6 +40,7 @@ https://luanlhp777.github.io/meu-site-estudos/
 - Registro de aulas e exercícios
 - Layout responsivo
 - Estrutura pensada como projeto real
+- Bloco de frases motivacionais fixas no hero da Home (`js/frase-home.js`)
 
 ---
 
@@ -59,6 +60,16 @@ implementadas ao longo do curso.
 - Integração futura com banco de dados
 - Implementação de novos projetos práticos
 - Otimização de performance e SEO
+
+---
+
+## 🆕 Atualizações Recentes (mar/2026)
+
+- Home ganhou um bloco compacto de frase motivacional diretamente no hero, acima do card “Em foco agora”.
+- Script `js/frase-home.js` agora usa uma lista local de frases e escolhe uma aleatoriamente a cada carregamento (sem dependência de API externa).
+- Ajuste visual no hero para alinhar o bloco de frase e o card “Em foco agora”, deixando a seção inicial mais compacta e organizada.
+- Layout geral atualizado: fundo dark uniforme (sem textura de estrelas), cores mais limpas e contraste melhor.
+- Landing (`index.html`) agora exibe foto de perfil destacada na entrada do site.
 
 ---
 

@@ -1,25 +1,33 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luan Araujo | Portfólio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/entrada.css">
 </head>
 
-<body>
+<body data-root="" data-no-layout="true"> <!-- data-no-layout evita injetar header/footer padrão -->
 
-    <div class="overlay">
-        <div class="content">
-            <h1>Luan Araujo</h1>
-            <p>Portfólio Acadêmico | Desenvolvimento de Sistemas<br>ETEC Albert Einstein</p>
-
-
-            <a href="inicio.html" class="btn-entrar">Entrar</a>
+    <div class="landing"> <!-- Card central da tela de entrada -->
+        <div class="avatar-wrap">
+            <img src="images/foto-perfil3.jpg" alt="Foto de Luan Araujo" class="avatar"> <!-- Foto circular -->
+        </div>
+        <p class="mini-titulo">Portfólio de Estudos</p>
+        <h1>Luan Araujo</h1>
+        <p class="hero-texto">
+            Desenvolvimento de Sistemas | Exercícios de lógica com JavaScript | Documentação contínua de projetos.
+        </p>
+        <div class="landing-actions"> <!-- Botões principais -->
+            <a href="inicio.html" class="btn-primary">Entrar</a>
         </div>
     </div>
 
+    <script src="js/layout.js"></script>
 </body>
 
 </html>

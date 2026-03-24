@@ -12,32 +12,27 @@
     <link rel="stylesheet" href="../../css/responsive.css">
 </head>
 
-<body>
-
-    <!-- MENU -->
-    <nav>
-        <a href="../../index.html" class="logo">Luan Araujo</a>
-
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
-        </div>
-
-        <ul id="menu">
-            <li><a href="../../inicio.html">Início</a></li>
-            <li><a href="../../sobre.html">Sobre Mim</a></li>
-            <li><a href="../../projetos/projetos.html">Projetos</a></li>
-            <li><a href="../../estudos/estudos.html">Diário de Estudos</a></li>
-        </ul>
-
-    </nav>
+<body data-root="../../">
 
     <!-- HERO -->
-    <header class="hero">
-        <h1>Portfólio Acadêmico</h1>
-        <p>Projeto para registro contínuo da minha evolução acadêmica</p>
+    <header class="hero hero-secundario">
+        <div class="hero-inner">
+            <span class="hero-kicker">Projeto destaque</span>
+            <h1>Portfólio Acadêmico</h1>
+            <p class="hero-lead">Site que centraliza estudos, anotações e projetos, evoluindo junto com o curso.</p>
+            <div class="hero-meta">
+                <span class="hero-pill">HTML/CSS</span>
+                <span class="hero-pill">JavaScript</span>
+                <span class="hero-pill">GitHub Pages</span>
+            </div>
+        </div>
     </header>
 
     <main class="conteudo-interno">
+
+        <div class="area-voltar">
+            <a href="../projetos.html" class="btn-voltar">← Voltar</a>
+        </div>
 
         <section class="apresentacao">
             <h2>Sobre este Projeto</h2>
@@ -95,6 +90,6 @@
 
 </body>
 
-<script src="../../js/menu.js"></script>
+<script src="../../js/layout.js"></script>
 
 </html>

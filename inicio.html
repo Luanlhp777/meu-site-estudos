@@ -17,36 +17,43 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
+<body data-root=""> <!-- data-root define o prefixo para links relativos do layout -->
 
-    <!-- MENU -->
-    <nav>
-        <a href="index.html" class="logo">Luan Araujo</a>
+    <!-- HERO principal da home -->
+    <header class="hero hero-principal">
+        <div class="hero-grid">
+            <div class="hero-text"> <!-- Texto principal -->
+                <span class="hero-badge">Desenvolvedor em formação</span>
+                <h1>Portfólio Acadêmico</h1>
+                <p>Projetos, estudos e evolução contínua em Desenvolvimento de Sistemas.</p>
+                <div class="hero-actions"> <!-- CTA duplo -->
+                    <a class="btn-primary" href="projetos/projetos.html">Ver Projetos</a>
+                    <a class="btn-ghost" href="docs/plano-curso.pdf">Plano do Curso</a>
+                </div>
+            </div>
 
-        <!-- Botão do menu mobile -->
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
+            <div class="hero-quote" aria-live="polite">
+                <div class="quote-box" data-quote-box>
+                    <p class="quote-status" data-quote-status>Frase do dia</p>
+                    <p class="quote-text" data-quote-text></p>
+                    <p class="quote-author" data-quote-author></p>
+                </div>
+            </div>
+
+            <div class="hero-card"> <!-- Destaques rápidos -->
+                <h3>Em foco agora</h3>
+                <div class="hero-stats">
+                    <div class="stat">HTML/CSS</div>
+                    <div class="stat">JavaScript</div>
+                    <div class="stat">Versionamento Git</div>
+                </div>
+            </div>
         </div>
-
-        <ul id="menu">
-            <li><a href="inicio.html">Início</a></li>
-            <li><a href="sobre.html">Sobre Mim</a></li>
-            <li><a href="projetos/projetos.html">Projetos</a></li>
-            <li><a href="estudos/estudos.html">Diário de Estudos</a></li>
-        </ul>
-
-    </nav>
-
-    <!-- HERO -->
-    <header class="hero">
-        <h1>Luan Araujo</h1>
-        <p>Estudante de Desenvolvimento de Sistemas documentando projetos e evolução em programação.</p>
-        <span>Projetos, estudos e evolução na área de tecnologia.</span>
     </header>
 
     <main class="container">
 
-        <section class="intro">
+        <section class="intro"> <!-- Apresentação curta -->
             <h2>Bem-vindo</h2>
 
             <p>
@@ -61,7 +68,7 @@
             </p>
         </section>
 
-        <section class="navegacao-principal">
+        <section class="navegacao-principal"> <!-- Cards principais -->
 
             <h2>Minha jornada de aprendizado</h2>
 
@@ -71,7 +78,7 @@
                 das aulas estudadas e informações sobre minha trajetória.
             </p><br><br>
 
-            <section class="container-aulas">
+            <section class="container-aulas"> <!-- Links para seções principais -->
 
                 <a href="projetos/projetos.html" class="card-link">
                     <div class="card">
@@ -104,7 +111,7 @@
 
         </section>
 
-        <section class="documentos">
+        <section class="documentos"> <!-- Links de documentos do curso -->
             <h2>Documentos do curso</h2>
 
             <div class="documentos-cards">
@@ -127,7 +134,8 @@
 
     </main>
 
-    <script src="js/menu.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/frase-home.js"></script>
 
 </body>
 

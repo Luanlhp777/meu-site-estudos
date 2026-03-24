@@ -27,8 +27,8 @@ section h2 {
 ===================================================== */
 
 nav {
-    background: #0b1120;
-
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +39,8 @@ nav {
     width: 100%;
     top: 0;
 
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid rgba(124, 140, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 
     z-index: 1000;
 }
@@ -51,14 +52,17 @@ nav ul {
 }
 
 nav a {
-    color: #cbd5e1;
+    color: #d4d4d8;
     text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-    color: #38bdf8;
+    color: #8ea2ff;
+    transform: translateY(-1px);
 }
 
 /* =====================================================
@@ -67,12 +71,183 @@ nav a:hover {
 
 .hero {
     position: relative;
-
-    padding: 140px 20px 60px 20px;
-
+    padding: 140px 20px 80px 20px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at top left, rgba(124, 140, 255, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(147, 51, 234, 0.16), transparent 35%),
+        rgba(5, 5, 5, 0.55);
+    border-bottom: 1px solid rgba(124, 140, 255, 0.15);
     text-align: center;
+}
 
-    background: rgba(10, 15, 30, 0.35);
+.hero-principal .hero-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    align-items: center;
+    text-align: left;
+}
+
+.hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(124, 140, 255, 0.14);
+    border: 1px solid rgba(124, 140, 255, 0.3);
+    color: #aab7ff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+}
+
+.hero-secundario h1 {
+    font-size: clamp(2.2rem, 3vw, 2.8rem);
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.hero-lead {
+    color: #cfcfd6;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0 auto 14px auto;
+    max-width: 720px;
+}
+
+.hero-meta {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.hero-pill {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(124, 140, 255, 0.25);
+    color: #d4d4d8;
+    font-size: 0.9rem;
+}
+
+.hero-principal .hero-text h1 {
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.hero-principal .hero-text p {
+    color: #cfcfd6;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.hero-principal .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(124, 140, 255, 0.14);
+    color: #aab7ff;
+    border: 1px solid rgba(124, 140, 255, 0.3);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+}
+
+.hero-principal .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: linear-gradient(90deg, #7c8cff, #9333ea);
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(124, 140, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(124, 140, 255, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(124, 140, 255, 0.35);
+}
+
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    color: #e2e8f0;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-ghost:hover {
+    border-color: rgba(124, 140, 255, 0.5);
+    color: #8ea2ff;
+    transform: translateY(-2px);
+}
+
+.hero-principal .hero-card {
+    background: linear-gradient(180deg, rgba(18, 18, 18, 0.95), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(124, 140, 255, 0.12);
+    border-radius: 16px;
+    padding: 18px 20px;
+    backdrop-filter: blur(10px);
+    color: #cbd5e1;
+}
+
+.hero-principal .hero-card h3 {
+    margin-bottom: 10px;
+    color: #e2e8f0;
+}
+
+.hero-principal .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.hero-principal .hero-stats .stat {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(124, 140, 255, 0.12);
+    border: 1px solid rgba(124, 140, 255, 0.24);
+    color: #aab7ff;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 /* =====================================================
@@ -83,10 +258,39 @@ footer {
     text-align: center;
     padding: 25px;
 
-    background: #0b1120;
-    border-top: 1px solid #1e293b;
+    background: rgba(9, 13, 25, 0.9);
+    border-top: 1px solid rgba(56, 189, 248, 0.15);
 
     color: #94a3b8;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-icons {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.footer-icons a {
+    display: inline-flex;
+    color: #94a3b8;
+    transition: color 0.2s ease;
+}
+
+.footer-icons a:hover {
+    color: #38bdf8;
+}
+
+.footer-icons svg {
+    width: 22px;
+    height: 22px;
 }
 
 /* =====================================================
@@ -99,8 +303,9 @@ footer {
 .apresentacao,
 .documentos,
 .intro {
-    background: rgba(15, 23, 42, 0.35);
+    background: linear-gradient(180deg, rgba(18, 18, 18, 0.96), rgba(10, 10, 10, 0.96));
     padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #1e293b;
+    border-radius: 16px;
+    border: 1px solid rgba(124, 140, 255, 0.14);
+    box-shadow: 0 0 24px rgba(124, 140, 255, 0.08);
 }

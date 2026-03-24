@@ -12,29 +12,26 @@
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
 
-<body>
+<body data-root="../">
 
-    <nav>
-        <a href="../index.html" class="logo">Luan Araujo</a>
-
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
+    <header class="hero hero-secundario">
+        <div class="hero-inner">
+            <span class="hero-kicker">Portfólio</span>
+            <h1>Projetos</h1>
+            <p class="hero-lead">Aplicações e experimentos construídos durante o curso, focados em web e boas práticas.</p>
+            <div class="hero-meta">
+                <span class="hero-pill">HTML/CSS/JS</span>
+                <span class="hero-pill">UI Responsiva</span>
+                <span class="hero-pill">Documentação</span>
+            </div>
         </div>
-
-        <ul id="menu">
-            <li><a href="../inicio.html">Início</a></li>
-            <li><a href="../sobre.html">Sobre Mim</a></li>
-            <li><a href="../projetos/projetos.html">Projetos</a></li>
-            <li><a href="../estudos/estudos.html">Diário de Estudos</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero">
-        <h1>Projetos</h1>
-        <p>Aplicações desenvolvidas ao longo da minha formação</p>
     </header>
 
     <main class="conteudo-interno">
+
+        <div class="area-voltar">
+            <a href="../inicio.html" class="btn-voltar">← Voltar</a>
+        </div>
 
         <section class="container-aulas">
 
@@ -48,19 +45,21 @@
                 </div>
             </a>
 
-            <div class="card">
-                <h3>Projeto Futuro</h3>
-                <p>
-                    Espaço reservado para aplicações futuras
-                    desenvolvidas ao longo do curso.
-                </p>
-            </div>
+            <a href="exercicios/exercicios.html" class="card-link">
+                <div class="card">
+                    <h3>Exercícios JS</h3>
+                    <p>
+                        Coleção de exercícios de lógica em JavaScript/Node.js:
+                        conversões, cálculos, IMC, cantina e juros simples.
+                    </p>
+                </div>
+            </a>
 
         </section>
 
     </main>
 
-    <script src="../js/menu.js"></script>
+    <script src="../js/layout.js"></script>
 
 </body>
 

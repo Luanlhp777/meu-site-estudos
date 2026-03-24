@@ -12,33 +12,24 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
+<body data-root=""> <!-- data-root permite ao layout.js montar links corretos -->
 
-    <nav>
-        <a href="index.html" class="logo">Luan Araujo</a>
-
-        <!-- Botão do menu mobile -->
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
+    <header class="hero hero-secundario"> <!-- Hero da página Sobre -->
+        <div class="hero-inner">
+            <span class="hero-kicker">Perfil</span>
+            <h1>Sobre Mim</h1>
+            <p class="hero-lead">Desenvolvedor em formação, documentando cada passo da jornada em tecnologia.</p>
+            <div class="hero-meta">
+                <span class="hero-pill">Front-end</span>
+                <span class="hero-pill">Back-end</span>
+                <span class="hero-pill">Git & GitHub</span>
+            </div>
         </div>
-
-        <ul id="menu">
-            <li><a href="inicio.html">Início</a></li>
-            <li><a href="sobre.html">Sobre Mim</a></li>
-            <li><a href="projetos/projetos.html">Projetos</a></li>
-            <li><a href="estudos/estudos.html">Diário de Estudos</a></li>
-        </ul>
-
-    </nav>
-
-    <header class="hero">
-        <h1>Sobre Mim</h1>
-        <p>Desenvolvedor em formação e entusiasta de tecnologia</p>
     </header>
 
     <main class="conteudo-interno">
 
-        <section class="apresentacao">
+        <section class="apresentacao"> <!-- Bio curta -->
             <h2>Olá, eu sou Luan</h2>
 
             <p>
@@ -55,7 +46,7 @@
             </p>
         </section>
 
-        <section class="tecnologias">
+        <section class="tecnologias"> <!-- Lista de tecnologias em estudo -->
 
             <h2>Tecnologias em estudo</h2>
 
@@ -68,7 +59,7 @@
 
         </section>
 
-        <section class="objetivo">
+        <section class="objetivo"> <!-- Objetivo de carreira -->
 
             <h2>Objetivo</h2>
 
@@ -80,7 +71,7 @@
 
         </section>
 
-        <section class="container-aulas">
+        <section class="container-aulas"> <!-- Links sociais -->
 
             <a href="https://github.com/Luanlhp777" target="_blank" class="card-link">
                 <div class="card">
@@ -108,7 +99,7 @@
 
     </main>
 
-    <script src="js/menu.js"></script>
+    <script src="js/layout.js"></script>
 
 </body>
 
