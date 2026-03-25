@@ -112,5 +112,23 @@ const aulasAlgoritmos = [
         Foi apresentada a estrutura do laço for em JavaScript, que é composta por três partes principais: inicialização, condição e incremento. Na inicialização definimos a variável de controle (exemplo: i = 1). Na condição determinamos até quando o laço continuará executando (exemplo: i < 10). No incremento atualizamos o valor da variável a cada repetição (exemplo: i + 1 ou i++).
         Enquanto a condição for verdadeira, o bloco de código dentro do for será executado repetidamente. Quando a condição se tornar falsa, o laço é encerrado e o programa continua sua execução normalmente.
         `,
+    },
+    {
+        data: "2026-03-24",
+        titulo: "Laço de repetição for",
+        conteudo: `Na aula de hoje estudamos o laço de repetição FOR em JavaScript, utilizado para executar um bloco de código várias vezes de forma automática. Foi relembrado que a variável é um espaço na memória usado para armazenar dados e que o laço de repetição permite inserir, processar e extrair informações de maneira organizada.
+        Aprendemos também sobre incremento e decremento (++, --), responsáveis por atualizar o valor da variável de controle a cada repetição. Foi destacado que todo laço precisa ter uma condição de parada e um incremento ou decremento, para evitar repetições infinitas.
+        Na prática, criamos o arquivo for1.js para gerar a tabuada do número 2, utilizando o laço for com inicialização, condição e incremento. Em seguida, no for2.js, trabalhamos com um array de frutas e utilizamos a propriedade length para percorrer cada item da lista e exibir no console.
+        No exercício for3.js, utilizamos a biblioteca prompt-sync para solicitar ao usuário qual tabuada deseja visualizar, convertendo o valor digitado para número e aplicando o laço for para mostrar os resultados de 1 a 10.
+        Também foi explicado o conceito de MOCK, que é quando definimos valores diretamente no código para testes, sem depender da entrada do usuário.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/2403img1.png",
+            "../../images/imgAlgoritmos/2403img2.png",
+            "../../images/imgAlgoritmos/2403img3.png",
+            "../../images/imgAlgoritmos/2403img4.png",
+            "../../images/imgAlgoritmos/2403img5.png",
+            "../../images/imgAlgoritmos/2403img6.png"
+        ]
     }
 ];
