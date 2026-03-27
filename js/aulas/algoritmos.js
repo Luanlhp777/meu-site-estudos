@@ -130,5 +130,26 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/2403img5.png",
             "../../images/imgAlgoritmos/2403img6.png"
         ]
+    },
+    {
+        data: "2026-03-25",
+        titulo: "Laço de repetição for (exercícios)",
+        conteudo: `Na aula de hoje realizamos exercícios práticos utilizando o laço de repetição for, com o objetivo de reforçar a lógica de repetição e controle de fluxo.
+        No primeiro exercício, desenvolvemos um programa para contar de 1 até 100. No segundo, fizemos uma contagem de 2 em 2, iniciando em 0 até 20. Já no terceiro exercício, criamos uma contagem regressiva de 10 até 0, trabalhando a lógica decrescente.
+        No quarto exercício, aplicamos o for na construção de uma tabuada, onde o usuário informa um número. Foi adicionada uma condição: se o número for par, a tabuada é exibida de forma decrescente, e se for ímpar, de forma crescente, utilizando estruturas condicionais junto com o laço.
+        Por fim, no quinto exercício, organizamos todas essas funcionalidades dentro de uma estrutura switch case, criando um menu de opções para o usuário escolher qual exercício executar, integrando conceitos de repetição, decisão e entrada de dados.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/2503img1.png",
+            "../../images/imgAlgoritmos/2503img2.png",
+            "../../images/imgAlgoritmos/2503img3.png",
+            "../../images/imgAlgoritmos/2503img4.png",
+            "../../images/imgAlgoritmos/2503img5.png",
+            "../../images/imgAlgoritmos/2503img6.png",
+            "../../images/imgAlgoritmos/2503img7.png",
+            "../../images/imgAlgoritmos/2503img8.png",
+            "../../images/imgAlgoritmos/2503img9.png",
+            "../../images/imgAlgoritmos/2503img10.png"
+        ]
     }
 ];
