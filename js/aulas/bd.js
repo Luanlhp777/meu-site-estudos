@@ -1,6 +1,6 @@
 const aulasBd = [
     {
-        data: "2026-02-26",
+        data: "2026-02-23",
         titulo: "Introdução ao Banco de Dados",
         conteudo: `Banco de dados é um conjunto estruturado de dados relacionados, organizado para garantir integridade, segurança e eficiência das informações. Seu funcionamento se baseia em três pilares fundamentais: organização, relacionamento e regras.
         No modelo relacional, criado por Edgar F. Codd, os dados são estruturados com base na teoria dos conjuntos. A organização ocorre por meio de tabelas (relações), compostas por linhas (tuplas) e colunas (atributos). Cada atributo possui um domínio, que define o tipo de dado permitido.

@@ -29,4 +29,12 @@ const aulasWeb = [
         Além disso, utilizamos a propriedade background para aplicar cores ou imagens de fundo nos elementos, tornando o design mais atrativo. Esses conceitos são fundamentais para a construção de interfaces web organizadas, responsivas e visualmente agradáveis.
          `,
     },
+    {
+        data: "2026-03-27",
+        titulo: "CSS - Posicionamento|Transformações|Transições",
+        conteudo: ` Na aula de hoje estudamos o posicionamento de elementos no CSS, focando principalmente nas divs. Exploramos diferentes formas de posicionamento, como static, relative, absolute e fixed, entendendo como cada uma influencia na organização dos elementos na página.
+        Também trabalhamos com transformações (transform), permitindo alterar a forma e posição das divs, como mover, girar, aumentar ou diminuir elementos. Além disso, utilizamos transições (transition) para criar efeitos suaves nas mudanças de estilo, melhorando a experiência visual do usuário.
+        A aula foi prática, com testes e ajustes nos estilos para entender melhor o comportamento dos elementos e como aplicar esses conceitos no desenvolvimento de interfaces.
+         `,
+    },
 ];
