@@ -26,5 +26,21 @@ const aulasBd = [
         Também foi apresentado o conceito de operações básicas conhecidas como CRUD, como SELECT para consultar dados, INSERT para inserir registros, UPDATE para atualizar informações e DELETE para remover dados. Foi destacado o cuidado no uso da cláusula WHERE, pois sua ausência pode alterar ou excluir todos os registros da tabela.
         Além disso, foram introduzidos conceitos importantes como filtros com operadores, ordenação com ORDER BY, agrupamento de dados com GROUP BY e o uso de JOIN para relacionar tabelas, reforçando a importância das chaves primárias e estrangeiras para garantir a integridade dos dados no banco.
         `
-    }
+    },
+    {
+        data: "2026-03-30",
+        titulo: "CRUD Academia",
+        conteudo: ` Na aula de hoje desenvolvemos um projeto prático de CRUD no MySQL, utilizando como exemplo um sistema de academia. O objetivo foi entender na prática como criar, consultar, atualizar e excluir dados dentro de um banco de dados relacional.
+        Aprendemos que um banco de dados relacional organiza as informações em tabelas que se relacionam entre si, evitando duplicidade e melhorando a organização. No projeto, criamos as tabelas alunos, planos e matriculas, onde a tabela matriculas faz a ligação entre alunos e planos.
+        Também revisamos o conceito de chave primária (identificador único de cada registro) e chave estrangeira (responsável por criar o relacionamento entre tabelas), garantindo a integridade dos dados. Foi utilizado o AUTO_INCREMENT para gerar automaticamente os IDs em sequência.
+        Durante a prática, criamos o banco de dados academia, as tabelas, verificamos sua estrutura com comandos como SHOW TABLES e DESCRIBE, inserimos dados com INSERT e realizamos consultas com SELECT. A aula reforçou a importância da ordem das operações e do entendimento das relações entre as tabelas para o correto funcionamento do sistema.
+        `,
+        imagens: [
+            "../../images/imgBd/imgBanco1.png",
+            "../../images/imgBd/imgBanco2.png",
+            "../../images/imgBd/imgBanco3.png",
+            "../../images/imgBd/imgBanco4.png",
+            "../../images/imgBd/imgBanco5.png"
+        ]
+    },
 ];
