@@ -151,5 +151,52 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/2503img9.png",
             "../../images/imgAlgoritmos/2503img10.png"
         ]
-    }
+    },
+    {
+        data: "2026-03-31",
+        titulo: "Laço de repetição while/dowhile",
+        conteudo: `Na aula de hoje fizemos uma revisão geral dos principais conceitos vistos até o momento, como sistema, condições, operadores, estruturas condicionais (if/else), operadores lógicos como conjunção (&&) e disjunção (||), além do laço de repetição for.
+        Foi apresentado também um novo pacote para entrada de dados no Node.js, o readline-sync, utilizado para interagir com o usuário pelo terminal.
+        Em seguida, estudamos novos laços de repetição, com foco no while, que executa um bloco de código enquanto uma condição for verdadeira, sempre testando a condição antes da execução. Diferente dele, o do...while executa o código pelo menos uma vez, pois a verificação ocorre ao final.
+        Na prática, realizamos três exercícios com while:
+        - No primeiro, criamos uma contagem iniciando em 5 até 9, demonstrando o uso de incremento.
+        - No segundo, fizemos uma soma acumulativa até ultrapassar o valor 10, trabalhando lógica de repetição e atualização de variáveis.
+        - No terceiro, desenvolvemos um sistema de verificação de senha, limitando tentativas com uso de condição e operador lógico (&&).
+        Também utilizamos o do...while em um exemplo com números aleatórios, simulando o lançamento de um dado até obter o número 6.
+        A aula reforçou o controle de fluxo com laços de repetição e a importância de definir corretamente as condições para evitar loops infinitos.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/3103img1.png",
+            "../../images/imgAlgoritmos/3103img2.png",
+            "../../images/imgAlgoritmos/3103img3.png",
+            "../../images/imgAlgoritmos/3103img4.png",
+            "../../images/imgAlgoritmos/3103img5.png",
+            "../../images/imgAlgoritmos/3103img6.png",
+            "../../images/imgAlgoritmos/3103img7.png",
+            "../../images/imgAlgoritmos/3103img8.png",
+        ]
+    },
+    {
+        data: "2026-04-01",
+        titulo: "Laço de repetição while/dowhile",
+        conteudo: `Na aula de hoje demos continuidade ao estudo de laços de repetição e funções matemáticas em JavaScript. Trabalhamos com a criação de um jogo de dado utilizando o método Math.random() para gerar números aleatórios, Math.floor() para remover as casas decimais e o +1 para ajustar o intervalo, fazendo com que os números comecem a partir de 1.
+        Revisamos também os principais laços de repetição:
+        - for: utilizado quando sabemos a quantidade de repetições.
+        - while: utilizado quando não sabemos quantas vezes o laço será executado, com a condição sendo testada antes da execução.
+        - do...while: executa o bloco de código pelo menos uma vez, pois a verificação ocorre ao final.
+        Durante a prática, criamos diferentes arquivos para testar esses conceitos. No dowhile.js, observamos que o bloco é executado mesmo quando a condição é falsa. No random.js, geramos números aleatórios. No while.js, fizemos uma contagem simples utilizando o laço while.
+        Por fim, desenvolvemos um menu interativo no dowhile2.js utilizando readline-sync, combinando do...while com switch/case. O programa permite ao usuário escolher opções como exibir uma saudação, mostrar a data atual ou jogar um dado, demonstrando na prática o uso de condições, laços de repetição e interação com o usuário.
+        A aula reforçou o controle de fluxo, a diferença entre os tipos de laços e a aplicação prática de funções matemáticas para criar programas dinâmicos.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/0104img1.png",
+            "../../images/imgAlgoritmos/0104img2.png",
+            "../../images/imgAlgoritmos/0104img3.png",
+            "../../images/imgAlgoritmos/0104img4.png",
+            "../../images/imgAlgoritmos/0104img5.png",
+            "../../images/imgAlgoritmos/0104img6.png",
+            "../../images/imgAlgoritmos/0104img7.png",
+            "../../images/imgAlgoritmos/0104img8.png",
+        ]
+    },
 ];
