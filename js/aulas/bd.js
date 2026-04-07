@@ -43,4 +43,24 @@ const aulasBd = [
             "../../images/imgBd/imgBanco5.png"
         ]
     },
+    {
+        data: "2026-04-06",
+        titulo: "JOIN | CRUD Clinica",
+        conteudo: `Na aula de hoje estudamos o conceito de JOIN em SQL, que é utilizado para juntar informações de diferentes tabelas e formar um resultado completo. Foi explicado que, em bancos relacionais, os dados ficam separados em tabelas e o JOIN permite conectar essas informações por meio de campos em comum, geralmente chaves primárias e estrangeiras.
+        Aprendemos a importância de seguir uma sequência correta na criação das tabelas, garantindo que os relacionamentos funcionem corretamente. Também vimos que o comando DESCRIBE permite visualizar a estrutura de uma tabela e o SELECT é utilizado para consultar dados, sendo recomendado evitar o uso de SELECT * e especificar apenas os campos necessários.
+        Foi apresentado o uso de alias, que são apelidos temporários para tabelas ou colunas, facilitando a escrita e evitando ambiguidades, especialmente em consultas com JOIN. Outro ponto importante foi o uso do ON, que define a regra de relacionamento entre as tabelas.
+        Revisamos também o uso do WHERE para filtrar registros específicos, destacando que sua ausência em comandos como UPDATE e DELETE pode alterar ou apagar todos os dados da tabela. Por fim, vimos o comando DROP TABLE, que remove completamente uma tabela do banco de dados, sendo uma operação irreversível.
+        A aula reforçou boas práticas em SQL, como sempre utilizar WHERE em operações críticas, usar JOIN corretamente com ON e evitar consultas desnecessárias para manter o desempenho e a segurança dos dados.
+        `,
+        imagens: [
+            "../../images/imgBd/0604img1.png",
+            "../../images/imgBd/0604img2.png",
+            "../../images/imgBd/0604img3.png",
+            "../../images/imgBd/0604img4.png",
+            "../../images/imgBd/0604img5.png",
+            "../../images/imgBd/0604img6.png",
+            "../../images/imgBd/0604img7.png",
+            "../../images/imgBd/0604img8.png"
+        ]
+    },
 ];

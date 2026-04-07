@@ -29,4 +29,11 @@ const aulasTic = [
         Também vimos como integrar essas informações ao documento principal, possibilitando a geração automática de várias cópias com dados diferentes, tornando o processo mais rápido e organizado. 
         `
     },
+    {
+        data: "2026-04-06",
+        titulo: "Excel",
+        conteudo: `Na aula de hoje fizemos uma revisão geral sobre o Excel, relembrando suas principais funcionalidades e utilidades no dia a dia. Foram reforçados conceitos como organização de dados em planilhas, uso de células, formatação, além da aplicação de fórmulas básicas para cálculos.
+        Também revisamos como o Excel pode ser utilizado para facilitar análises, automatizar tarefas e melhorar a produtividade no tratamento de informações.
+        `
+    },
 ];
