@@ -37,4 +37,16 @@ const aulasWeb = [
         A aula foi prática, com testes e ajustes nos estilos para entender melhor o comportamento dos elementos e como aplicar esses conceitos no desenvolvimento de interfaces.
          `,
     },
+    {
+        data: "2026-04-10",
+        titulo: "JavaScript | HTML",
+        conteudo: ` Na aula de hoje iniciamos a utilização do JavaScript dentro do HTML, utilizando a tag script para inserir código diretamente na página. Trabalhamos com entrada de dados usando o prompt, permitindo que o usuário digite informações, e utilizamos a função Number() para converter os valores para número.
+        Na prática, desenvolvemos um exemplo que solicita quatro notas do aluno, armazena esses valores em variáveis e realiza o cálculo da média. Também aprendemos a importância dos parênteses na operação matemática para garantir o cálculo correto.
+        Por fim, utilizamos o alert para exibir o resultado na tela e o método toFixed() para formatar o número com casas decimais. A aula reforçou conceitos de variáveis, entrada e saída de dados, além da integração entre HTML e JavaScript.
+        `,
+        imagens: [
+            "../../images/imgWeb/1004img1.png",
+            "../../images/imgWeb/1004img2.png"
+        ]
+    }
 ];

@@ -36,4 +36,22 @@ const aulasTic = [
         Também revisamos como o Excel pode ser utilizado para facilitar análises, automatizar tarefas e melhorar a produtividade no tratamento de informações.
         `
     },
+    {
+        data: "2026-04-09",
+        titulo: "Excel",
+        conteudo: `Na aula de hoje trabalhamos de forma prática com formatação completa de uma planilha no Excel, focando na organização, padronização e visual profissional dos dados.
+        Inicialmente, organizamos os dados em colunas e linhas, ajustando automaticamente a largura das colunas (AutoFit) para que todo o conteúdo ficasse visível. Em seguida, aplicamos formatação de títulos, utilizando negrito, aumento de fonte e centralização, destacando o cabeçalho da tabela.
+        Também foram aplicadas cores de preenchimento nas células (background) para diferenciar títulos, totais ou categorias, além do uso de bordas para delimitar a tabela e melhorar a leitura visual.
+        Trabalhamos com formatação de números, convertendo valores para o formato adequado, como moeda (R$), garantindo melhor interpretação dos dados financeiros.
+        `
+    },
+    {
+        data: "2026-04-13",
+        titulo: "Excel",
+        conteudo: `Na aula de hoje demos continuidade ao uso do Excel, aprofundando a formatação e organização de planilhas. Trabalhamos com a estruturação dos dados, aplicando ajustes para melhorar a visualização e facilitar a análise das informações.
+        Foram utilizados recursos como formatação de células, incluindo cores, bordas, alinhamento e destaque de títulos, além da padronização de fontes para manter consistência visual. Também aplicamos formatação de valores numéricos, como moeda, garantindo melhor interpretação dos dados.
+        Outro ponto importante foi o uso de organização lógica da planilha, separando corretamente as informações em colunas e linhas, além de possíveis ajustes como mesclagem de células para títulos e melhor apresentação.
+        A aula reforçou a importância de uma planilha bem estruturada e formatada, não apenas para estética, mas para facilitar a leitura, análise e tomada de decisão com base nos dados apresentados.
+        `
+    },
 ];

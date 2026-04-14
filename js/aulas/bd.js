@@ -63,4 +63,19 @@ const aulasBd = [
             "../../images/imgBd/0604img8.png"
         ]
     },
+    {
+        data: "2026-04-13",
+        titulo: "Atividade para nota",
+        conteudo: ` Na aula de hoje realizamos uma atividade prática (prova) com foco em CRUD no MySQL, aplicando todos os conceitos de banco de dados relacional estudados até o momento. O objetivo foi desenvolver um sistema de gestão de eventos, criando um banco de dados completo com tabelas relacionadas.
+        Iniciamos com a criação do banco de dados e, em seguida, desenvolvemos três tabelas: participantes, eventos e inscrições. Cada tabela foi estruturada com chave primária (PRIMARY KEY) e utilizamos chave estrangeira (FOREIGN KEY) para criar o relacionamento entre participantes e eventos por meio da tabela inscrições.
+        Na sequência, realizamos a verificação das tabelas com comandos como SHOW TABLES e DESCRIBE, garantindo que a estrutura estivesse correta. Depois, inserimos dados nas tabelas respeitando a ordem lógica, primeiro nas tabelas principais e depois na tabela de relacionamento.
+        Também executamos consultas utilizando SELECT para visualizar os dados e aplicamos JOIN para unir informações de diferentes tabelas, mostrando, por exemplo, o nome do participante e o evento em que está inscrito.
+        Por fim, utilizamos os comandos UPDATE para alterar dados e DELETE para excluir registros, sempre com o uso da cláusula WHERE para evitar alterações ou exclusões em massa. A atividade reforçou a importância da integridade dos dados, do uso correto de relacionamentos e das boas práticas em SQL.
+        `,
+        imagens: [
+            "../../images/imgBd/1304img1.png",
+            "../../images/imgBd/1304img2.png",
+            "../../images/imgBd/1304img3.png"
+        ]
+    },
 ];
