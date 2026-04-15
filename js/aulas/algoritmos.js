@@ -199,4 +199,43 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/0104img8.png",
         ]
     },
+    {
+        data: "2026-04-07",
+        titulo: "Exercícios de Analise de Requisitos",
+        conteudo: `Na aula de hoje trabalhamos o conceito de Análise de Requisitos em Algoritmos, que consiste em entender completamente um problema antes de começar a programar. Foi reforçada a importância de identificar corretamente três etapas fundamentais: entrada (dados recebidos), processamento (o que será feito com os dados) e saída (resultado final).
+        Durante a aula, realizamos exercícios práticos aplicando esse conceito. No primeiro exercício, fizemos a soma de números informados pelo usuário. No segundo, identificamos quantos números são pares utilizando operadores e condições. No terceiro, utilizamos o laço while para somar valores até o usuário digitar zero, trabalhando com repetição indefinida.
+        Também desenvolvemos um sistema de notas, calculando a média de um aluno e classificando o resultado com if/else em aprovado, recuperação ou reprovado. Por fim, criamos um menu interativo utilizando do...while, permitindo ao usuário escolher operações como soma e subtração, reforçando o uso de estruturas de decisão e repetição.
+        A aula integrou conceitos importantes como variáveis, operadores, estruturas condicionais e laços de repetição (for, while e do...while), destacando que a análise correta do problema é essencial para construir algoritmos eficientes e sem erros.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/0704img1.png",
+            "../../images/imgAlgoritmos/0704img2.png",
+            "../../images/imgAlgoritmos/0704img3.png",
+            "../../images/imgAlgoritmos/0704img4.png",
+            "../../images/imgAlgoritmos/0704img5.png",
+            "../../images/imgAlgoritmos/0704img6.png",
+            "../../images/imgAlgoritmos/0704img7.png",
+            "../../images/imgAlgoritmos/0704img8.png",
+            "../../images/imgAlgoritmos/0704img9.png",
+            "../../images/imgAlgoritmos/0704img10.png"
+        ]
+    },
+    {
+        data: "2026-04-08",
+        titulo: "Correção dos Exercícios de Analise de Requisitos",
+        conteudo: `Na aula de hoje realizamos a correção dos exercícios de Análise de Requisitos, reforçando o entendimento de cada problema antes da implementação. Foram revisados os conceitos de entrada, processamento e saída, garantindo que a lógica estivesse correta em cada etapa.
+        Durante a correção, o professor destacou boas práticas na construção dos algoritmos, como o uso adequado de variáveis, operadores, estruturas condicionais (if/else) e laços de repetição (for, while e do...while). Também foram corrigidos possíveis erros de lógica, como condições mal definidas, loops incorretos e problemas na soma ou contagem de valores.
+        A aula teve foco no aperfeiçoamento da lógica de programação, mostrando a importância de analisar o problema com atenção para evitar erros e desenvolver soluções mais eficientes.
+        `,
+    },
+    {
+        data: "2026-04-14",
+        titulo: "GitHub",
+        conteudo: `Na aula de hoje iniciamos o uso do Git e GitHub, aprendendo a criar uma conta e entender o funcionamento de repositórios. Foi explicado que existem dois tipos de repositórios: o local (na máquina) e o remoto (no GitHub), que trabalham juntos no controle de versões do projeto.
+        Aprendemos a criar um repositório de teste e utilizar os principais comandos do Git, como git init para iniciar o projeto, git status para verificar alterações, git add . para adicionar arquivos, git commit para salvar mudanças e git push para enviar o projeto ao GitHub. Também vimos o conceito de branch, que é uma ramificação do projeto principal.
+        Foi apresentado o arquivo package.json, que armazena as dependências do projeto, e o .gitignore, utilizado para ignorar arquivos ou pastas desnecessárias, como node_modules, evitando subir conteúdos desnecessários para o repositório.
+        Além disso, iniciamos o uso do Node.js com o comando npm i express para criar um servidor, e utilizamos o Git Bash para executar comandos do Git.
+        Por fim, começamos a estudar funções em JavaScript, entendendo como criar uma função simples para somar dois valores e retornar o resultado, reforçando o conceito de reutilização de código.
+        `,
+    },
 ];
