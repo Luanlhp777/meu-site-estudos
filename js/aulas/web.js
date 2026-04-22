@@ -48,5 +48,26 @@ const aulasWeb = [
             "../../images/imgWeb/1004img1.png",
             "../../images/imgWeb/1004img2.png"
         ]
+    },
+    {
+        data: "2026-04-17",
+        titulo: "JavaScript | HTML",
+        conteudo: ` Na aula de hoje desenvolvemos exercícios práticos integrando HTML e JavaScript, com foco na coleta de dados via formulário, processamento das informações e exibição dos resultados na tela, seguindo o padrão de entrada, processamento e saída.
+        No primeiro exercício, criamos um sistema para uma vídeo locadora, onde o usuário informa o título e a duração do filme. O programa converte a duração de minutos para horas e minutos utilizando Math.floor() e o operador módulo (%), além de exibir as informações na página. Também foi acrescentado o campo de gênero do filme.
+        No segundo exercício, desenvolvemos um programa para uma revenda de veículos, que lê o modelo e o preço do veículo, calcula o valor da entrada (50%) e o saldo parcelado em 12 vezes. O resultado é exibido na tela utilizando textContent, e foi incluído o campo fabricante do veículo. Foi reforçado o uso de funções, manipulação de elementos HTML e eventos de botão.
+        No terceiro exercício, criamos um sistema para um restaurante, onde o programa calcula o valor a ser pago com base no preço por quilo e no consumo em gramas, realizando a conversão de unidades. Também foi adicionada a opção de incluir o valor da sobremesa e calcular o total final.
+        A aula reforçou a integração entre HTML e JavaScript, o uso de funções, manipulação do DOM, conversões matemáticas e a aplicação prática da lógica de programação em situações do dia a dia.
+        `,
+        imagens: [
+            "../../images/imgWeb/locadoraHTML.png",
+            "../../images/imgWeb/locadoraJS.png",
+            "../../images/imgWeb/locadoraWEB.png",
+            "../../images/imgWeb/revendaHTML.png",
+            "../../images/imgWeb/revendaJS.png",
+            "../../images/imgWeb/revendaWEB.png",
+            "../../images/imgWeb/restauranteHTML.png",
+            "../../images/imgWeb/restauranteJS.png",
+            "../../images/imgWeb/restauranteWEB.png"
+        ]
     }
 ];

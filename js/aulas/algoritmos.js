@@ -238,4 +238,27 @@ const aulasAlgoritmos = [
         Por fim, começamos a estudar funções em JavaScript, entendendo como criar uma função simples para somar dois valores e retornar o resultado, reforçando o conceito de reutilização de código.
         `,
     },
+    {
+        data: "2026-04-15",
+        titulo: "GitHub | Função",
+        conteudo: `Na aula de hoje revisamos exercícios anteriores que utilizavam o laço de repetição for e evoluímos o código aplicando o conceito de funções, com o objetivo de organizar melhor a lógica e tornar o programa mais estruturado e reutilizável.
+        Cada exercício foi separado em funções específicas, como contar até 100, contar de 2 em 2, contagem regressiva e tabuada, permitindo que cada parte do programa tenha uma responsabilidade definida. Também criamos uma função para exibir o menu de opções, melhorando a organização e a leitura do código.
+        Além disso, utilizamos uma função principal (principal) para controlar o fluxo do programa, combinando um laço do...while com a estrutura switch/case. Isso possibilitou criar um menu interativo, onde o usuário escolhe qual funcionalidade deseja executar.
+        A aula reforçou conceitos importantes como modularização do código, reutilização de funções, controle de fluxo com laços de repetição e estruturas condicionais, além da interação com o usuário via terminal utilizando prompt-sync.
+        `,
+        imagens: [
+            "../../images/imgAlgoritmos/1504img1.png",
+            "../../images/imgAlgoritmos/1504img2.png",
+            "../../images/imgAlgoritmos/1504img3.png",
+            "../../images/imgAlgoritmos/1504img4.png",
+            "../../images/imgAlgoritmos/1504img5.png",
+            "../../images/imgAlgoritmos/1504img6.png",
+            "../../images/imgAlgoritmos/1504img7.png",
+            "../../images/imgAlgoritmos/1504img8.png",
+            "../../images/imgAlgoritmos/1504img9.png",
+            "../../images/imgAlgoritmos/1504img10.png",
+            "../../images/imgAlgoritmos/1504img11.png",
+            "../../images/imgAlgoritmos/1504img12.png"
+        ]
+    },
 ];
