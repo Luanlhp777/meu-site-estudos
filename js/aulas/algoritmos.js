@@ -240,7 +240,7 @@ const aulasAlgoritmos = [
     },
     {
         data: "2026-04-15",
-        titulo: "GitHub | Função",
+        titulo: "Função",
         conteudo: `Na aula de hoje revisamos exercícios anteriores que utilizavam o laço de repetição for e evoluímos o código aplicando o conceito de funções, com o objetivo de organizar melhor a lógica e tornar o programa mais estruturado e reutilizável.
         Cada exercício foi separado em funções específicas, como contar até 100, contar de 2 em 2, contagem regressiva e tabuada, permitindo que cada parte do programa tenha uma responsabilidade definida. Também criamos uma função para exibir o menu de opções, melhorando a organização e a leitura do código.
         Além disso, utilizamos uma função principal (principal) para controlar o fluxo do programa, combinando um laço do...while com a estrutura switch/case. Isso possibilitou criar um menu interativo, onde o usuário escolhe qual funcionalidade deseja executar.
