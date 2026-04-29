@@ -261,4 +261,18 @@ const aulasAlgoritmos = [
             "../../images/imgAlgoritmos/1504img12.png"
         ]
     },
+    {
+        data: "2026-04-28",
+        titulo: "Função | GitHub",
+        conteudo: `Na aula de hoje aprofundamos o estudo de funções em JavaScript, focando na reutilização de código e na organização da lógica de programação. Foi reforçado que funções são blocos reutilizáveis que ajudam a evitar repetição e tornam o código mais limpo e estruturado.
+        Trabalhamos com diferentes tipos de funções, como funções com retorno (return), funções sem retorno, funções com parâmetros e sem parâmetros, entendendo a diferença entre parâmetros (valores recebidos pela função) e argumentos (valores passados na chamada da função).
+        Durante a prática, criamos diversas funções para resolver problemas do dia a dia, como operações matemáticas (subtração, multiplicação, divisão), cálculo do dobro de um número, verificação do maior valor entre dois números, identificação de número par ou ímpar, cálculo de idade, verificação de aprovação de aluno e geração de tabuada com laço de repetição.
+        Também foi abordado o conceito de tratamento de erro, como no caso da divisão por zero, além do uso de estruturas condicionais (if/else) dentro das funções para controlar o comportamento do programa.
+        Outro ponto importante foi o entendimento de escopo de variáveis, diferenciando escopo local (dentro da função) e escopo global (fora da função).
+        Por fim, foram introduzidos conceitos teóricos que serão aprofundados futuramente, como funções assíncronas, arrow functions, promises e callbacks, preparando a base para conteúdos mais avançados.
+        A aula reforçou a importância da modularização, reutilização de código e construção de funções bem definidas para resolver problemas de forma eficiente.
+        <br><br>
+        <a href="https://github.com/Luanlhp777/aulaFuncoes3/blob/main/funcao.js" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
 ];
