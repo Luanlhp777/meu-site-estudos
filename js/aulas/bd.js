@@ -78,4 +78,61 @@ const aulasBd = [
             "../../images/imgBd/1304img3.png"
         ]
     },
+    {
+        data: "2026-04-27",
+        titulo: "Correção da atividade",
+        conteudo: ` Na aula de hoje realizamos a correção completa da prova prática de CRUD em MySQL, analisando passo a passo a construção de um banco de dados relacional para um sistema de gestão de eventos.
+        Iniciamos revisando a criação do banco de dados com o comando CREATE DATABASE eventos e sua seleção com USE eventos, reforçando a importância de sempre trabalhar no banco correto antes de executar comandos.
+        Em seguida, foi feita a análise da criação das tabelas: participantes, eventos e inscricoes. Cada tabela foi estruturada com chave primária (PRIMARY KEY) utilizando AUTO_INCREMENT, garantindo um identificador único para cada registro. Também foi destacado o uso de chave estrangeira (FOREIGN KEY) na tabela inscricoes, responsável por criar o relacionamento entre participantes e eventos, assegurando a integridade dos dados.
+        Na parte de verificação, utilizamos comandos como SHOW TABLES para listar as tabelas criadas e DESCRIBE para visualizar a estrutura de cada tabela, validando se os campos e tipos de dados estavam corretos.
+        Durante a correção da inserção de dados (INSERT), foi reforçada a importância da ordem lógica: primeiro inserir dados nas tabelas principais (participantes e eventos) e depois na tabela de relacionamento (inscricoes), evitando erros de referência.
+        Na etapa de consultas (SELECT), revisamos tanto consultas simples quanto consultas com JOIN, onde foi demonstrado como unir dados de diferentes tabelas para obter informações completas, como o nome do participante e o nome do evento em que está inscrito. Foi enfatizado o uso correto do JOIN com a cláusula ON para garantir a associação correta dos registros.
+        Também foi corrigido o uso do comando UPDATE, destacando a obrigatoriedade do uso do WHERE para evitar alterações em todos os registros da tabela. O mesmo cuidado foi reforçado no comando DELETE, onde a ausência do WHERE pode apagar todos os dados.
+        <br/>
+        <br/>
+        Por fim, revisamos as questões teóricas da prova, reforçando que:<br/>
+        - Sem WHERE no UPDATE, todos os registros são alterados<br/>
+        - A chave estrangeira garante o relacionamento e a integridade dos dados<br/>
+        - O JOIN permite integrar informações de diferentes tabelas<br/>
+        <br/>
+        A aula consolidou o entendimento sobre CRUD (Create, Read, Update, Delete), reforçando boas práticas, prevenção de erros críticos e a importância da modelagem correta em bancos de dados relacionais.
+        `,
+        imagens: [
+            "../../images/imgBd/2704img1.png",
+            "../../images/imgBd/2704img2.png"
+        ]
+    },
+    {
+        data: "2026-05-04",
+        titulo: "Modelagem Relacional",
+        conteudo: ` 1-) Na aula de ontem aprofundamos o estudo de modelagem relacional completa, indo além do SQL básico e entendendo como estruturar corretamente um banco de dados antes da implementação.
+        Foi reforçado que a modelagem relacional organiza os dados em tabelas (relações), definindo atributos, chaves primárias (PK) e chaves estrangeiras (FK), garantindo integridade e evitando inconsistências. Também revisamos os tipos de relacionamento, como 1:1, 1:N e N:M, sendo este último resolvido por uma tabela associativa.
+        Estudamos conceitos mais avançados como especialização e generalização, que permitem organizar entidades de forma mais inteligente, separando ou agrupando dados conforme o contexto do sistema.
+        Outro ponto importante foram as Formas Normais (1FN, 2FN e 3FN), utilizadas para eliminar redundâncias e problemas como dependências parciais e transitivas. Foi demonstrado que um banco bem modelado evita repetição de dados e facilita manutenção.
+        Também vimos o conceito de desnormalização, utilizado em cenários específicos para melhorar performance, mesmo que introduza redundância controlada.
+        Por fim, foi feita a revisão completa do CRUD da prova, reforçando boas práticas como uso correto de JOIN, uso obrigatório de WHERE em UPDATE e DELETE, e a importância das chaves estrangeiras para manter a consistência dos dados.
+        A aula consolidou a base teórica e prática de banco de dados, mostrando como modelar corretamente antes de implementar.<br/><br/>
+        *O que acontece sem WHERE no UPDATE? Todos os registros da tabela são alterados. Ex: UPDATE participantes SET nome = 'X' muda o nome de TODOS os participantes — perda irreversível.<br/>
+        *Por que usar chave estrangeira? Garante integridade referencial: impede inserir uma inscrição para um participante ou evento inexistente. O banco rejeita dados inconsistentes.<br/>
+        *Para que serve o JOIN? Combina dados de duas ou mais tabelas em uma consulta, usando o relacionamento PK « FK. Sem JOIN precisaríamos de múltiplas consultas.<br/><br/>
+        2-) No exercício prático, desenvolvemos a modelagem de um sistema de escola de natação, aplicando os conceitos de banco de dados relacional.<br/><br/>
+        Foram criadas as principais entidades:<br/>
+        - Professores: responsáveis pelas aulas, com informações como nome, especialidade e data de contratação.<br/>
+        - Níveis: representam o nível do aluno (iniciante, intermediário, avançado), incluindo o valor da mensalidade.<br/>
+        - Alunos: armazenam dados pessoais e informações de matrícula.<br/>
+        - Turmas: representam as aulas, associando professor, nível, horário e dias da semana.<br/>
+        - Matrículas: tabela associativa que relaciona alunos e turmas.<br/>
+        <br/>
+        O modelo utiliza relacionamentos importantes:<br/>
+        - 1:N entre Professores e Turmas (um professor pode ter várias turmas)<br/>
+        - 1:N entre Níveis e Turmas<br/>
+        - N:M entre Alunos e Turmas, resolvido pela tabela Matrículas<br/><br/>
+        Também foram aplicadas chaves primárias (AUTO_INCREMENT) e chaves estrangeiras para garantir a integridade referencial, impedindo registros inválidos.<br/>
+        Além disso, o sistema inclui controle de status do aluno (ativo, inativo, trancado), mostrando uma aplicação mais próxima de um sistema real.<br/>
+        Esse MER demonstra uma estrutura bem organizada, normalizada e preparada para operações de CRUD e consultas com JOIN, sendo um exemplo completo de modelagem de banco de dados aplicada.<br/>
+        `,
+        imagens: [
+            "../../images/imgBd/0405img1.png"
+        ]
+    },
 ];
