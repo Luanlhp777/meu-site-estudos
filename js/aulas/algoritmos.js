@@ -275,4 +275,60 @@ const aulasAlgoritmos = [
         <a href="https://github.com/Luanlhp777/aulaFuncoes3/blob/main/funcao.js" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
+    {
+        data: "2026-04-29",
+        titulo: "Exercícios de Função",
+        conteudo: ` Na aula de hoje praticamos exercícios com funções em JavaScript, reforçando a ideia de reutilização de código e organização da lógica em blocos separados.
+        Foram desenvolvidas funções simples para resolver problemas específicos. Criamos uma função para encontrar o antecessor de um número, subtraindo 1 do valor informado, e outra função para encontrar o sucessor, somando 1 ao número recebido.
+        Também trabalhamos com uma função de conversão de temperatura, transformando graus Celsius em Fahrenheit por meio da fórmula matemática adequada. Esse exercício reforçou o uso de parâmetros, cálculos e retorno de valores com return.
+        Outro exercício importante foi a função para verificar idade, utilizando if/else para identificar se uma pessoa é maior ou menor de idade. Assim, revisamos o uso de condições dentro de funções.
+        Por fim, criamos uma função para calcular desconto, recebendo o valor do produto e a porcentagem de desconto. O programa calcula o valor descontado e retorna o preço final do produto.
+        Além dos exercícios de JavaScript, também registramos os comandos do Git utilizados para versionar e enviar o projeto ao GitHub, como git init, git status, git add ., git commit, git branch, git remote add origin e git push.
+        A aula reforçou conceitos fundamentais como funções com parâmetros, argumentos, retorno de valores, operadores matemáticos, estruturas condicionais e versionamento de código com Git e GitHub.
+        <br><br>
+        <a href="https://github.com/Luanlhp777/exerciciosFuncoes/blob/main/exercicioFuncoes.js" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
+    {
+        data: "2026-05-05",
+        titulo: "Vetores (arrays)",
+        conteudo: ` Na aula de hoje aprofundamos o estudo sobre vetores (arrays) em JavaScript, trabalhando na prática com armazenamento, organização e manipulação de múltiplos valores dentro de uma única variável. O objetivo foi entender como os vetores facilitam o gerenciamento de dados e tornam o código mais dinâmico e reutilizável.<br><br>
+        Durante os exercícios, revisamos a declaração de arrays utilizando colchetes [], armazenando diferentes tipos de informações em posições indexadas. Também praticamos o acesso aos elementos do vetor utilizando índices, lembrando que a contagem inicia na posição 0.<br><br>
+        A aula explorou estruturas de repetição integradas aos vetores, principalmente o laço for, permitindo percorrer os elementos automaticamente sem necessidade de escrever código repetitivo. Também trabalhamos com a propriedade length, utilizada para identificar a quantidade de itens existentes no array.<br><br>
+        Além disso, realizamos exercícios de entrada, processamento e saída de dados, reforçando a lógica de programação junto ao uso de vetores. Foram aplicados conceitos como:<br>
+        - armazenamento de valores em arrays;<br>
+        - leitura e exibição de posições específicas;<br>
+        - percorrer listas completas com for;<br>
+        - manipulação de dados dentro do vetor;<br>
+        - uso de condições em conjunto com arrays.<br>
+        <br>
+        A aula também reforçou a importância da organização do código, reutilização de lógica e entendimento da estrutura de dados, mostrando que os vetores são fundamentais para desenvolvimento de sistemas, manipulação de listas e construção de programas mais avançados.
+        Por fim, o projeto foi versionado e enviado ao GitHub, reforçando o uso do Git como ferramenta de controle de versão e armazenamento de projetos.
+        <br><br>
+        <a href="https://github.com/Luanlhp777/vetores" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
+    {
+        data: "2026-05-06",
+        titulo: "Exercícios de Vetores",
+        conteudo: ` Na aula de hoje aprofundamos o estudo sobre vetores (arrays) em JavaScript, realizando exercícios práticos focados em manipulação, acesso e processamento de dados armazenados em listas. O objetivo foi compreender como os vetores organizam múltiplos valores dentro de uma única variável e facilitam o desenvolvimento de programas mais dinâmicos.<br><br>
+        Iniciamos criando vetores contendo nomes de pessoas, aprendendo a exibir o array completo no console e acessar posições específicas, como o primeiro e o último elemento. Também revisamos o conceito de índice, lembrando que os vetores começam na posição 0.<br><br>
+        Durante os exercícios, trabalhamos com acesso a elementos específicos de um vetor numérico, realizando operações matemáticas, como soma entre o primeiro e o último valor armazenado. Em seguida, utilizamos o laço de repetição for para percorrer automaticamente os elementos do vetor, exibindo todos os valores e aplicando condições para mostrar apenas números maiores que 10.<br><br>
+        Outro exercício importante foi o cálculo da soma total dos elementos do vetor, utilizando uma variável acumuladora para armazenar o resultado durante o percurso do array. Também desenvolvemos um algoritmo para identificar o maior valor presente no vetor sem utilizar o método Math.max( ), reforçando a lógica de comparação e análise de dados.<br><br>
+        Além disso, aprendemos a manipular vetores com os métodos push( ) e pop( ). O método push( ) foi utilizado para adicionar novos elementos ao final do array, enquanto o pop( ) removeu o último item inserido, mostrando como é possível alterar dinamicamente o conteúdo do vetor.<br><br>
+
+        A aula reforçou conceitos fundamentais como:<br>
+        - criação e manipulação de arrays;<br>
+        - acesso por índice;<br>
+        - uso do for com vetores;<br>
+        - lógica de comparação;<br>
+        - variáveis acumuladoras;<br>
+        - métodos push( ) e pop( );<br>
+        - processamento de dados em listas.<br><br>
+
+        Também foi trabalhada a organização do código e a aplicação prática da lógica de programação utilizando estruturas de dados muito utilizadas no desenvolvimento de sistemas.
+        <br><br>
+        <a href="https://github.com/Luanlhp777/exerciciosVetores" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
 ];
