@@ -96,7 +96,7 @@ const aulasWeb = [
         `,
         imagens: [
             "../../images/imgWeb/caixaEletronicoHTML.png",
-            "../../images/imgWeb/caixaEletronicoJS.png",
+            "../../images/imgWeb/caixaEletronicojs.png",
             "../../images/imgWeb/calculoMediaHTML.png",
             "../../images/imgWeb/calculoMediaJS.png",
             "../../images/imgWeb/calculoPesoHTML.png",
