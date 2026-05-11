@@ -69,5 +69,40 @@ const aulasWeb = [
             "../../images/imgWeb/restauranteJS.png",
             "../../images/imgWeb/restauranteWEB.png"
         ]
+    },
+    {
+        data: "2026-05-08",
+        titulo: "JavaScript | HTML | CSS",
+        conteudo: ` Na aula de hoje desenvolvemos diversos exercícios práticos integrando HTML, CSS e JavaScript, reforçando conceitos de lógica de programação, manipulação do DOM, validação de dados, estruturas condicionais e laços de repetição.<br><br>
+        No primeiro exercício, criamos um programa de tabuada. O sistema captura o número digitado pelo usuário através de um campo HTML, converte o valor para número utilizando Number() e valida se o valor informado é válido. Caso o usuário deixe o campo vazio, digite zero ou um valor não numérico, o sistema exibe uma mensagem de alerta utilizando alert(). Após a validação, foi utilizado um laço for para gerar automaticamente a tabuada. Também trabalhamos com concatenação de texto em uma variável string e exibimos o resultado dentro da tag pre, mantendo a formatação organizada. O botão “Mostrar Tabuada” executa a função através do evento click utilizando addEventListener().<br><br>
+        Outro exercício desenvolvido foi o programa “Contas do Mês”. O sistema lê a descrição da conta, o tipo da conta (fixa ou variável) e o valor a pagar. Após validar os dados digitados, o programa incrementa um contador de contas e acumula o valor total das despesas. Em seguida, os dados são concatenados em uma variável de resposta, formando uma lista organizada das contas cadastradas. Utilizamos o método toFixed(2) para formatar os valores monetários com duas casas decimais. O conteúdo foi exibido dinamicamente na página utilizando textContent. Também trabalhamos limpeza automática dos campos após o cadastro e posicionamento do cursor com focus().<br><br>
+        Desenvolvemos ainda um sistema de situação do aluno, onde o programa calcula a média de quatro notas e classifica o aluno como aprovado, em exame ou reprovado. Foram utilizados if/else if/else para verificar as condições da média e alterar dinamicamente tanto o texto quanto a cor da mensagem exibida na tela, utilizando style.color.<br><br>
+        Outro exercício importante foi o programa de cálculo do peso ideal. O sistema recebe o nome, altura e sexo da pessoa através de campos de formulário e radio buttons. O cálculo foi realizado utilizando Math.pow() para elevar a altura ao quadrado, aplicando fórmulas diferentes conforme o sexo selecionado. Também implementamos validação dos campos e uma função para limpar todos os dados do formulário automaticamente.<br><br>
+        Além disso, criamos um sistema de caixa eletrônico, onde o usuário informa um valor de saque e o programa calcula automaticamente a quantidade de notas necessárias utilizando Math.floor() e o operador módulo (%). O sistema validava se o valor informado era compatível com as notas disponíveis (10, 20, 50, 100 e 200 reais) e exibia mensagens de erro quando necessário.<br><br>
+        A aula reforçou diversos conceitos importantes:<br>
+        - Manipulação do DOM com getElementById()<br>
+        - Eventos com addEventListener()<br>
+        - Entrada, processamento e saída de dados<br>
+        - Estruturas condicionais if/else<br>
+        - Laços de repetição for<br>
+        - Concatenação de strings<br>
+        - Validação de formulários<br>
+        - Conversão de dados com Number()<br>
+        - Operadores matemáticos e módulo (%)<br>
+        - Uso de Math.floor() e Math.pow()<br>
+        - Manipulação dinâmica de conteúdo HTML<br>
+        - Organização de código em funções reutilizáveis<br><br>
+        Foi uma aula bastante prática, focada em desenvolver aplicações interativas utilizando JavaScript integrado ao HTML.<br><br>
+        `,
+        imagens: [
+            "../../images/imgWeb/caixaEletronicoHTML.png",
+            "../../images/imgWeb/caixaEletronicoJS.png",
+            "../../images/imgWeb/calculoMediaHTML.png",
+            "../../images/imgWeb/calculoMediaJS.png",
+            "../../images/imgWeb/calculoPesoHTML.png",
+            "../../images/imgWeb/calculoPesoJS.png",
+            "../../images/imgWeb/contaMesHTML.png",
+            "../../images/imgWeb/ContaMesJS.png"
+        ]
     }
 ];
