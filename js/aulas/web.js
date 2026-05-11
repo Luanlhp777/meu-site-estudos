@@ -102,7 +102,7 @@ const aulasWeb = [
             "../../images/imgWeb/calculoPesoHTML.png",
             "../../images/imgWeb/calculoPesoJS.png",
             "../../images/imgWeb/contaMesHTML.png",
-            "../../images/imgWeb/ContaMesJS.png"
+            "../../images/imgWeb/contaMesJS.png"
         ]
     }
 ];
