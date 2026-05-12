@@ -134,4 +134,30 @@ const aulasBd = [
             "../../images/imgBd/0405img1.png"
         ]
     },
+    {
+        data: "2026-05-11",
+        titulo: "Inicio Projeto QUIZ",
+        conteudo: ` Na aula de hoje iniciamos o desenvolvimento do projeto QUIZ do curso de Desenvolvimento de Sistemas, com foco principal na análise e planejamento da estrutura do banco de dados antes da implementação do sistema.<br/><br/>
+        A professora apresentou os requisitos iniciais do projeto, explicando que o sistema deverá armazenar informações dos alunos, respostas, pontuação, desempenho e ranking, além de organizar as questões por disciplina e conteúdos do curso. Também foi reforçada a importância de planejar corretamente a modelagem relacional para evitar problemas futuros de integridade, redundância e escalabilidade do sistema.<br/><br/>
+        Durante a atividade, começamos identificando as entidades principais do projeto, como:<br/>
+        - Aluno<br/>
+        - Disciplina<br/>
+        - Questão<br/>
+        - Alternativa<br/>
+        - Tentativa<br/>
+        - Resposta do Aluno<br/>
+        - Ranking<br/><br/>
+        Foi discutido que essas entidades precisam existir separadamente porque possuem informações próprias e funções específicas dentro do sistema. Também iniciamos o estudo dos relacionamentos entre elas, analisando cardinalidades como:<br/>
+        - Um aluno pode realizar várias tentativas (1:N)<br/>
+        - Uma questão pode possuir várias alternativas (1:N)<br/>
+        - Uma tentativa pode possuir várias respostas do aluno (1:N)<br/><br/>
+        Além disso, discutimos como armazenar o desempenho dos alunos, organizar questões por disciplina e estruturar o ranking do sistema. Foram levantadas reflexões importantes sobre:<br/>
+        - Controle de tentativas para evitar manipulação do ranking<br/>
+        - Ranking geral ou por turma<br/>
+        - Controle de tempo de resposta<br/>
+        - Níveis de dificuldade das questões<br/>
+        - Possibilidade de cadastro de professores<br/><br/>
+        A aula teve foco em modelagem de banco de dados, análise de requisitos e estruturação lógica do sistema, reforçando a importância de pensar primeiro na arquitetura e organização das informações antes de iniciar o desenvolvimento da aplicação.
+        `,
+    },
 ];
