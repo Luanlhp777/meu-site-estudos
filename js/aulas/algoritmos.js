@@ -300,35 +300,23 @@ const aulasAlgoritmos = [
         - leitura e exibição de posições específicas;<br>
         - percorrer listas completas com for;<br>
         - manipulação de dados dentro do vetor;<br>
-        - uso de condições em conjunto com arrays.<br>
-        <br>
+        - uso de condições em conjunto com arrays.<br><br>        
         A aula também reforçou a importância da organização do código, reutilização de lógica e entendimento da estrutura de dados, mostrando que os vetores são fundamentais para desenvolvimento de sistemas, manipulação de listas e construção de programas mais avançados.
-        Por fim, o projeto foi versionado e enviado ao GitHub, reforçando o uso do Git como ferramenta de controle de versão e armazenamento de projetos.
-        <br><br>
+        Por fim, o projeto foi versionado e enviado ao GitHub, reforçando o uso do Git como ferramenta de controle de versão e armazenamento de projetos.<br><br>
         <a href="https://github.com/Luanlhp777/vetores" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
     {
-        data: "2026-05-06",
-        titulo: "Exercícios de Vetores",
-        conteudo: ` Na aula de hoje aprofundamos o estudo sobre vetores (arrays) em JavaScript, realizando exercícios práticos focados em manipulação, acesso e processamento de dados armazenados em listas. O objetivo foi compreender como os vetores organizam múltiplos valores dentro de uma única variável e facilitam o desenvolvimento de programas mais dinâmicos.<br><br>
-        Iniciamos criando vetores contendo nomes de pessoas, aprendendo a exibir o array completo no console e acessar posições específicas, como o primeiro e o último elemento. Também revisamos o conceito de índice, lembrando que os vetores começam na posição 0.<br><br>
-        Durante os exercícios, trabalhamos com acesso a elementos específicos de um vetor numérico, realizando operações matemáticas, como soma entre o primeiro e o último valor armazenado. Em seguida, utilizamos o laço de repetição for para percorrer automaticamente os elementos do vetor, exibindo todos os valores e aplicando condições para mostrar apenas números maiores que 10.<br><br>
-        Outro exercício importante foi o cálculo da soma total dos elementos do vetor, utilizando uma variável acumuladora para armazenar o resultado durante o percurso do array. Também desenvolvemos um algoritmo para identificar o maior valor presente no vetor sem utilizar o método Math.max( ), reforçando a lógica de comparação e análise de dados.<br><br>
-        Além disso, aprendemos a manipular vetores com os métodos push( ) e pop( ). O método push( ) foi utilizado para adicionar novos elementos ao final do array, enquanto o pop( ) removeu o último item inserido, mostrando como é possível alterar dinamicamente o conteúdo do vetor.<br><br>
-
-        A aula reforçou conceitos fundamentais como:<br>
-        - criação e manipulação de arrays;<br>
-        - acesso por índice;<br>
-        - uso do for com vetores;<br>
-        - lógica de comparação;<br>
-        - variáveis acumuladoras;<br>
-        - métodos push( ) e pop( );<br>
-        - processamento de dados em listas.<br><br>
-
-        Também foi trabalhada a organização do código e a aplicação prática da lógica de programação utilizando estruturas de dados muito utilizadas no desenvolvimento de sistemas.
-        <br><br>
-        <a href="https://github.com/Luanlhp777/exerciciosVetores" target="_blank" class="btn-github">Ver código no GitHub</a>
+        data: "2026-05-12",
+        titulo: "Mini Projeto com Vetor",
+        conteudo: ` Na aula de hoje desenvolvemos um mini projeto utilizando vetores (arrays) em JavaScript, com foco em praticar lógica de programação, organização de código e manipulação de listas de dados.<br><br>
+        O projeto trabalhou conceitos fundamentais de arrays, mostrando como armazenar vários valores dentro de uma única variável e como percorrer esses valores utilizando estruturas de repetição. Também foi reforçado o uso do for e do forEach, permitindo acessar cada elemento do vetor de forma organizada.<br><br>
+        Durante a prática, exploramos a entrada e saída de dados, operações matemáticas e lógica aplicada ao processamento de informações. O objetivo principal foi fortalecer o raciocínio lógico e consolidar a base de programação por meio de exercícios práticos.<br><br>
+        Também começamos a relacionar vetores com objetos em JavaScript, entendendo que um objeto pode armazenar informações mais completas, usando propriedades e valores. Essa combinação é importante para representar dados mais próximos de situações reais dentro de um sistema.<br><br>
+        Além da parte de programação, o projeto foi organizado em arquivos como app.js, forEach.js e objeto.js, mantendo o código mais separado e fácil de entender. O repositório também foi versionado no GitHub, reforçando a prática de controle de versão e publicação dos estudos.<br><br>
+        A aula reforçou conceitos importantes como:<br>
+        vetores em JavaScript, estruturas de repetição, forEach, objetos, entrada e saída de dados, operações matemáticas, lógica de programação e organização de código.<br><br>
+        <a href="https://github.com/Luanlhp777/miniProjetoVetor" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
 ];
