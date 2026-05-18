@@ -319,4 +319,15 @@ const aulasAlgoritmos = [
         <a href="https://github.com/Luanlhp777/miniProjetoVetor" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
+    {
+        data: "2026-05-13",
+        titulo: "Mini Projeto com Vetor | Objetos",
+        conteudo: ` Na aula de hoje finalizamos parte do conteúdo da aula anterior e iniciamos uma introdução ao estudo de objetos e métodos de array em JavaScript.<br><br>
+        Durante a prática, trabalhamos com um vetor chamado numeros, armazenando valores dentro de uma única variável. Em seguida, utilizamos o método forEach(), que percorre cada item do vetor e executa uma função para cada elemento. Nesse exemplo, foi criada uma função para multiplicar cada número por 2 e exibir o resultado no console.<br><br>
+        Também utilizamos o método map(), que percorre o vetor e cria um novo array com os valores transformados. Diferente do forEach(), que apenas executa uma ação, o map() retorna um novo vetor com os resultados.<br><br>
+        A aula reforçou conceitos importantes como vetores, funções, passagem de função como argumento, uso de arrow function, reutilização de código e manipulação de dados em listas.<br><br>
+        Além disso, tivemos uma pequena introdução à ideia de objetos, preparando a base para entender estruturas mais completas em JavaScript, onde será possível armazenar dados com propriedades e valores, como nome, idade, curso e outras informações relacionadas.<br><br>
+        <a href="https://github.com/Luanlhp777/objetos" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
 ];
