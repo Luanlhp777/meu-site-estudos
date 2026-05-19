@@ -136,17 +136,17 @@ const aulasBd = [
     },
     {
         data: "2026-05-11",
-        titulo: "Inicio Projeto QUIZ",
+        titulo: "Projeto QUIZ | Levantamento de requisitos",
         conteudo: ` Na aula de hoje iniciamos o desenvolvimento do projeto QUIZ do curso de Desenvolvimento de Sistemas, com foco principal na análise e planejamento da estrutura do banco de dados antes da implementação do sistema.<br/><br/>
         A professora apresentou os requisitos iniciais do projeto, explicando que o sistema deverá armazenar informações dos alunos, respostas, pontuação, desempenho e ranking, além de organizar as questões por disciplina e conteúdos do curso. Também foi reforçada a importância de planejar corretamente a modelagem relacional para evitar problemas futuros de integridade, redundância e escalabilidade do sistema.<br/><br/>
         Durante a atividade, começamos identificando as entidades principais do projeto, como:<br/>
-        - Aluno<br/>
-        - Disciplina<br/>
-        - Questão<br/>
-        - Alternativa<br/>
-        - Tentativa<br/>
-        - Resposta do Aluno<br/>
-        - Ranking<br/><br/>
+        - curso<br/>
+        - usuario<br/>
+        - disciplina<br/>
+        - questao<br/>
+        - alternativa<br/>
+        - tentativa<br/>
+        - resposta<br/><br/>
         Foi discutido que essas entidades precisam existir separadamente porque possuem informações próprias e funções específicas dentro do sistema. Também iniciamos o estudo dos relacionamentos entre elas, analisando cardinalidades como:<br/>
         - Um aluno pode realizar várias tentativas (1:N)<br/>
         - Uma questão pode possuir várias alternativas (1:N)<br/>
@@ -158,6 +158,34 @@ const aulasBd = [
         - Níveis de dificuldade das questões<br/>
         - Possibilidade de cadastro de professores<br/><br/>
         A aula teve foco em modelagem de banco de dados, análise de requisitos e estruturação lógica do sistema, reforçando a importância de pensar primeiro na arquitetura e organização das informações antes de iniciar o desenvolvimento da aplicação.
+        `,
+    },
+    {
+        data: "2026-05-18",
+        titulo: "Projeto QUIZ | Criação de tabelas",
+        conteudo: ` Na aula de hoje avançamos na implementação do banco de dados do Projeto Quiz Educacional, transformando a modelagem conceitual em tabelas reais no MySQL.<br/><br/>
+
+        Criamos as tabelas principais do sistema:<br/>
+        - curso<br/>
+        - usuario<br/>
+        - disciplina<br/>
+        - questao<br/>
+        - alternativa<br/>
+        - tentativa<br/>
+        - resposta<br/><br/>
+
+        Durante a implementação trabalhamos com:<br/>
+        - PRIMARY KEY<br/>
+        - FOREIGN KEY<br/>
+        - AUTO_INCREMENT<br/>
+        - CONSTRAINT<br/>
+        - integridade referencial<br/>
+        - normalização de dados<br/><br/>
+
+        Também analisamos o MER (Modelo Entidade-Relacionamento), entendendo os relacionamentos entre usuários, tentativas, questões e respostas. Foi reforçada a importância da separação entre tentativa e resposta para melhorar controle estatístico e organização do sistema.<br/><br/>
+
+        A aula teve foco em modelagem relacional, estrutura escalável, organização do banco e boas práticas de desenvolvimento SQL.<br/><br/>
+        <a href="https://github.com/Luanlhp777/bancoQUIZ" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
 ];
