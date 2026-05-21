@@ -330,4 +330,48 @@ const aulasAlgoritmos = [
         <a href="https://github.com/Luanlhp777/objetos" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
+    {
+        data: "2026-05-19",
+        titulo: "Tratamento de Exceções",
+        conteudo: ` Na aula de hoje estudamos tratamento de exceções em JavaScript, utilizando try, catch e throw new Error para controlar erros durante a execução do programa.<br><br>
+        No primeiro exercício, foi feita uma divisão entre dois números digitados pelo usuário. O sistema valida se o segundo número é zero e, caso seja, lança uma exceção para impedir a divisão por zero.<br><br>
+        No segundo exercício, trabalhamos com validação de idade. O programa verifica se o valor digitado é numérico e se não é negativo, exibindo uma mensagem de erro quando a entrada é inválida.<br><br>
+        No terceiro exercício, criamos uma validação de cadastro com nome, e-mail e senha. Foram aplicadas regras como impedir nome vazio com trim(), validar se o e-mail contém @ e verificar se a senha possui pelo menos 6 caracteres.<br><br>
+        No quarto exercício, utilizamos o módulo fs do Node.js para ler um arquivo dados.json e converter seu conteúdo com JSON.parse(). O try/catch foi usado para tratar possíveis erros de leitura ou conversão do arquivo.<br><br>
+        No quinto exercício, simulamos uma operação de saque bancário. O programa valida se o valor é numérico, positivo e se não ultrapassa o saldo disponível. Caso tudo esteja correto, o saque é realizado e o saldo atualizado é exibido.<br><br>
+        A aula reforçou conceitos importantes como validação de dados, controle de erros, entrada de dados com prompt-sync, leitura de arquivos JSON, uso do módulo fs, estruturas try/catch, lançamento de exceções com throw new Error e construção de programas mais seguros e confiáveis.<br><br>
+        <a href="https://github.com/Luanlhp777/tratamentoExcecoes.git" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
+    {
+        data: "2026-05-20",
+        titulo: "Fork Git Hub",
+        conteudo: ` Na aula de hoje aprendemos sobre colaboração em projetos utilizando GitHub Fork e Pull Request, entendendo na prática como contribuir em repositórios de outros desenvolvedores.<br><br>
+        Inicialmente estudamos o conceito de Fork, que consiste em criar uma cópia de um repositório para nossa própria conta do GitHub, permitindo realizar alterações sem modificar diretamente o projeto original. Também vimos que o fork é muito utilizado em projetos open source e trabalhos colaborativos.<br><br>
+        Durante a prática, realizamos um fork de um repositório de uma colega e clonamos o projeto para a máquina utilizando o comando:<br><br>
+        git clone URL_DO_REPOSITORIO<br><br>
+        Após isso, acessamos a pasta do projeto pelo terminal e abrimos no VSCode para realizar modificações no sistema. Na atividade prática, alteramos elementos visuais do projeto, como a cor do título h1 através do arquivo CSS.<br><br>
+        Também reforçamos comandos importantes do Git:<br>
+        - git status<br>
+        - git add .<br>
+        - git commit -m<br>
+        - git push origin master/main<br><br>
+        Depois das alterações, enviamos as modificações para o repositório forkado utilizando push e aprendemos a abrir um Pull Request no GitHub para solicitar que as alterações fossem adicionadas ao repositório original.<br><br>
+        A aula mostrou todo o fluxo real de contribuição:<br>
+        - Fork do projeto;<br>
+        - Clone para máquina local;<br>
+        - Alterações no código;<br>
+        - Commit das mudanças;<br>
+        - Push para o fork;<br>
+        - Criação do Pull Request;<br>
+        - Aprovação e Merge pelo dono do projeto.<br><br>
+        Além disso, estudamos os três tipos principais de merge no GitHub:<br>
+        - Create Merge Commit;<br>
+        - Squash and Merge;<br>
+        - Rebase and Merge.<br><br>
+        Foi explicado como cada estratégia funciona, suas vantagens, desvantagens e impacto no histórico de commits do projeto.<br><br>
+        A aula teve foco em versionamento, colaboração em equipe, fluxo profissional de contribuição no GitHub, controle de versões e organização de projetos utilizando Git e GitHub.<br><br>
+        <a href="https://github.com/Luanlhp777/hamburguer.git" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
 ];
