@@ -104,5 +104,34 @@ const aulasWeb = [
             "../../images/imgWeb/contaMesHTML.png",
             "../../images/imgWeb/contaMesJS.png"
         ]
+    },
+    {
+        data: "2026-05-15",
+        titulo: "JavaScript | HTML | CSS",
+        conteudo: ` Na aula de hoje realizamos melhorias em dois sistemas desenvolvidos anteriormente utilizando JavaScript, HTML e vetores, adicionando novas funcionalidades e regras de negócio.<br><br>
+
+        No primeiro exercício, evoluímos o sistema de cadastro e consulta de carros. Foi adicionada a informação de ano de fabricação ao objeto carro, armazenando modelo, anoFabricacao e preço dentro do vetor global carros. O sistema continuou utilizando funções para adicionar, listar e filtrar veículos, além de validações com Number() para garantir que os dados fossem preenchidos corretamente. Também reforçamos o uso de laços de repetição, manipulação do DOM e concatenação de informações para exibição dinâmica na tela.<br><br>
+
+        No segundo exercício, aprimoramos o sistema de fila de atendimento de um consultório odontológico. Implementamos a lógica de atendimento preferencial, utilizando o método splice() para inserir pacientes prioritários em posições específicas da fila. Pacientes normais continuam sendo adicionados ao final com push(), enquanto urgências possuem prioridade máxima. Também utilizamos shift() para chamar o próximo paciente da fila. A lista de atendimento foi atualizada dinamicamente na página, incluindo marcações visuais para identificar atendimentos normais, preferenciais e de urgência.<br><br>
+
+        A aula reforçou conceitos importantes como:<br>
+        - vetores e objetos;<br>
+        - funções;<br>
+        - estruturas condicionais;<br>
+        - laços de repetição;<br>
+        - manipulação do DOM;<br>
+        - métodos push(), splice() e shift();<br>
+        - validação de dados;<br>
+        - organização lógica de filas e cadastros;<br>
+        - atualização dinâmica de informações na interface.<br><br>
+        `,
+        imagens: [
+            "../../images/imgWeb/preferencialClinica.png",
+            "../../images/imgWeb/preferencialClinicaHTML.png",
+            "../../images/imgWeb/preferencialClinicaJS.png",
+            "../../images/imgWeb/revendaAnoFabricacao.png",
+            "../../images/imgWeb/revendaAnoFabricacaoHTML.png",
+            "../../images/imgWeb/revendaAnoFabricacaoJS.png"
+        ]
     }
 ];
