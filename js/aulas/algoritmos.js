@@ -374,4 +374,32 @@ const aulasAlgoritmos = [
         <a href="https://github.com/Luanlhp777/hamburguer.git" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
+    {
+        data: "2026-05-26",
+        titulo: "Trabalho em grupo com Fork Git Hub",
+        conteudo: ` Na aula de hoje realizamos um trabalho colaborativo utilizando GitHub, branches e fork, simulando um fluxo de desenvolvimento em equipe semelhante ao utilizado em projetos reais.<br><br>
+        Inicialmente, trabalhamos no repositório principal localizado na branch main, onde estava a base original do sistema. Em seguida, criamos uma nova branch chamada sistema-urgencia para desenvolver funcionalidades separadas sem alterar diretamente a produção principal do projeto.<br><br>
+        Durante a atividade, aprendemos a importância das branches dentro do Git, permitindo que diferentes funcionalidades sejam desenvolvidas paralelamente com mais segurança e organização. Também reforçamos conceitos de versionamento e colaboração em equipe.<br><br>
+        Na branch sistema-urgencia foram realizadas alterações relacionadas ao módulo de urgência do sistema, adicionando novas funcionalidades, ajustes na interface e melhorias na lógica do projeto. Todo o desenvolvimento foi separado da branch principal para evitar conflitos e manter o código organizado.<br><br>
+        Durante a prática utilizamos diversos comandos do Git e GitHub, como:<br>
+        - git checkout -b<br>
+        - git status<br>
+        - git add .<br>
+        - git commit -m<br>
+        - git push<br>
+        - git pull<br><br>
+        Também trabalhamos com Pull Request, entendendo como enviar alterações de uma branch para outra e como funciona o processo de comparação, revisão e merge dentro do GitHub.<br><br>
+        Além disso, reforçamos conceitos importantes como:<br>
+        - branch;<br>
+        - merge;<br>
+        - versionamento;<br>
+        - repositório local e remoto;<br>
+        - fluxo colaborativo;<br>
+        - organização de funcionalidades;<br>
+        - controle de alterações;<br>
+        - integração de código.<br><br>
+        A aula teve foco em desenvolvimento colaborativo, organização de projetos com Git/GitHub e boas práticas utilizadas em ambientes profissionais de desenvolvimento de software.<br><br>
+        <a href="https://github.com/Luanlhp777/trabalhoFork0306/tree/sistema-urgencia" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
 ];

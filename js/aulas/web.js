@@ -133,5 +133,23 @@ const aulasWeb = [
             "../../images/imgWeb/revendaAnoFabricacaoHTML.png",
             "../../images/imgWeb/revendaAnoFabricacaoJS.png"
         ]
+    },
+    {
+        data: "2026-05-22",
+        titulo: "JavaScript | HTML | CSS",
+        conteudo: ` Na aula de hoje desenvolvemos exercícios práticos com HTML e JavaScript, trabalhando validação de senha, manipulação do DOM, eventos de clique e cálculos financeiros.<br><br>
+        No primeiro exercício, criamos o Programa Valida Senha. A página possui um campo para digitar a senha e um botão para verificar sua validade. No JavaScript, utilizamos uma função para capturar o valor digitado e aplicar várias regras de validação, como tamanho entre 8 e 16 caracteres, mínimo de 2 números, mínimo de 2 letras minúsculas, mínimo de 1 letra maiúscula, mínimo de 1 símbolo e presença das letras do nome na senha.<br><br>
+        Para realizar essas verificações, utilizamos métodos como length, match(), includes() e toLowerCase(). Os erros foram armazenados em um vetor e exibidos de forma agrupada na página. Caso a senha atendesse todos os critérios, o sistema mostrava a mensagem “Ok! Senha Válida” em verde; caso contrário, exibia os erros em vermelho.<br><br>
+        No segundo exercício, desenvolvemos o Programa Caixa da Loja. O sistema recebe a data de vencimento e o valor da conta, calculando multa e juros em caso de atraso. Também acrescentamos duas novas funcionalidades: pagamento à vista com desconto de 2% e pagamento parcelado em 3 vezes com acréscimo de 12%.<br><br>
+        Durante a implementação, utilizamos constantes para armazenar as taxas de multa, juros, desconto e acréscimo. Também trabalhamos com Date(), split(), setDate(), setMonth() e setFullYear() para calcular o atraso com base na data de vencimento. Os valores foram formatados com toFixed(2) e exibidos nos campos da página.<br><br>
+        A aula reforçou conceitos importantes como validação de dados, uso de funções, vetores, operadores matemáticos, manipulação de datas, eventos com addEventListener(), atualização de campos HTML com value e boas práticas para organizar regras de negócio dentro do JavaScript.<br><br>
+        `,
+        imagens: [
+            "../../images/imgWeb/programaSenhaHTML.png",
+            "../../images/imgWeb/programaSenhaJS.png",
+            "../../images/imgWeb/programaCaixaHTML.png",
+            "../../images/imgWeb/programaCaixaJS1.png",
+            "../../images/imgWeb/programaCaixaJS2.png"
+        ]
     }
 ];

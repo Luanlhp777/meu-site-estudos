@@ -188,4 +188,29 @@ const aulasBd = [
         <a href="https://github.com/Luanlhp777/bancoQUIZ" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
+    {
+        data: "2026-05-25",
+        titulo: "Projeto QUIZ | Tabela Resposta e Integridade Referencial",
+        conteudo: ` Na aula de hoje demos continuidade ao desenvolvimento do Projeto Quiz Educacional, com foco na criação da tabela resposta, integridade referencial, inserção de dados de teste e desenvolvimento de consultas SQL.<br/><br/>
+
+        Inicialmente, criamos a tabela resposta, responsável por armazenar as respostas dos alunos durante as tentativas do quiz. A tabela foi estruturada utilizando PRIMARY KEY AUTO_INCREMENT e três FOREIGN KEY, relacionando as tabelas tentativa, questao e alternativa. Também utilizamos um campo BOOLEAN para identificar se a resposta está correta ou incorreta.<br/><br/>
+
+        Durante a implementação, foi reforçada a importância da integridade referencial no banco de dados, garantindo que não existam respostas sem tentativas, questões ou alternativas válidas.<br/><br/>
+
+        Em seguida, realizamos vários INSERT INTO para popular o banco de dados com informações de teste, cadastrando cursos, disciplinas, questões e alternativas, respeitando toda a hierarquia dos relacionamentos criados anteriormente.<br/><br/>
+
+        Também desenvolvemos consultas SQL utilizando INNER JOIN para relacionar tabelas e exibir informações organizadas. Uma das consultas gerava o ranking dos alunos através da maior pontuação obtida, utilizando GROUP BY, MAX() e ORDER BY. Outra consulta listava questões juntamente com suas respectivas disciplinas.<br/><br/>
+
+        A aula também abordou conceitos importantes como:<br/>
+        - normalização;<br/>
+        - organização de entidades;<br/>
+        - integridade referencial;<br/>
+        - redução de redundância;<br/>
+        - escalabilidade do banco;<br/>
+        - boas práticas em SQL.<br/><br/>
+
+        Por fim, discutimos futuras melhorias do projeto, como autenticação JWT, API REST, dashboard administrativo, gamificação, ranking em tempo real e integração com Inteligência Artificial.<br/><br/>
+        <a href="https://github.com/Luanlhp777/bancoQUIZ" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
 ];
