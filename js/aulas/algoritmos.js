@@ -402,4 +402,93 @@ const aulasAlgoritmos = [
         <a href="https://github.com/Luanlhp777/trabalhoFork0306/tree/sistema-urgencia" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
+    {
+        data: "2026-06-09",
+        titulo: "Funções de Seta em JavaScript",
+        conteudo: ` Na aula de hoje estudamos Funções de Seta (Arrow Functions) em JavaScript, compreendendo uma forma mais moderna e simplificada de declarar funções. Além da teoria, realizamos diversos exercícios práticos para comparar a sintaxe tradicional com a nova sintaxe utilizando =>.<br><br>
+        Inicialmente revisamos o conceito de função, entendendo que uma função é um bloco de código reutilizável responsável por executar uma tarefa específica. Em seguida, aprendemos como converter funções tradicionais para Arrow Functions, reduzindo a quantidade de código e tornando a escrita mais objetiva.<br><br>
+        Durante os exercícios, trabalhamos funções matemáticas como soma, subtração, multiplicação e divisão, praticando o uso de parâmetros e retorno de valores com return. Também observamos situações em que o return pode ser escrito de forma implícita nas Arrow Functions.<br><br>
+        Foram realizados exercícios utilizando funções para:<br>
+        - calcular operações matemáticas;<br>
+        - verificar números pares e ímpares;<br>
+        - identificar o maior valor entre dois números;<br>
+        - calcular dobro de números;<br>
+        - exibir mensagens personalizadas;<br>
+        - realizar validações simples;<br>
+        - gerar resultados através de parâmetros recebidos pelas funções.<br><br>
+        A aula também reforçou a diferença entre:<br>
+        - função tradicional (function);<br>
+        - função de seta (=>);<br>
+        - parâmetros;<br>
+        - argumentos;<br>
+        - retorno de valores;<br>
+        - escopo local e escopo global.<br><br>
+        Além disso, discutimos que Arrow Functions são muito utilizadas em métodos de arrays como map(), filter(), find() e forEach(), tornando o código mais limpo e legível.<br><br>
+        Exemplos estudados:<br><br>
+        Função tradicional:<br>
+        function somar(a, b) {<br>
+            return a + b;<br>
+        }<br><br>
+        Arrow Function:<br>
+        const somar = (a, b) => a + b;<br><br>
+        A aula teve como objetivo preparar a base para conteúdos futuros envolvendo manipulação de vetores, objetos, callbacks, programação assíncrona e desenvolvimento moderno em JavaScript.<br><br>
+        Conceitos reforçados:<br>
+        - funções;<br>
+        - Arrow Functions;<br>
+        - parâmetros e argumentos;<br>
+        - return;<br>
+        - escopo local e global;<br>
+        - reutilização de código;<br>
+        - lógica de programação;<br>
+        - sintaxe moderna do JavaScript.<br><br>
+        <a href="https://github.com/Luanlhp777/funcaoSeta" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
+    {
+        data: "2026-06-10",
+        titulo: "Introdução a Programação Orientada a Objetos | Classes",
+        conteudo: ` Na aula de hoje iniciamos o estudo de Programação Orientada a Objetos (POO) em JavaScript, aprendendo a criar e utilizar classes para representar entidades do mundo real de forma organizada e reutilizável.<br><br>
+        Inicialmente estudamos o conceito de classe, entendendo que ela funciona como um modelo ou molde para criação de objetos. Também vimos o uso do método constructor(), responsável por inicializar os atributos de cada objeto no momento da criação.<br><br>
+        Durante os exercícios, criamos classes com atributos e métodos próprios, aplicando conceitos de encapsulamento e organização do código. Foram desenvolvidos exemplos envolvendo cadastro de pessoas, produtos e outras entidades, permitindo armazenar informações em objetos ao invés de variáveis isoladas.<br><br>
+        A aula reforçou a diferença entre:<br>
+        - Classe (modelo);<br>
+        - Objeto (instância da classe);<br>
+        - Atributos (características);<br>
+        - Métodos (ações ou comportamentos).<br><br>
+        Também trabalhamos a criação de objetos utilizando a palavra-chave new, permitindo gerar múltiplas instâncias a partir de uma mesma classe.<br><br>
+        Além disso, realizamos exercícios práticos utilizando métodos para:<br>
+        - exibir informações dos objetos;<br>
+        - calcular valores;<br>
+        - alterar atributos;<br>
+        - validar informações;<br>
+        - executar operações específicas relacionadas a cada classe.<br><br>
+        Foi reforçada a importância da Programação Orientada a Objetos para organizar projetos maiores, facilitando manutenção, reutilização de código e escalabilidade das aplicações.<br><br>
+        Exemplo conceitual estudado:<br><br>
+        class Pessoa {<br>
+            constructor(nome, idade) {<br>
+                this.nome = nome;<br>
+                this.idade = idade;<br>
+            }<br><br>
+
+            apresentar() {<br>
+                return Meu nome é '$ { this.nome }';<br>
+            }
+        }<br><br>
+
+        const pessoa1 = new Pessoa("Luan", 34);<br><br>
+
+        A aula serviu como introdução aos conceitos fundamentais de POO e preparou a base para conteúdos futuros como herança, polimorfismo, encapsulamento, composição e desenvolvimento de sistemas mais complexos.<br><br>
+        Conceitos reforçados:<br>
+        - Programação Orientada a Objetos;<br>
+        - classes;<br>
+        - objetos;<br>
+        - constructor();<br>
+        - atributos;<br>
+        - métodos;<br>
+        - instanciamento com new;<br>
+        - reutilização de código;<br>
+        - organização de projetos.<br><br>
+        <a href="https://github.com/Luanlhp777/classe" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
 ];
