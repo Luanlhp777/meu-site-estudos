@@ -213,4 +213,38 @@ const aulasBd = [
         <a href="https://github.com/Luanlhp777/bancoQUIZ" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
+    {
+        data: "2026-06-01",
+        titulo: "Procedure | Trigger | View | Índice",
+        conteudo: ` Na aula de hoje demos continuidade ao desenvolvimento do projeto Quiz Educacional, estudando recursos avançados do MySQL voltados para automação, desempenho e organização das regras de negócio do banco de dados. O conteúdo abordado corresponde às páginas 25 a 39 da apresentação do projeto.<br/><br/>
+
+        Inicialmente foi realizada uma introdução aos conceitos de Procedure, Trigger, View e Índice, entendendo como cada recurso pode contribuir para a construção de um banco de dados mais eficiente e inteligente.<br/><br/>
+
+        Foi apresentado o conceito de Stored Procedure, que consiste em um conjunto de comandos SQL armazenados dentro do próprio banco de dados para executar tarefas repetitivas de forma centralizada. Utilizando o contexto do Quiz Educacional, discutimos como uma Procedure pode automatizar processos como validação de respostas, atualização de pontuações e geração de rankings, reduzindo a quantidade de código necessária na aplicação.<br/><br/>
+
+        Também estudamos o funcionamento das Triggers, mecanismos executados automaticamente pelo banco de dados em resposta a eventos como INSERT, UPDATE e DELETE. Foi demonstrado como uma Trigger pode ser utilizada para atualizar pontuações, registrar estatísticas ou validar informações sem necessidade de intervenção da aplicação principal.<br/><br/>
+
+        Outro tema abordado foi o uso de Views, estruturas que funcionam como tabelas virtuais criadas a partir de consultas SQL. As Views permitem simplificar consultas complexas, facilitar relatórios e fornecer informações consolidadas para usuários e administradores sem alterar os dados originais armazenados nas tabelas.<br/><br/>
+
+        Na sequência estudamos os Índices (Indexes), recursos utilizados para otimizar a velocidade das consultas ao banco de dados. Foi discutida a importância dos índices em tabelas que possuem grande volume de registros, melhorando significativamente o desempenho de pesquisas, filtros e ordenações.<br/><br/>
+
+        Durante a aula também foi apresentada a integração completa da aplicação, demonstrando como os componentes do sistema se conectam:<br/><br/>
+
+        Aluno → Interface HTML → Node.js → MySQL<br/><br/>
+
+        Foi analisado o fluxo das informações desde a interação do usuário até o processamento das regras de negócio e armazenamento dos dados no banco. Esse modelo evidencia a separação de responsabilidades entre Front-end, Back-end e Banco de Dados.<br/><br/>
+
+        Conceitos reforçados:<br/>
+        - Stored Procedures;<br/>
+        - Triggers;<br/>
+        - Views;<br/>
+        - Índices (Indexes);<br/>
+        - Automação de processos no banco;<br/>
+        - Integridade e regras de negócio;<br/>
+        - Otimização de consultas;<br/>
+        - Arquitetura HTML → Node.js → MySQL;<br/>
+        - Integração entre aplicação e banco de dados;<br/>
+        - Boas práticas de desenvolvimento de sistemas.<br/>
+        `,
+    },
 ];
