@@ -491,4 +491,30 @@ const aulasAlgoritmos = [
         <a href="https://github.com/Luanlhp777/classe" target="_blank" class="btn-github">Ver código no GitHub</a>
         `,
     },
+    {
+        data: "2026-06-17",
+        titulo: "Classes e Objetos",
+        conteudo: ` Na aula de hoje desenvolvemos um Sistema de Loja utilizando JavaScript com Programação Orientada a Objetos (POO). O projeto teve como objetivo simular o funcionamento básico de uma loja, aplicando conceitos de classes, objetos, encapsulamento, modularização e relacionamento entre entidades do sistema.<br><br>
+        Inicialmente foram criadas classes separadas para representar os principais elementos do sistema: Cliente, Produto e Loja. Cada classe ficou responsável por armazenar e gerenciar seus próprios dados, promovendo maior organização e reutilização do código.<br><br>
+        Na classe Cliente foram implementados atributos como nome, idade e e-mail, permitindo o cadastro de clientes e a exibição de suas informações. Esse exercício reforçou o conceito de criação de objetos a partir de uma classe e utilização de construtores para inicialização dos dados.<br><br>
+        Na classe Produto foram definidos atributos como nome, preço e categoria, representando os itens disponíveis para venda na loja. Os produtos passaram a ser tratados como objetos independentes, facilitando seu armazenamento e manipulação dentro do sistema.<br><br>
+        A classe Loja atuou como a estrutura principal da aplicação, sendo responsável por armazenar os produtos cadastrados e gerenciar as operações da loja. Foram utilizados vetores para guardar os produtos e métodos específicos para adicionar, listar e consultar informações.<br><br>
+        Também foi implementada a interação entre clientes e produtos por meio de um método de compra, simulando o processo de aquisição de itens da loja. Durante a execução do programa, os clientes realizaram compras e o sistema exibiu mensagens informando quais produtos foram adquiridos.<br><br>
+        Ao final do projeto foi realizada a listagem dos produtos cadastrados na loja, percorrendo os vetores utilizando estruturas de repetição. Esse processo reforçou conceitos de manipulação de arrays, iteração de dados e exibição de informações organizadas no console.<br><br>
+        Conceitos trabalhados na aula:<br>
+        - Programação Orientada a Objetos (POO);<br>
+        - Classes e Objetos;<br>
+        - Construtores;<br>
+        - Encapsulamento;<br>
+        - Modularização com arquivos separados;<br>
+        - Instanciação de objetos;<br>
+        - Vetores (Arrays);<br>
+        - Métodos personalizados;<br>
+        - Relacionamento entre classes;<br>
+        - Simulação de compras;<br>
+        - Organização de projetos em Node.js;<br>
+        - Boas práticas de estruturação de código.<br><br>
+        <a href="https://github.com/Luanlhp777/sistemaDeLoja" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `,
+    },
 ];
