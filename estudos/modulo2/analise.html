@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise e Projeto de Sistemas</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+
+<body data-root="../../">
+
+    <header class="hero hero-secundario">
+        <div class="hero-inner">
+            <span class="hero-kicker">Disciplina</span>
+            <h1>Análise e Projeto de Sistemas</h1>
+            <p class="hero-lead">Estudo dos processos de engenharia de software, análise de requisitos,
+                arquitetura, documentação e boas práticas para o desenvolvimento de
+                sistemas modernos.</p>
+            <div class="hero-meta">
+                <span class="hero-pill">Engenharia de Software</span>
+                <span class="hero-pill">UML</span>
+                <span class="hero-pill">SOLID</span>
+                <span class="hero-pill">DDD</span>
+                <span class="hero-pill">TDD</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="area-voltar">
+        <a href="modulo2.html" class="btn-voltar">← Voltar</a>
+    </div>
+
+    <main class="conteudo-interno">
+
+        <section id="lista-aulas"></section>
+
+    </main>
+
+    <!-- Modal para exibir a imagem em tamanho grande -->
+    <div id="imagemModal" class="modal" onclick="fecharModal()">
+        <span class="fechar" onclick="fecharModal()">×</span>
+        <img id="imagemGrande" class="imagem-grande" src="" alt="Imagem Grande">
+    </div>
+
+    <script src="../../js/aulas/analise.js"></script>
+    <script src="../../js/render-aulas.js"></script>
+    <script>
+        renderizarAulas(aulasAnalise, "lista-aulas");
+
+        // Função para abrir o modal
+        function abrirModal(imagemSrc) {
+            const modal = document.getElementById("imagemModal");
+            const imagem = document.getElementById("imagemGrande");
+            imagem.src = imagemSrc;
+            modal.style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function fecharModal() {
+            const modal = document.getElementById("imagemModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+    <script src="../../js/layout.js"></script>
+
+</body>
+
+</html>
