@@ -64,4 +64,134 @@ const aulasWeb2 = [
         - estilo inline em React.<br><br>
         <a href="https://github.com/Luanlhp777/react" target="_blank" class="btn-github">Ver código no GitHub</a> `
     },
+    {
+        data: "2026-08-05",
+        titulo: "React | Renderização Condicional | Criação de Componentes",
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de React, trabalhando principalmente com renderização condicional, criação de componentes e organização da aplicação em arquivos separados.<br><br>
+
+        Inicialmente, criamos o componente CondicionalSimples. Nesse exemplo, foi definida uma variável idade com valor 20 e uma variável mensagem inicialmente vazia. Utilizamos uma estrutura if para verificar se a idade era maior ou igual a 18. Quando a condição era verdadeira, a mensagem “Você é maior de idade” era atribuída à variável e exibida na interface através do JSX.<br><br>
+
+        Esse exercício mostrou como podemos utilizar lógica JavaScript antes do return de um componente React e depois exibir o resultado dentro do JSX utilizando chaves.<br><br>
+
+        Também desenvolvemos o componente CondicionalComposta, utilizando uma estrutura if/else. Nesse exemplo, uma variável nota recebeu o valor 6 e o programa verificou se ela era maior ou igual a 7. Caso fosse verdadeira, a situação seria “Aprovado”; caso contrário, seria “Reprovado”. O resultado foi então exibido dinamicamente na página. <br><br>
+
+        Com isso, reforçamos a diferença entre:<br><br>
+
+        - Condicional simples: utiliza apenas if para executar uma ação quando a condição é verdadeira;<br>
+        - Condicional composta: utiliza if e else, permitindo executar comportamentos diferentes dependendo do resultado da condição.<br><br>
+
+        Também criamos um componente chamado Separador, responsável por retornar uma tag hr estilizada. Esse componente foi utilizado para separar visualmente os exercícios na tela, mostrando que até pequenos elementos da interface podem ser transformados em componentes reutilizáveis. <br><br>
+
+        No arquivo App.jsx, importamos os componentes CondicionalSimples, CondicionalComposta e Separador. Depois, utilizamos esses componentes dentro do return do App, organizando a interface principal da aplicação. <br><br>
+
+        A estrutura utilizada ficou baseada na composição de componentes:<br><br>
+
+        App<br>
+        → CondicionalSimples<br>
+        → Separador<br>
+        → CondicionalComposta<br>
+        → Separador<br><br>
+
+        Essa organização reforça uma característica importante do React: construir interfaces a partir de componentes independentes e reutilizáveis.<br><br>
+
+        Também utilizamos estilização inline através da propriedade style, passando objetos JavaScript para definir propriedades como padding, border e margin.<br><br>
+
+        O repositório possui ainda arquivos preparados para estudos posteriores, como CondicionalComEstado.jsx, CondicionalComInput.jsx e CondicionalTernaria.jsx, porém atualmente esses arquivos estão vazios. Portanto, o conteúdo efetivamente implementado nesta aula está concentrado nas condicionais simples e composta e na organização dos componentes. <br><br>
+
+        Conceitos trabalhados:<br><br>
+        - React;<br>
+        - componentes funcionais;<br>
+        - JSX;<br>
+        - import e export default;<br>
+        - renderização condicional;<br>
+        - estrutura if;<br>
+        - estrutura if/else;<br>
+        - variáveis dentro de componentes;<br>
+        - interpolação com chaves no JSX;<br>
+        - composição de componentes;<br>
+        - reutilização de componentes;<br>
+        - estilização inline;<br>
+        - organização da aplicação em arquivos separados.<br><br>
+
+        <a href="https://github.com/Luanlhp777/react02" target="_blank" class="btn-github">Ver código no GitHub</a> `
+    },
+    {
+        data: "2026-08-06",
+        titulo: "React | Operador Ternario | Hook uneState",
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de React, aprofundando o uso de renderização condicional e iniciando o trabalho com estado utilizando o hook useState.<br><br>
+
+        Inicialmente, reforçamos a organização dos componentes React. Foi destacado que os nomes dos componentes devem começar com letra maiúscula e que cada componente pode ser criado em seu próprio arquivo utilizando export default function. Depois, o componente é importado e utilizado dentro do App.jsx. <br><br>
+
+        No primeiro exercício, criamos o componente CondicionalTernaria. Nele foi definida a constante logado com valor false e utilizamos o operador ternário diretamente dentro do JSX.<br><br>
+
+        A estrutura utilizada foi baseada na seguinte lógica:<br><br>
+
+        condição ? valor_se_verdadeiro : valor_se_falso<br><br>
+
+        No exemplo, caso logado fosse verdadeiro, seria exibida a mensagem “Bem-vindo de volta”. Caso fosse falso, seria exibida a mensagem “Você precisa fazer login.”. Esse exercício mostrou uma forma compacta de realizar renderização condicional diretamente dentro do JSX. <br><br>
+
+        Na sequência, desenvolvemos o componente CondicionalComInput, no qual começamos a trabalhar com o hook useState. Primeiro, importamos useState do React e criamos dois estados:<br><br>
+
+        - idade: responsável por armazenar o valor digitado pelo usuário;<br>
+        - mensagem: responsável por armazenar o resultado da verificação.<br><br>
+
+        A estrutura utilizada foi:<br><br>
+
+        const [idade, setIdade] = useState("")<br>
+        const [mensagem, setMensagem] = useState("")<br><br>
+
+        Nesse padrão, idade e mensagem representam os valores atuais dos estados, enquanto setIdade e setMensagem são funções utilizadas para atualizar esses valores. <br><br>
+
+        Também criamos um campo input do tipo number. O valor do campo foi ligado ao estado idade através da propriedade value. Já o evento onChange foi utilizado para capturar cada alteração realizada pelo usuário.<br><br>
+
+        Dentro do onChange utilizamos:<br><br>
+
+        e.target.value<br><br>
+
+        Esse comando permite acessar o valor atual digitado no campo. Em seguida, setIdade() atualiza o estado da aplicação.<br><br>
+
+        Também criamos um botão com o evento onClick. Quando o usuário clica em “Verificar”, a função verificar() é executada.<br><br>
+
+        Dentro dessa função utilizamos uma estrutura condicional com if, else if e else.<br><br>
+
+        A lógica implementada foi:<br><br>
+
+        - se o campo estiver vazio, mostrar “Digite uma idade válida.”;<br>
+        - se a idade for maior ou igual a 18, mostrar “Você é maior de idade.”;<br>
+        - caso contrário, mostrar “Você é menor de idade.”.<br><br>
+
+        A mensagem é atualizada utilizando setMensagem() e exibida automaticamente na interface através do JSX. <br><br>
+
+        Esse exercício mostrou uma característica muito importante do React: quando um estado é alterado utilizando sua função set, o componente é renderizado novamente e a interface é atualizada automaticamente.<br><br>
+
+        No arquivo App.jsx, importamos os componentes CondicionalTernaria e CondicionalComInput e os utilizamos dentro do componente principal, mantendo a aplicação organizada em componentes separados. <br><br>
+
+        A aula reforçou a evolução da renderização condicional em React, passando de condições simples para interfaces capazes de responder às ações do usuário através de eventos e estados.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - React;<br>
+        - componentes funcionais;<br>
+        - organização de componentes;<br>
+        - export default;<br>
+        - import;<br>
+        - JSX;<br>
+        - renderização condicional;<br>
+        - operador ternário;<br>
+        - useState;<br>
+        - estado da aplicação;<br>
+        - atualização de estado;<br>
+        - setIdade();<br>
+        - setMensagem();<br>
+        - input controlado;<br>
+        - value;<br>
+        - onChange;<br>
+        - e.target.value;<br>
+        - eventos;<br>
+        - onClick;<br>
+        - funções em componentes;<br>
+        - if, else if e else;<br>
+        - atualização dinâmica da interface.<br><br>
+
+        <a href="https://github.com/Luanlhp777/react03" target="_blank" class="btn-github">Ver código no GitHub</a> `
+    },
 ]
