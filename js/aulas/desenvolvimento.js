@@ -131,5 +131,75 @@ const aulasDesenvolvimento = [
         <br><br>
     
         <a href="https://github.com/Luanlhp777/backEndNodeExpress" target="_blank" class="btn-github">Ver código no GitHub</a>`
+    }, {
+        data: "2026-08-07",
+        titulo: "Códigos de Status HTTP com Node.js e Express",
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de Back-end com Node.js e Express, trabalhando principalmente com códigos de status HTTP e a forma como o servidor deve responder a diferentes situações durante uma requisição.<br><br>
+
+        O projeto utiliza Express para criar o servidor, define a porta 3000 e configura o middleware express.json(), permitindo que dados enviados no corpo das requisições sejam interpretados em formato JSON. <br><br>
+
+        Inicialmente, trabalhamos com o código HTTP 200, que representa uma requisição realizada com sucesso. Na rota GET /usuarios, o servidor retorna status 200 juntamente com uma mensagem informando que a lista de usuários foi retornada com sucesso.<br><br>
+
+        Também utilizamos o código 201 na rota POST /usuarios. Esse status indica que um novo recurso foi criado com sucesso. O usuário enviado através de req.body é armazenado em uma variável e devolvido na resposta juntamente com a mensagem de confirmação. <br><br>
+
+        Na rota POST /login, estudamos o código 400, utilizado quando existe um problema na requisição enviada pelo cliente. Os campos email e senha são obtidos através da desestruturação de req.body.<br><br>
+
+        Foi criada uma validação utilizando:<br><br>
+
+        if (!email || !senha)<br><br>
+
+        Caso algum desses dados não seja informado, o servidor interrompe a execução com return e responde com status 400 e a mensagem “E-mail e senha são obrigatórios.”. Caso os campos estejam presentes, a rota retorna status 200 indicando que o login foi realizado.<br><br>
+
+        Também iniciamos o estudo do status 401, relacionado à autenticação. Na rota GET /perfil, o servidor tenta obter um token através do header authorization:<br><br>
+
+        req.headers.authorization<br><br>
+
+        Se o token não existir, o servidor retorna status 401 com uma mensagem informando que o token não foi fornecido. Caso exista, a requisição recebe status 200 e o perfil é considerado acessado. <br><br>
+
+        Além dos códigos já implementados, o arquivo possui rotas preparadas para continuar o estudo de outros códigos HTTP:<br><br>
+
+        - 403: relacionado à falta de permissão para acessar determinado recurso;
+        - 404: utilizado quando um recurso não é encontrado;
+        - 500: representa erro interno do servidor;
+        - 422: utilizado quando a requisição possui dados que não podem ser processados conforme as regras da aplicação.<br><br>
+
+        Essas rotas ainda aparecem sem implementação completa no código, servindo como estrutura para a continuidade dos exercícios. <br><br>
+
+        A aula mostrou que uma API não deve retornar apenas dados, mas também informar corretamente o resultado de cada requisição através dos códigos de status HTTP. Isso permite que aplicações Front-end, aplicativos mobile ou outros sistemas saibam se uma operação foi concluída, rejeitada ou apresentou algum erro.<br><br>
+
+        Também reforçamos o uso de:<br><br>
+
+        res.status().json()<br><br>
+
+        Essa estrutura permite definir o código HTTP da resposta e enviar informações em formato JSON ao cliente.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Node.js;<br>
+        - Express;<br>
+        - servidor HTTP;<br>
+        - API;<br>
+        - rotas;<br>
+        - req e res;<br>
+        - req.body;<br>
+        - req.headers;<br>
+        - authorization;<br>
+        - express.json();<br>
+        - JSON;<br>
+        - res.status();<br>
+        - res.json();<br>
+        - validação de dados;<br>
+        - return em rotas;<br>
+        - códigos de status HTTP;<br>
+        - 200 OK;<br>
+        - 201 Created;<br>
+        - 400 Bad Request;<br>
+        - 401 Unauthorized;<br>
+        - 403 Forbidden;<br>
+        - 404 Not Found;<br>
+        - 422 Unprocessable Entity;<br>
+        - 500 Internal Server Error.<br><br>
+        
+    
+        <a href="https://github.com/Luanlhp777/codigoStatusHTTP" target="_blank" class="btn-github">Ver código no GitHub</a>`
     },
 ]
