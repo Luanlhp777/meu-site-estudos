@@ -131,7 +131,8 @@ const aulasDesenvolvimento = [
         <br><br>
     
         <a href="https://github.com/Luanlhp777/backEndNodeExpress" target="_blank" class="btn-github">Ver código no GitHub</a>`
-    }, {
+    },
+    {
         data: "2026-08-07",
         titulo: "Códigos de Status HTTP com Node.js e Express",
         conteudo: ` Na aula de hoje demos continuidade aos estudos de Back-end com Node.js e Express, trabalhando principalmente com códigos de status HTTP e a forma como o servidor deve responder a diferentes situações durante uma requisição.<br><br>
@@ -201,5 +202,144 @@ const aulasDesenvolvimento = [
         
     
         <a href="https://github.com/Luanlhp777/codigoStatusHTTP" target="_blank" class="btn-github">Ver código no GitHub</a>`
+    },
+    {
+        data: "2026-08-12",
+        titulo: "Catálogo de Produtos com Node.js e Express",
+        conteudo: ` Na aula de hoje avançamos no desenvolvimento Back-end com Node.js e Express, começando a organizar a aplicação em uma estrutura mais próxima de um projeto real, separando responsabilidades em arquivos e pastas diferentes.<br><br>
+
+        O projeto foi organizado dentro da pasta src, contendo:<br><br>
+        - app.js;<br>
+        - controllers;<br>
+        - data;<br>
+        - routes.<br><br>
+
+        Essa separação permite deixar o código mais organizado, facilitando manutenção, leitura e crescimento da aplicação. <br><br>
+
+        No arquivo app.js, configuramos o Express e definimos a porta 3000. Também utilizamos express.json() para permitir que o servidor receba dados em formato JSON enviados pelo front-end.<br><br>
+
+        Depois, importamos as rotas de produtos e utilizamos:<br><br>
+
+        app.use("/api/produtos", produtoRoutes);<br><br>
+
+        Com isso, todas as rotas definidas em produtoRoutes passam a utilizar como endereço inicial /api/produtos. O servidor é iniciado através de app.listen(). <br><br>
+
+        Na pasta routes, criamos o arquivo produtoRoutes.js. Nesse arquivo utilizamos express.Router() para criar um roteador separado para os produtos.<br><br>
+
+        Foram definidas duas rotas principais:<br><br>
+
+        GET /api/produtos<br>
+        → lista os produtos cadastrados.<br><br>
+
+        POST /api/produtos<br>
+        → cadastra um novo produto.<br><br>
+
+        As rotas não possuem toda a lógica diretamente dentro delas. Em vez disso, chamam funções que ficam no controller. Isso ajuda a manter cada arquivo com uma responsabilidade específica. <br><br>
+
+        Na pasta controllers, criamos o arquivo produtoController.js, responsável pela lógica das operações relacionadas aos produtos.<br><br>
+
+        A função listarProdutos() simplesmente retorna o array de produtos utilizando:<br><br>
+
+        res.json(produtos);<br><br>
+
+        Já a função cadastrarProduto() recebe os dados enviados pelo cliente através de req.body e utiliza desestruturação para obter:<br><br>
+
+        - nome;<br>
+        - descricao;<br>
+        - preco.<br><br>
+
+        Também foi implementada uma validação. Caso o nome não seja informado ou o preço esteja ausente, a API retorna status 400 com a mensagem “Nome e preço são obrigatórios.”. <br><br>
+
+        Quando os dados são válidos, um novo objeto de produto é criado.<br><br>
+
+        O id é gerado automaticamente utilizando o último produto existente no array e adicionando 1. Caso o array esteja vazio, o primeiro id será 1.<br><br>
+
+        A descrição é opcional. Caso não seja informada, é armazenada como uma String vazia.<br><br>
+
+        O preço é convertido utilizando Number(), garantindo que seja armazenado como valor numérico.<br><br>
+
+        Depois disso, utilizamos:<br><br>
+
+        produtos.push(novoProduto);<br><br>
+
+        para inserir o novo produto no array.<br><br>
+
+        Por fim, o servidor retorna o status HTTP 201 juntamente com o produto criado. <br><br>
+
+        Na pasta data, criamos o arquivo produtos.js, que funciona como uma fonte temporária de dados.<br><br>
+
+        Inicialmente, o array possui três produtos:<br><br>
+        - Notebook;<br>
+        - Mouse;<br>
+        - Teclado.<br><br>
+
+        Cada produto possui id, nome, descrição e preço.<br><br>
+
+        Esses dados ficam somente na memória da aplicação. Portanto, quando o servidor é reiniciado, novos produtos adicionados durante a execução são perdidos. Ainda não existe persistência em banco de dados nesse projeto. <br><br>
+
+        O fluxo da aplicação ficou organizado da seguinte maneira:<br><br>
+
+        Cliente<br>
+        → Requisição HTTP<br>
+        → app.js<br>
+        → produtoRoutes.js<br>
+        → produtoController.js<br>
+        → produtos.js<br>
+        → Controller prepara a resposta<br>
+        → Resposta HTTP<br>
+        → Cliente<br><br>
+
+        Essa estrutura mostrou na prática a importância da separação de responsabilidades no Back-end.<br><br>
+
+        O app.js fica responsável pela configuração geral do servidor.<br><br>
+
+        As routes definem quais URLs e métodos HTTP estarão disponíveis.<br><br>
+
+        Os controllers possuem a lógica de processamento das requisições.<br><br>
+
+        A pasta data mantém, neste momento, os dados utilizados pela aplicação.<br><br>
+
+        Também reforçamos conceitos de API REST, utilizando métodos HTTP diferentes sobre o mesmo recurso:<br><br>
+
+        GET /api/produtos<br>
+        → consultar produtos.<br><br>
+
+        POST /api/produtos<br>
+        → cadastrar produto.<br><br>
+
+        A aula representa uma evolução importante em relação aos primeiros servidores Express, pois começamos a deixar de concentrar toda a lógica em um único arquivo e passamos a trabalhar com uma arquitetura modular.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Node.js;<br>
+        - Express;<br>
+        - API REST;<br>
+        - modularização;<br>
+        - separação de responsabilidades;<br>
+        - estrutura de pastas;<br>
+        - app.js;<br>
+        - routes;<br>
+        - controllers;<br>
+        - camada de dados;<br>
+        - express.Router();<br>
+        - app.use();<br>
+        - express.json();<br>
+        - GET;<br>
+        - POST;<br>
+        - req.body;<br>
+        - desestruturação de objetos;<br>
+        - validação de dados;<br>
+        - status HTTP 400;<br>
+        - status HTTP 201;<br>
+        - res.json();<br>
+        - arrays de objetos;<br>
+        - push();<br>
+        - geração automática de id;<br>
+        - Number();<br>
+        - module.exports;<br>
+        - require();<br>
+        - dados temporários em memória;<br>
+        - preparação para futura integração com banco de dados.<br><br>
+        
+        <a href="https://github.com/Luanlhp777/backend" target="_blank" class="btn-github">Ver código no GitHub</a>`
     },
 ]

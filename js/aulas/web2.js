@@ -194,4 +194,123 @@ const aulasWeb2 = [
 
         <a href="https://github.com/Luanlhp777/react03" target="_blank" class="btn-github">Ver código no GitHub</a> `
     },
+    {
+        data: "2026-08-12",
+        titulo: "Cadastro de Produtos com React",
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de Front-end com React, trabalhando na criação de um formulário para cadastro de produtos e reforçando conceitos de componentes, estados, eventos e inputs controlados.<br><br>
+
+        O projeto foi organizado utilizando React com Vite. Dentro da pasta src, o arquivo App.jsx importa o componente FormProduto e o exibe dentro do elemento main da aplicação. <br><br>
+
+        O principal componente desenvolvido foi o FormProduto.jsx. Ele representa um formulário responsável por receber os dados de um novo produto.<br><br>
+
+        Dentro do componente, utilizamos o hook useState para criar três estados:<br><br>
+
+        - nome;<br>
+        - descricao;<br>
+        - preco.<br><br>
+
+        Cada estado possui também sua respectiva função de atualização:<br><br>
+
+        - setNome();<br>
+        - setDescricao();<br>
+        - setPreco().<br><br>
+
+        Esses estados permitem que o React acompanhe os valores digitados pelo usuário em tempo real. <br><br>
+
+        Os campos do formulário são controlados utilizando as propriedades value e onChange.<br><br>
+
+        Quando o usuário digita alguma informação, utilizamos:<br><br>
+
+        evento.target.value<br><br>
+
+        para acessar o valor atual do input e atualizar o estado correspondente.<br><br>
+
+        Dessa forma, os inputs permanecem sincronizados com os estados do componente.<br><br>
+
+        Também utilizamos diferentes tipos de input:<br><br>
+
+        - type="text" para nome;<br>
+        - type="text" para descrição;<br>
+        - type="number" para preço.<br><br>
+
+        No campo de preço foram utilizadas ainda as propriedades min="0" e step="0.01", permitindo valores positivos e números decimais.<br><br>
+
+        Para tratar o envio do formulário, criamos a função enviarFormulario(). Essa função recebe o evento gerado pelo submit e utiliza:<br><br>
+
+        evento.preventDefault();<br><br>
+
+        Esse método impede o comportamento padrão do formulário HTML, evitando que a página seja recarregada após o envio.<br><br>
+
+        Também foi implementada uma validação simples:<br><br>
+
+        if (!nome.trim() || !preco) {<br>
+            return;<br>
+        }<br><br>
+
+        Com isso, o cadastro só continua se o nome e o preço estiverem preenchidos. O método trim() é utilizado para remover espaços extras do início e do final do texto. <br><br>
+
+        Depois da validação, o componente chama a função aoCadastrar(), recebida através das props.<br><br>
+
+        É enviado um objeto contendo:<br><br>
+
+        - nome;<br>
+        - descricao;<br>
+        - preco.<br><br>
+
+        O nome e a descrição são tratados com trim(), enquanto o preço é convertido para número utilizando Number().<br><br>
+
+        Esse ponto introduz um conceito importante do React: comunicação entre componentes através de props. O componente FormProduto não realiza sozinho toda a lógica de cadastro; ele prepara os dados e chama uma função recebida externamente.<br><br>
+
+        Após o envio, os campos são limpos através de:<br><br>
+
+        setNome("");<br>
+        setDescricao("");<br>
+        setPreco("");<br><br>
+
+        Dessa forma, o formulário volta ao estado inicial e fica preparado para um novo cadastro.<br><br>
+
+        No JSX, utilizamos a tag form com o evento onSubmit ligado à função enviarFormulario. Também foram utilizados elementos label, input e button para construir a estrutura do formulário.<br><br>
+
+        O botão foi definido como:<br><br>
+
+        type="submit"<br><br>
+
+        fazendo com que o clique acione o evento onSubmit do formulário.<br><br>
+
+        O projeto possui ainda arquivos preparados para outros componentes, como Header.jsx, ListaProduto.jsx e Produto.jsx, porém atualmente esses arquivos estão vazios. Portanto, nesta etapa o desenvolvimento está concentrado principalmente no formulário de cadastro. <br><br>
+
+        Conceitos trabalhados:<br><br>
+        - React;<br>
+        - Vite;<br>
+        - componentes funcionais;<br>
+        - JSX;<br>
+        - useState;<br>
+        - estados;<br>
+        - setState através das funções do useState;<br>
+        - formulários;<br>
+        - inputs controlados;<br>
+        - value;<br>
+        - onChange;<br>
+        - evento.target.value;<br>
+        - onSubmit;<br>
+        - preventDefault();<br>
+        - validação de formulário;<br>
+        - trim();<br>
+        - Number();<br>
+        - props;<br>
+        - comunicação entre componentes;<br>
+        - objetos JavaScript;<br>
+        - limpeza de formulário;<br>
+        - type="submit";<br>
+        - organização de componentes.<br><br>
+
+        <a href="https://github.com/Luanlhp777/frontend" target="_blank" class="btn-github">Ver código no GitHub</a> `
+    },
+    {
+        data: "2026-08-13",
+        titulo: "",
+        conteudo: ` <br><br>
+
+        <a href="" target="_blank" class="btn-github">Ver código no GitHub</a> `
+    },
 ]
