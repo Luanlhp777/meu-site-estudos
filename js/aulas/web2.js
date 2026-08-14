@@ -308,9 +308,140 @@ const aulasWeb2 = [
     },
     {
         data: "2026-08-13",
-        titulo: "",
-        conteudo: ` <br><br>
+        titulo: "Integração frontEnd com backEnd",
+        conteudo: ` Na aula de hoje começamos a integrar os dois projetos que haviam sido desenvolvidos separadamente: o Back-end com Node.js e Express e o Front-end com React. A partir dessa junção, passamos a trabalhar em uma aplicação Full Stack chamada Projeto Catálogo. <br><br>
 
-        <a href="" target="_blank" class="btn-github">Ver código no GitHub</a> `
+        O objetivo do projeto é desenvolver um catálogo de produtos com separação clara entre Front-end, Back-end, API REST, regras de negócio e gerenciamento de produtos.<br><br>
+
+        A estrutura do projeto ficou organizada em um único repositório contendo duas pastas principais:<br><br>
+
+        projetoCatalogo/<br>
+        ├── backend/<br>
+        └── frontend/<br><br>
+
+        Dessa forma, o Front-end e o Back-end continuam sendo projetos independentes, cada um com seu próprio package.json e suas próprias dependências, mas agora fazem parte da mesma aplicação. <br><br>
+
+        No Back-end continuamos utilizando Node.js, Express e JavaScript. A estrutura permanece organizada em:<br><br>
+
+        backend/src/<br>
+        ├── controllers/<br>
+        ├── data/<br>
+        ├── routes/<br>
+        └── app.js<br><br>
+
+        Essa parte é responsável pelas regras de negócio, rotas da API, processamento das requisições e envio das respostas em formato JSON.<br><br>
+
+        Entre as funcionalidades já existentes no Back-end estão:<br><br>
+        - listagem de produtos;<br>
+        - cadastro de produtos;<br>
+        - validação de dados;<br>
+        - rotas HTTP;<br>
+        - controllers;<br>
+        - respostas JSON;<br>
+        - códigos de status HTTP.<br><br>
+
+        O endpoint principal utilizado para trabalhar com produtos é:<br><br>
+
+        /api/produtos<br><br>
+
+        No Front-end continuamos utilizando React, Vite, JavaScript, JSX e CSS.<br><br>
+
+        Nessa camada trabalhamos com:<br><br>
+        - componentes;<br>
+        - useState;<br>
+        - formulários controlados;<br>
+        - eventos;<br>
+        - props;<br>
+        - validação de campos;<br>
+        - organização da interface.<br><br>
+
+        O principal conceito da aula foi entender como essas duas partes devem se comunicar.<br><br>
+
+        O fluxo esperado da aplicação é:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        Frontend React<br>
+        ↓<br>
+        Requisição HTTP<br>
+        ↓<br>
+        API Node.js + Express<br>
+        ↓<br>
+        Processamento no Back-end<br>
+        ↓<br>
+        Resposta JSON<br>
+        ↓<br>
+        Frontend React<br>
+        ↓<br>
+        Interface atualizada<br><br>
+
+        Ou seja, o React fica responsável pela interface e interação com o usuário, enquanto o Node.js com Express fica responsável por receber as requisições, executar as regras necessárias e devolver os dados para o Front-end. <br><br>
+
+        Também entendemos que Front-end e Back-end são executados separadamente durante o desenvolvimento.<br><br>
+
+        Para executar o Back-end:<br><br>
+
+        cd backend<br>
+        npm install<br>
+        npm run dev<br><br>
+
+        Depois, para executar o Front-end:<br><br>
+
+        cd frontend<br>
+        npm install<br>
+        npm run dev<br><br>
+
+        Assim, teremos dois processos rodando ao mesmo tempo: um servidor responsável pela API e outro servidor de desenvolvimento do Vite responsável pela aplicação React.<br><br>
+
+        A aula também reforçou o conceito de API REST como intermediária da comunicação. O Front-end não deve acessar diretamente os dados internos do Back-end. Em vez disso, envia requisições HTTP para endpoints definidos pela API e recebe respostas normalmente em JSON.<br><br>
+
+        A integração permite que um cadastro realizado pelo usuário no formulário React seja enviado para a API. O Back-end recebe os dados, executa as validações e regras de negócio e retorna uma resposta para o Front-end.<br><br>
+
+        Da mesma forma, para listar produtos, o Front-end poderá realizar uma requisição GET para a API, receber o conjunto de produtos e utilizar esses dados para montar dinamicamente a interface.<br><br>
+
+        Nesta etapa, o projeto foi estruturado como uma aplicação Full Stack e preparado para aprofundar a comunicação efetiva entre as duas camadas. O próprio repositório indica como próximas evoluções o uso de fetch, listagem dinâmica, cadastro através da API, atualização, exclusão, CRUD completo e posteriormente integração com banco de dados. <br><br>
+
+        A organização em um único repositório também facilita o versionamento do projeto completo utilizando Git e GitHub.<br><br>
+
+        O fluxo utilizado continua sendo:<br><br>
+
+        git status<br>
+        git add .<br>
+        git commit -m "Descrição da alteração"<br>
+        git push origin main<br><br>
+
+        Com essa aula, começamos a sair de aplicações Front-end e Back-end isoladas e passamos a compreender como funciona a arquitetura de uma aplicação Full Stack, na qual diferentes camadas trabalham juntas para formar um sistema completo.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - desenvolvimento Full Stack;<br>
+        - integração Front-end e Back-end;<br>
+        - React;<br>
+        - Vite;<br>
+        - Node.js;<br>
+        - Express;<br>
+        - JavaScript;<br>
+        - JSX;<br>
+        - API REST;<br>
+        - requisições HTTP;<br>
+        - respostas JSON;<br>
+        - endpoints;<br>
+        - /api/produtos;<br>
+        - componentes;<br>
+        - useState;<br>
+        - formulários controlados;<br>
+        - props;<br>
+        - rotas;<br>
+        - controllers;<br>
+        - regras de negócio;<br>
+        - códigos de status HTTP;<br>
+        - separação de responsabilidades;<br>
+        - arquitetura em camadas;<br>
+        - comunicação cliente-servidor;<br>
+        - organização em monorepositório;<br>
+        - Git;<br>
+        - GitHub;<br>
+        - preparação para uso de fetch e CRUD completo.<br><br>
+
+        <a href="https://github.com/Luanlhp777/projetoCatalogo" target="_blank" class="btn-github">Ver código no GitHub</a> `
     },
 ]
