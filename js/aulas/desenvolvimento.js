@@ -342,4 +342,92 @@ const aulasDesenvolvimento = [
         
         <a href="https://github.com/Luanlhp777/backend" target="_blank" class="btn-github">Ver código no GitHub</a>`
     },
+    {
+        data: "2026-08-14",
+        titulo: "Projeto Integrado - Catálogo de Produtos",
+        conteudo: ` Na aula de hoje demos continuidade ao Projeto Integrador — Catálogo de Produtos, trabalhando na evolução da aplicação Full Stack que reúne o Front-end em React e o Back-end em Node.js com Express.<br><br>
+
+        A atividade proposta envolve as disciplinas de Programação Web II e Desenvolvimento de Sistemas I, justamente para reforçar a integração entre as duas partes do sistema. No Front-end, o foco está no React; no Back-end, em Node.js e Express; e a comunicação entre os dois ocorre através de uma API REST. <br><br>
+
+        No Front-end, a atividade pede quatro evoluções principais.<br><br>
+
+        A primeira é a criação de um contador de produtos. A aplicação deve mostrar quantos produtos estão cadastrados e esse valor precisa ser atualizado automaticamente sempre que a lista de produtos sofrer alguma alteração.<br><br>
+
+        A segunda evolução é a validação do formulário. O sistema não deve permitir o cadastro de um produto sem nome e também não deve aceitar preço igual ou menor que zero. Além de impedir o cadastro inválido, a aplicação deve exibir uma mensagem adequada para informar o usuário sobre o problema.<br><br>
+
+        A terceira funcionalidade é a busca de produtos. Deve ser criado um campo de pesquisa que permita filtrar os produtos pelo nome. Dessa forma, conforme a busca for realizada, apenas os produtos correspondentes ao texto pesquisado deverão aparecer na interface.<br><br>
+
+        A quarta parte envolve melhorias visuais e de organização. A atividade pede a criação de um componente Footer, melhorias no CSS e a manutenção de uma interface organizada e responsiva.<br><br>
+
+        No Back-end, também devemos continuar evoluindo a API desenvolvida com Node.js e Express. As novas funcionalidades devem seguir a estrutura organizada estudada anteriormente, mantendo a separação entre rotas, Controller e API REST. <br><br>
+
+        Essa organização reforça o fluxo da aplicação:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        Front-end React<br>
+        ↓<br>
+        Requisição HTTP<br>
+        ↓<br>
+        API REST<br>
+        ↓<br>
+        Rotas<br>
+        ↓<br>
+        Controller<br>
+        ↓<br>
+        Processamento no Back-end<br>
+        ↓<br>
+        Resposta HTTP/JSON<br>
+        ↓<br>
+        Front-end<br>
+        ↓<br>
+        Interface atualizada<br><br>
+
+        A atividade também reforça que o projeto precisa continuar funcionando de forma integrada. Ou seja, não basta desenvolver separadamente o React e o Node.js: o Front-end precisa se comunicar corretamente com o Back-end para que as funcionalidades do catálogo funcionem como um único sistema.<br><br>
+
+        O objetivo da atividade é compreender melhor o funcionamento das duas partes de uma aplicação Full Stack e aprender a evoluir o projeto sem quebrar a integração já existente.<br><br>
+
+        Ao final, o projeto deverá ser demonstrado funcionando em sala. Não será necessário entregar PDF ou relatório, pois a avaliação está concentrada no funcionamento e na evolução prática do sistema.<br><br>
+
+        Funcionalidades propostas na atividade:<br><br>
+        - contador de produtos;<br>
+        - atualização automática do contador;<br>
+        - validação do formulário;<br>
+        - bloqueio de produto sem nome;<br>
+        - bloqueio de preço igual ou menor que zero;<br>
+        - mensagens de validação para o usuário;<br>
+        - campo de busca;<br>
+        - filtro de produtos pelo nome;<br>
+        - componente Footer;<br>
+        - melhorias no CSS;<br>
+        - interface responsiva;<br>
+        - evolução da API;<br>
+        - manutenção de rotas e Controller;<br>
+        - integração entre React e Node.js/Express.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - desenvolvimento Full Stack;<br>
+        - React;<br>
+        - Node.js;<br>
+        - Express;<br>
+        - API REST;<br>
+        - integração Front-end e Back-end;<br>
+        - requisições HTTP;<br>
+        - respostas JSON;<br>
+        - componentes;<br>
+        - formulários;<br>
+        - validação de dados;<br>
+        - filtragem de informações;<br>
+        - estado da aplicação;<br>
+        - atualização dinâmica da interface;<br>
+        - responsividade;<br>
+        - CSS;<br>
+        - rotas;<br>
+        - Controller;<br>
+        - separação de responsabilidades;<br>
+        - evolução incremental de software.<br><br>
+        
+        
+        <a href="https://github.com/Luanlhp777/projetoCatalogo" target="_blank" class="btn-github">Ver código no GitHub</a>`
+    },
 ]
