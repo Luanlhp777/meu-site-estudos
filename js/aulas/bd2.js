@@ -132,4 +132,73 @@ const aulasBd2 = [
         
         `
     },
+    {
+        data: "2026-08-17",
+        titulo: "Apresentação HBase",
+        conteudo: ` Na aula de hoje realizamos a apresentação do trabalho sobre Apache HBase, dentro da disciplina de Banco de Dados II. O tema abordou o uso de bancos NoSQL do tipo Wide-Column, sua relação com Hadoop, HDFS e cenários de Big Data. <br><br>
+
+        Inicialmente, apresentamos o Apache HBase como um banco de dados NoSQL distribuído, baseado no Google Bigtable e integrado ao ecossistema Hadoop/HDFS.<br><br>
+
+        Foi explicado que o HBase organiza os dados em uma estrutura diferente dos bancos relacionais tradicionais. Sua hierarquia é baseada em:<br><br>
+
+        TABLE<br>
+        → ROW<br>
+        → ROW KEY<br>
+        → COLUMN FAMILY<br>
+        → COLUMN QUALIFIER<br>
+        → VALUE<br><br>
+
+        Cada linha possui uma Row Key única, responsável por identificar e ordenar os registros. Também vimos que o desenho da Row Key é muito importante, pois influencia diretamente a eficiência das consultas. As Column Families são definidas previamente, enquanto os Column Qualifiers possuem maior flexibilidade durante a execução. <br><br>
+
+        Como exemplo, utilizamos dados de sensores IoT, demonstrando como uma Row Key pode identificar determinado sensor e data, enquanto diferentes Column Families armazenam informações como temperatura, pressão, status e localização.<br><br>
+
+        Na sequência, apresentamos a arquitetura distribuída do HBase. O HMaster é responsável pela coordenação administrativa do cluster, enquanto os RegionServers realizam operações de leitura e escrita e gerenciam as Regions, que representam partes distribuídas das tabelas. O armazenamento dos dados é realizado sobre o HDFS.<br><br>
+
+        Também estudamos o conceito de escalabilidade horizontal, ou Scale-Out. Em vez de aumentar continuamente a capacidade de um único servidor, o HBase permite adicionar novos nós ao cluster para distribuir os dados e a carga de processamento.<br><br>
+
+        Durante a apresentação, fizemos uma comparação entre MySQL/PostgreSQL e HBase. Bancos relacionais trabalham com schemas estruturados, JOINs e transações, enquanto o HBase utiliza o modelo Wide-Column, arquitetura distribuída e escalabilidade horizontal, sendo mais indicado para grandes volumes de leitura e escrita. Também foi destacado que NoSQL não significa ausência de consistência, pois o HBase oferece operações de leitura e escrita fortemente consistentes. <br><br>
+
+        Outro ponto abordado foi a história do Apache HBase. O Google publicou o paper do Bigtable em 2006, servindo de inspiração para o projeto. O desenvolvimento inicial do HBase começou ainda em 2006, depois entrou no ecossistema Apache Hadoop em 2007 e tornou-se um projeto de alto nível da Apache Software Foundation em 2010.<br><br>
+
+        Como exemplo real de utilização, apresentamos a FINRA, organização ligada ao mercado financeiro. O caso demonstrou uma arquitetura com Apache HBase, Amazon EMR e Amazon S3 trabalhando com aproximadamente 3 trilhões de registros, cerca de 4 bilhões de novos registros por dia e aproximadamente 700 TB de dados. O exemplo mostrou a aplicação do HBase em cenários nos quais grande volume, baixa latência e escalabilidade distribuída são requisitos importantes.<br><br>
+
+        Por fim, discutimos que o HBase é uma tecnologia poderosa, mas não é adequado para qualquer tipo de sistema.<br><br>
+
+        O HBase faz sentido principalmente em cenários como:<br><br>
+        - Big Data com bilhões ou trilhões de registros;<br>
+        - IoT e telemetria;<br>
+        - logs, eventos e métricas;<br>
+        - dados esparsos;<br>
+        - grandes volumes de leitura e escrita;<br>
+        - necessidade de escalabilidade horizontal.<br><br>
+
+        Por outro lado, sistemas com muitos relacionamentos, transações e volume controlado, como um sistema acadêmico envolvendo alunos, professores, disciplinas, matrículas e notas, tendem a ser melhor atendidos por bancos relacionais como MySQL ou PostgreSQL. <br><br>
+
+        A apresentação reforçou a ideia de Persistência Poliglota, em que SQL e NoSQL podem ser utilizados de forma complementar. A principal conclusão foi que a escolha do banco de dados deve depender das características e necessidades do problema, e não apenas do poder ou da popularidade da tecnologia.<br><br>
+
+        Conceitos apresentados:<br><br>
+        - Apache HBase;<br>
+        - NoSQL;<br>
+        - Wide-Column;<br>
+        - Hadoop;<br>
+        - HDFS;<br>
+        - Big Data;<br>
+        - Google Bigtable;<br>
+        - Row Key;<br>
+        - Column Family;<br>
+        - Column Qualifier;<br>
+        - HMaster;<br>
+        - RegionServer;<br>
+        - Regions;<br>
+        - escalabilidade horizontal;<br>
+        - Scale-Out;<br>
+        - sistemas distribuídos;<br>
+        - consistência forte;<br>
+        - IoT;<br>
+        - FINRA;<br>
+        - persistência poliglota;<br>
+        - comparação entre SQL e NoSQL.<br><br>
+        
+        `
+    },
 ]

@@ -364,5 +364,150 @@ const aulasMobile = [
         <a href="https://github.com/Luanlhp777/mobile05" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
     },
+    {
+        data: "2026-08-17",
+        titulo: "Exercícios de Flutter Básico",
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile com Flutter e Dart, realizando exercícios práticos para reforçar os principais conceitos trabalhados nas aulas anteriores. O repositório possui um projeto chamado exercicios e também um material em PDF com exercícios de Flutter Básico. <br><br>
+
+        No exercício implementado no arquivo main.dart, desenvolvemos uma aplicação chamada “Campeonato de E-sports”. A proposta foi criar uma interface capaz de receber dados sobre vitórias, derrotas e quantidade de pontos por vitória e, a partir dessas informações, calcular resultados automaticamente. <br><br>
+
+        A aplicação começa utilizando a estrutura padrão do Flutter com main(), runApp(), MaterialApp e a classe MainApp estendendo StatelessWidget.<br><br>
+
+        Como a tela precisa armazenar valores e atualizar os resultados durante a execução, utilizamos StatefulWidget através da classe TelaCampeonato.<br><br>
+
+        Dentro da classe de estado _TelaCampeonatoState foram criados três TextEditingController:<br><br>
+
+        - vitoriasController;<br>
+        - derrotasController;<br>
+        - pontosController.<br><br>
+
+        Esses controllers são responsáveis por acessar os valores digitados pelo usuário nos campos de entrada.<br><br>
+
+        Também foram criadas três variáveis para armazenar os resultados:<br><br>
+
+        - totalPartidas;<br>
+        - pontuacaoFinal;<br>
+        - percentualVitorias.<br><br>
+
+        A principal função da aplicação é calcularResultados(). Nela, os valores digitados são convertidos de texto para números inteiros utilizando:<br><br>
+
+        int.tryParse()<br><br>
+
+        Também utilizamos:<br><br>
+
+        ?? 0<br><br>
+
+        para definir zero como valor padrão quando a conversão não puder ser realizada.<br><br>
+
+        O total de partidas é calculado somando vitórias e derrotas:<br><br>
+
+        total = vitorias + derrotas<br><br>
+
+        A pontuação final é calculada multiplicando a quantidade de vitórias pela quantidade de pontos que cada vitória vale:<br><br>
+
+        pontos = vitorias * pontosPorVitoria<br><br>
+
+        Também calculamos o percentual de vitórias utilizando:<br><br>
+
+        (vitorias / total) * 100<br><br>
+
+        Antes desse cálculo, existe uma condição verificando se o total de partidas é maior que zero. Isso evita tentar realizar o cálculo quando ainda não existem partidas cadastradas.<br><br>
+
+        Depois dos cálculos, utilizamos setState() para atualizar os valores de totalPartidas, pontuacaoFinal e percentualVitorias. Com isso, o Flutter reconstrói a interface e mostra automaticamente os novos resultados na tela. <br><br>
+
+        Também criamos a função limparCampos(). Nela utilizamos o método clear() dos controllers para apagar os valores digitados e setState() para retornar todos os resultados para zero.<br><br>
+
+        Outro conceito importante trabalhado foi o método dispose(). Ele foi utilizado para liberar os TextEditingController quando a tela deixa de ser utilizada:<br><br>
+
+        vitoriasController.dispose();<br>
+        derrotasController.dispose();<br>
+        pontosController.dispose();<br><br>
+
+        Isso mostra uma prática importante no gerenciamento de recursos em componentes com estado.<br><br>
+
+        Na interface, utilizamos três TextField para receber:<br><br>
+        - quantidade de vitórias;<br>
+        - quantidade de derrotas;<br>
+        - pontos por vitória.<br><br>
+
+        Cada campo utiliza keyboardType: TextInputType.number, indicando entrada numérica, além de InputDecoration, labelText, OutlineInputBorder e prefixIcon.<br><br>
+
+        Também foram utilizados ícones diferentes para facilitar a identificação visual de cada campo.<br><br>
+
+        Os botões foram organizados em uma Row.<br><br>
+
+        O botão “Calcular” foi desenvolvido com ElevatedButton.icon e chama a função calcularResultados.<br><br>
+
+        Já o botão “Limpar” utiliza OutlinedButton.icon e chama a função limparCampos.<br><br>
+
+        Isso permitiu praticar diferentes tipos de botões disponíveis no Flutter.<br><br>
+
+        Os resultados são apresentados através de widgets Text mostrando:<br><br>
+        - total de partidas;<br>
+        - pontuação final;<br>
+        - percentual de vitórias.<br><br>
+
+        Para limitar o percentual a uma casa decimal, utilizamos:<br><br>
+
+        toStringAsFixed(1)<br><br>
+
+        Assim, o resultado fica apresentado de forma mais organizada, por exemplo:<br><br>
+
+        Percentual de vitórias: 75.0%<br><br>
+
+        A interface também utiliza widgets como Padding, Column, Row e SizedBox para controlar organização, alinhamento e espaçamento dos elementos.<br><br>
+
+        Com esse exercício, reforçamos a criação de aplicações interativas em Flutter, combinando entrada de dados, operações matemáticas, condições, funções, gerenciamento de estado e atualização dinâmica da interface.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Flutter;<br>
+        - Dart;<br>
+        - StatelessWidget;<br>
+        - StatefulWidget;<br>
+        - State;<br>
+        - MaterialApp;<br>
+        - Scaffold;<br>
+        - AppBar;<br>
+        - TextEditingController;<br>
+        - TextField;<br>
+        - InputDecoration;<br>
+        - OutlineInputBorder;<br>
+        - prefixIcon;<br>
+        - TextInputType.number;<br>
+        - int.tryParse();<br>
+        - operador ??;<br>
+        - variáveis int e double;<br>
+        - operações matemáticas;<br>
+        - estrutura if;<br>
+        - funções;<br>
+        - setState();<br>
+        - gerenciamento de estado;<br>
+        - clear();<br>
+        - dispose();<br>
+        - ElevatedButton.icon;<br>
+        - OutlinedButton.icon;<br>
+        - onPressed;<br>
+        - Row;<br>
+        - Column;<br>
+        - Padding;<br>
+        - SizedBox;<br>
+        - Text;<br>
+        - TextStyle;<br>
+        - interpolação de Strings;<br>
+        - toStringAsFixed();<br>
+        - atualização dinâmica da interface.<br><br>
+        
+
+        <a href="https://github.com/Luanlhp777/mobile06" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `
+    },
+    {
+        data: "2026-08-18",
+        titulo: "",
+        conteudo: ` <br><br>
+
+        <a href="" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `
+    },
 
 ]
