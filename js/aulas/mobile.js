@@ -366,7 +366,7 @@ const aulasMobile = [
     },
     {
         data: "2026-08-17",
-        titulo: "Exercícios de Flutter Básico",
+        titulo: "Exercício 1 E-sports",
         conteudo: ` Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile com Flutter e Dart, realizando exercícios práticos para reforçar os principais conceitos trabalhados nas aulas anteriores. O repositório possui um projeto chamado exercicios e também um material em PDF com exercícios de Flutter Básico. <br><br>
 
         No exercício implementado no arquivo main.dart, desenvolvemos uma aplicação chamada “Campeonato de E-sports”. A proposta foi criar uma interface capaz de receber dados sobre vitórias, derrotas e quantidade de pontos por vitória e, a partir dessas informações, calcular resultados automaticamente. <br><br>
@@ -503,10 +503,131 @@ const aulasMobile = [
     },
     {
         data: "2026-08-18",
-        titulo: "",
-        conteudo: ` <br><br>
+        titulo: "Exercício 2 Influencer por um dia",
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile com Flutter e Dart, realizando um novo exercício prático para reforçar o uso de StatefulWidget, entrada de dados, cálculos, funções e atualização dinâmica da interface.<br><br>
 
-        <a href="" target="_blank" class="btn-github">Ver código no GitHub</a>
+        O exercício desenvolvido foi uma aplicação chamada “Influencer por um Dia”. A proposta é permitir que o usuário informe sua quantidade atual de seguidores, quantos seguidores ganha por dia e durante quantos dias deseja realizar uma simulação. A partir desses valores, o aplicativo calcula quantos seguidores serão ganhos e qual será o total final. <br><br>
+
+        A aplicação começa com a estrutura básica do Flutter utilizando main(), runApp(), MaterialApp e a classe MainApp estendendo StatelessWidget.<br><br>
+
+        A tela principal foi criada através da classe TelaInfluencer, que estende StatefulWidget. Esse tipo de widget é necessário porque os resultados da aplicação mudam durante sua execução e precisam ser atualizados na interface.<br><br>
+
+        Dentro da classe _TelaInfluencerState foram criados três TextEditingController:<br><br>
+
+        - seguidoresController;<br>
+        - ganhoDiarioController;<br>
+        - diasController.<br><br>
+
+        Esses controllers são responsáveis por capturar os valores digitados nos campos do formulário.<br><br>
+
+        Também foram criadas duas variáveis para armazenar os resultados:<br><br>
+
+        - seguidoresFinais;<br>
+        - seguidoresGanhos.<br><br>
+
+        A principal função desenvolvida foi calcularCrescimento(). Nela, os valores digitados nos campos são convertidos de String para int utilizando:<br><br>
+
+        int.tryParse()<br><br>
+
+        Também foi utilizado:<br><br>
+
+        ?? 0<br><br>
+
+        para definir zero como valor padrão caso algum valor não possa ser convertido corretamente.<br><br>
+
+        O cálculo da quantidade de seguidores ganhos foi feito multiplicando o ganho diário pela quantidade de dias:<br><br>
+
+        totalGanhos = seguidoresPorDia * quantidadeDias<br><br>
+
+        Depois, calculamos o total final de seguidores:<br><br>
+
+        totalFinal = seguidoresAtuais + totalGanhos<br><br>
+
+        Após realizar os cálculos, utilizamos setState() para atualizar as variáveis seguidoresGanhos e seguidoresFinais. Dessa forma, o Flutter reconstrói a parte necessária da interface e mostra imediatamente os novos resultados.<br><br>
+
+        Também foi criada a função limparCampos(). Ela utiliza o método clear() dos controllers para apagar os valores digitados e setState() para retornar os resultados para zero.<br><br>
+
+        Na construção da interface utilizamos três widgets TextField.<br><br>
+
+        O primeiro recebe:<br>
+        - número atual de seguidores.<br><br>
+
+        O segundo recebe:<br>
+        - quantidade de seguidores ganhos por dia.<br><br>
+
+        O terceiro recebe:<br>
+        - quantidade de dias que será simulada.<br><br>
+
+        Todos os campos utilizam keyboardType: TextInputType.number, pois os valores informados são numéricos.<br><br>
+
+        Os TextField também utilizam InputDecoration com:<br><br>
+        - labelText;<br>
+        - OutlineInputBorder;<br>
+        - prefixIcon.<br><br>
+
+        Foram utilizados diferentes ícones para representar visualmente cada informação:<br><br>
+        - pessoas para seguidores atuais;<br>
+        - adicionar pessoa para novos seguidores;<br>
+        - calendário para quantidade de dias.<br><br>
+
+        Também foram criados dois botões organizados dentro de uma Row.<br><br>
+
+        O botão “Calcular” utiliza ElevatedButton.icon e executa a função calcularCrescimento através da propriedade onPressed.<br><br>
+
+        O botão “Limpar” utiliza OutlinedButton.icon e executa a função limparCampos.<br><br>
+
+        Na parte inferior da tela, dois widgets Text mostram dinamicamente:<br><br>
+
+        - Total de seguidores;<br>
+        - Seguidores ganhos.<br><br>
+
+        Os valores são inseridos diretamente nas Strings utilizando interpolação de variáveis do Dart:<br><br>
+
+        $seguidoresFinais<br>
+        $seguidoresGanhos<br><br>
+
+        Além da lógica, continuamos utilizando widgets de organização como Padding, Column, Row e SizedBox para controlar alinhamento, espaçamento e disposição dos elementos na tela.<br><br>
+
+        Com esse exercício, reforçamos como uma aplicação Flutter pode receber dados do usuário, processar essas informações, realizar cálculos e atualizar os resultados automaticamente através do gerenciamento de estado.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Flutter;<br>
+        - Dart;<br>
+        - StatelessWidget;<br>
+        - StatefulWidget;<br>
+        - State;<br>
+        - MaterialApp;<br>
+        - Scaffold;<br>
+        - AppBar;<br>
+        - TextEditingController;<br>
+        - TextField;<br>
+        - InputDecoration;<br>
+        - OutlineInputBorder;<br>
+        - prefixIcon;<br>
+        - TextInputType.number;<br>
+        - int.tryParse();<br>
+        - operador ??;<br>
+        - variáveis int;<br>
+        - funções;<br>
+        - operações matemáticas;<br>
+        - multiplicação;<br>
+        - soma;<br>
+        - setState();<br>
+        - gerenciamento de estado;<br>
+        - clear();<br>
+        - ElevatedButton.icon;<br>
+        - OutlinedButton.icon;<br>
+        - onPressed;<br>
+        - Row;<br>
+        - Column;<br>
+        - Padding;<br>
+        - SizedBox;<br>
+        - Text;<br>
+        - TextStyle;<br>
+        - interpolação de Strings;<br>
+        - atualização dinâmica da interface.<br><br>
+
+        <a href="https://github.com/Luanlhp777/mobile07" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
     },
 
