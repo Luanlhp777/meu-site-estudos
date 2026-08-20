@@ -309,3 +309,8 @@ footer {
     border: 1px solid rgba(124, 140, 255, 0.14);
     box-shadow: 0 0 24px rgba(124, 140, 255, 0.08);
 }
+
+/* LISTA DE TECNOLOGIAS - SOBRE MIM */
+.tecnologias ul {
+    padding-left: 30px;
+}
