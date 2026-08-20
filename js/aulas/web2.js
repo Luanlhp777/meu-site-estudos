@@ -444,4 +444,223 @@ const aulasWeb2 = [
 
         <a href="https://github.com/Luanlhp777/projetoCatalogo" target="_blank" class="btn-github">Ver código no GitHub</a> `
     },
+    {
+        data: "2026-08-19",
+        titulo: "Projeto Integrado - Catálogo de Produtos v2",
+        conteudo: ` Na aula de hoje demos continuidade ao Projeto Integrador de Catálogo de Produtos, agora em uma nova versão do projeto, trabalhando novamente a integração entre o Front-end em React e o Back-end em Node.js com Express.<br><br>
+
+        O objetivo principal continua sendo construir uma aplicação Full Stack simples, separando claramente as responsabilidades entre as duas partes do sistema. O React fica responsável pela interface e pela interação com o usuário, enquanto o Express mantém temporariamente os dados em memória e disponibiliza as operações utilizadas pelo Front-end. Nesta etapa ainda não existe banco de dados; os produtos são armazenados apenas em um vetor, portanto os dados são perdidos quando o servidor é reiniciado. <br><br>
+
+        O projeto está dividido em duas pastas principais:<br><br>
+
+        projetoCatalogoV2/<br>
+        ├── frontend/<br>
+        └── backend/<br><br>
+
+        Essa organização permite executar as duas aplicações separadamente, mantendo cada camada com suas próprias dependências e responsabilidades. <br><br>
+
+        No Back-end, continuamos utilizando Node.js e Express. O servidor é executado na porta 3000 e utiliza express.json() para permitir o recebimento de dados em formato JSON enviados pelo Front-end.<br><br>
+
+        Também mantivemos a rota principal:<br><br>
+
+        /api/produtos<br><br>
+
+        Essa rota é encaminhada para o módulo produtoRoutes, mantendo a organização do projeto em rotas, controllers e camada de dados. <br><br>
+
+        No Front-end, utilizamos React e começamos a trabalhar de maneira mais completa com a comunicação com a API.<br><br>
+
+        No App.jsx foram utilizados os hooks:<br><br>
+
+        - useState;<br>
+        - useEffect.<br><br>
+
+        O useState é utilizado para controlar diferentes informações da aplicação, como:<br><br>
+        - produtos;<br>
+        - mensagem;<br>
+        - busca.<br><br>
+
+        Já o useEffect é utilizado para executar a função carregarProdutos() quando a aplicação é carregada. <br><br>
+
+        A função carregarProdutos() utiliza fetch() para realizar uma requisição GET para:<br><br>
+
+        /api/produtos<br><br>
+
+        Depois da resposta do Back-end, os dados são convertidos para JSON através de:<br><br>
+
+        resposta.json()<br><br>
+
+        e armazenados no estado produtos utilizando setProdutos().<br><br>
+
+        Com isso, os produtos que estão no Back-end passam a ser exibidos pelo Front-end.<br><br>
+
+        Também trabalhamos com o cadastro de produtos através de uma requisição POST.<br><br>
+
+        A função cadastrarProduto() utiliza:<br><br>
+
+        fetch("/api/produtos", {<br>
+            method: "POST",<br>
+            headers: {<br>
+                "Content-Type": "application/json"<br>
+            },<br>
+            body: JSON.stringify(produto)<br>
+        })<br><br>
+
+        Nesse processo, o objeto JavaScript contendo os dados do produto é convertido para JSON utilizando JSON.stringify() e enviado para a API.<br><br>
+
+        Caso a resposta não seja bem-sucedida, verificamos:<br><br>
+
+        resposta.ok<br><br>
+
+        e exibimos a mensagem de erro retornada pelo Back-end.<br><br>
+
+        Quando o cadastro é realizado corretamente, o novo produto retornado pela API é adicionado ao estado da aplicação através de:<br><br>
+
+        setProdutos((produtosAtuais) => [...produtosAtuais, novoProduto])<br><br>
+
+        Dessa forma, a tela é atualizada imediatamente sem precisar recarregar a página. <br><br>
+
+        Também foi implementado um contador de produtos utilizando:<br><br>
+
+        produtos.length<br><br>
+
+        Esse contador é exibido na interface e acompanha automaticamente a quantidade atual de itens presentes no estado.<br><br>
+
+        Outra funcionalidade implementada foi a busca de produtos.<br><br>
+
+        Criamos o estado busca e utilizamos:<br><br>
+
+        produtos.filter()<br><br>
+
+        para gerar uma nova lista contendo apenas os produtos cujo nome corresponde ao texto pesquisado.<br><br>
+
+        A comparação utiliza:<br><br>
+
+        produto.nome.toLowerCase().includes(busca.toLowerCase())<br><br>
+
+        Com isso, a pesquisa não diferencia letras maiúsculas e minúsculas.<br><br>
+
+        A lista filtrada é enviada para o componente ListaProdutos através de props.<br><br>
+
+        Também evoluímos a estrutura de componentes do Front-end. Atualmente existem componentes separados para:<br><br>
+
+        - Header;<br>
+        - FormProduto;<br>
+        - ListaProdutos;<br>
+        - Produto;<br>
+        - Footer.<br><br>
+
+        Essa separação melhora a organização do código e reforça o conceito de componentização do React.<br><br>
+
+        No formulário de produtos, continuamos utilizando useState para controlar os campos nome, descrição e preço.<br><br>
+
+        Também adicionamos um estado chamado erro, responsável por armazenar mensagens de validação.<br><br>
+
+        Antes de cadastrar um produto, verificamos se o nome foi preenchido:<br><br>
+
+        if (!nome.trim())<br><br>
+
+        Caso contrário, é exibida a mensagem:<br><br>
+
+        "Digite o nome do produto."<br><br>
+
+        Também verificamos se o preço foi preenchido e se é maior que zero:<br><br>
+
+        if (!preco || Number(preco) <= 0)<br><br>
+
+        Caso a condição seja verdadeira, o usuário recebe a mensagem:<br><br>
+
+        "O preço deve ser maior que zero."<br><br>
+
+        Assim, o formulário passou a possuir validação antes de enviar os dados para a API. <br><br>
+
+        Depois que o produto é cadastrado, os campos são limpos utilizando:<br><br>
+
+        setNome("");<br>
+        setDescricao("");<br>
+        setPreco("");<br><br>
+
+        Além disso, as mensagens de erro são exibidas de maneira condicional dentro do JSX.<br><br>
+
+        Outro ponto importante foi a integração através do proxy do Vite.<br><br>
+
+        Quando o Front-end realiza uma requisição para:<br><br>
+
+        /api/produtos<br><br>
+
+        o Vite encaminha essa requisição para:<br><br>
+
+        http://localhost:3000/api/produtos<br><br>
+
+        Isso permite que o Front-end se comunique com o servidor Express durante o desenvolvimento sem precisar alterar cada chamada para utilizar diretamente o endereço completo do Back-end. <br><br>
+
+        O fluxo da aplicação ficou semelhante a:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        React<br>
+        ↓<br>
+        Evento ou carregamento da página<br>
+        ↓<br>
+        fetch()<br>
+        ↓<br>
+        API /api/produtos<br>
+        ↓<br>
+        Node.js + Express<br>
+        ↓<br>
+        Processamento<br>
+        ↓<br>
+        Resposta JSON<br>
+        ↓<br>
+        React atualiza o estado<br>
+        ↓<br>
+        Interface é renderizada novamente<br><br>
+
+        Com essa aula, reforçamos principalmente a comunicação real entre Front-end e Back-end, indo além de projetos separados e trabalhando com uma aplicação integrada.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - desenvolvimento Full Stack;<br>
+        - React;<br>
+        - Node.js;<br>
+        - Express;<br>
+        - API REST;<br>
+        - integração Front-end e Back-end;<br>
+        - useState;<br>
+        - useEffect;<br>
+        - fetch();<br>
+        - async/await;<br>
+        - GET;<br>
+        - POST;<br>
+        - JSON;<br>
+        - JSON.stringify();<br>
+        - resposta.json();<br>
+        - resposta.ok;<br>
+        - estado;<br>
+        - atualização dinâmica da interface;<br>
+        - arrays;<br>
+        - spread operator;<br>
+        - filter();<br>
+        - includes();<br>
+        - toLowerCase();<br>
+        - busca de produtos;<br>
+        - contador de produtos;<br>
+        - validação de formulário;<br>
+        - mensagens de erro;<br>
+        - props;<br>
+        - componentes;<br>
+        - Header;<br>
+        - Footer;<br>
+        - FormProduto;<br>
+        - ListaProdutos;<br>
+        - proxy do Vite;<br>
+        - separação de responsabilidades;<br>
+        - dados temporários em memória.<br><br>
+        
+        
+        <a href="https://github.com/Luanlhp777/projetoCatalogoV2" target="_blank" class="btn-github">Ver código no Github</a>`
+    },
+    {
+        data: "2026-08-20",
+        titulo: "",
+        conteudo: ` `
+    }
 ]
