@@ -630,5 +630,214 @@ const aulasMobile = [
         <a href="https://github.com/Luanlhp777/mobile07" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
     },
+    {
+        data: "2026-08-24",
+        titulo: "Exercício 3 Estatísticas do Time",
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de Desenvolvimento Mobile I com Flutter e Dart, realizando o Exercício 3, chamado “Estatísticas do Time”. O foco principal foi trabalhar entrada de dados numéricos, cálculos de médias, gerenciamento de estado e atualização dinâmica da interface. <br><br>
+
+        A aplicação desenvolvida permite informar três dados:<br><br>
+
+        - número de jogos disputados;<br>
+        - total de gols marcados;<br>
+        - total de assistências.<br><br>
+
+        A partir dessas informações, o aplicativo calcula:<br><br>
+
+        - média de gols por jogo;<br>
+        - média de participações em gols por jogo.<br><br>
+
+        As participações consideram a soma de gols e assistências.<br><br>
+
+        A estrutura da aplicação começa com main(), runApp(), MaterialApp e a classe MainApp utilizando StatelessWidget.<br><br>
+
+        A tela principal foi criada através de TelaEstatisticas, que utiliza StatefulWidget. Isso é necessário porque os resultados mudam durante a execução e precisam ser atualizados na tela.<br><br>
+
+        Dentro da classe de estado foram criados três TextEditingController:<br><br>
+
+        - jogosController;<br>
+        - golsController;<br>
+        - assistenciasController.<br><br>
+
+        Esses controllers são utilizados para acessar os valores digitados nos TextField. <br><br>
+
+        Também foram criadas duas variáveis do tipo double:<br><br>
+
+        mediaGols<br>
+        mediaParticipacoes<br><br>
+
+        Essas variáveis armazenam os resultados dos cálculos.<br><br>
+
+        A principal função desenvolvida foi:<br><br>
+
+        calcularEstatisticas()<br><br>
+
+        Dentro dela, os valores dos campos são convertidos de texto para números inteiros utilizando:<br><br>
+
+        int.tryParse()<br><br>
+
+        Também utilizamos:<br><br>
+
+        ?? 0<br><br>
+
+        para utilizar zero caso algum campo não possa ser convertido corretamente.<br><br>
+
+        O cálculo da média de gols é realizado através de:<br><br>
+
+        mediaGols = gols / jogos;<br><br>
+
+        Já a média de participações considera gols e assistências:<br><br>
+
+        mediaParticipacoes = (gols + assistencias) / jogos;<br><br>
+
+        Por exemplo:<br><br>
+
+        10 gols<br>
+        +<br>
+        5 assistências<br>
+        =<br>
+        15 participações<br><br>
+
+        Se foram disputados 5 jogos:<br><br>
+
+        15 / 5 = 3 participações por jogo.<br><br>
+
+        Antes de realizar as divisões, utilizamos uma condição:<br><br>
+
+        if (jogos > 0)<br><br>
+
+        Essa validação é importante para evitar divisão por zero.<br><br>
+
+        Caso o número de jogos seja zero, os dois resultados permanecem em 0.<br><br>
+
+        Os cálculos são realizados dentro de setState().<br><br>
+
+        O setState() informa ao Flutter que os valores foram alterados e que a interface precisa ser reconstruída para mostrar os novos resultados.<br><br>
+
+        Também foi criada a função limparCampos().<br><br>
+
+        Essa função utiliza:<br><br>
+
+        jogosController.clear();<br>
+        golsController.clear();<br>
+        assistenciasController.clear();<br><br>
+
+        para limpar os campos.<br><br>
+
+        Depois, utiliza setState() para redefinir as médias para zero.<br><br>
+
+        Outro conceito reforçado foi o método dispose().<br><br>
+
+        Os três TextEditingController são liberados utilizando:<br><br>
+
+        dispose()<br><br>
+
+        quando a tela deixa de ser utilizada, evitando que esses recursos continuem ocupando memória desnecessariamente.<br><br>
+
+        Na interface foram utilizados três TextField com:<br><br>
+
+        keyboardType: TextInputType.number<br><br>
+
+        indicando que os campos devem receber valores numéricos.<br><br>
+
+        Também utilizamos InputDecoration com:<br><br>
+
+        - labelText;<br>
+        - OutlineInputBorder;<br>
+        - prefixIcon.<br><br>
+
+        Os ícones utilizados ajudam a identificar visualmente cada informação do formulário.<br><br>
+
+        Os botões foram organizados dentro de uma Row.<br><br>
+
+        O botão “Calcular” utiliza:<br><br>
+
+        ElevatedButton.icon<br><br>
+
+        e executa calcularEstatisticas().<br><br>
+
+        O botão “Limpar” utiliza:<br><br>
+
+        OutlinedButton.icon<br><br>
+
+        e executa limparCampos().<br><br>
+
+        Os resultados são exibidos através de widgets Text.<br><br>
+
+        Para deixar os valores das médias formatados com duas casas decimais, utilizamos:<br><br>
+
+        toStringAsFixed(2)<br><br>
+
+        Assim, um valor pode ser apresentado, por exemplo, como:<br><br>
+
+        Média de gols por jogo: 2.50<br><br>
+
+        O fluxo da aplicação ficou:<br><br>
+
+        Usuário informa os dados<br>
+                ↓<br>
+        TextField<br>
+                ↓<br>
+        TextEditingController<br>
+                ↓<br>
+        Botão Calcular<br>
+                ↓<br>
+        calcularEstatisticas()<br>
+                ↓<br>
+        Conversão dos valores<br>
+                ↓<br>
+        Validação de jogos > 0<br>
+                ↓<br>
+        Cálculo das médias<br>
+                ↓<br>
+        setState()<br>
+                ↓<br>
+        Interface atualizada<br><br>
+
+        Com esse exercício, reforçamos conceitos já trabalhados anteriormente em Flutter, mas agora aplicados em um novo problema envolvendo estatísticas e médias.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Flutter;<br>
+        - Dart;<br>
+        - StatelessWidget;<br>
+        - StatefulWidget;<br>
+        - gerenciamento de estado;<br>
+        - TextEditingController;<br>
+        - TextField;<br>
+        - TextInputType.number;<br>
+        - InputDecoration;<br>
+        - OutlineInputBorder;<br>
+        - prefixIcon;<br>
+        - int.tryParse();<br>
+        - operador ??;<br>
+        - variáveis int e double;<br>
+        - operações matemáticas;<br>
+        - cálculo de média;<br>
+        - condicionais;<br>
+        - prevenção de divisão por zero;<br>
+        - setState();<br>
+        - clear();<br>
+        - dispose();<br>
+        - ElevatedButton.icon;<br>
+        - OutlinedButton.icon;<br>
+        - Row;<br>
+        - Column;<br>
+        - Padding;<br>
+        - SizedBox;<br>
+        - Text;<br>
+        - TextStyle;<br>
+        - toStringAsFixed(2);<br>
+        - atualização dinâmica da interface.<br><br>
+
+        <a href="https://github.com/Luanlhp777/mobile08" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `
+    },
+    {
+        data: "2026-08-25",
+        titulo: "Exercício 4 Planejamento de Mesada",
+        conteudo: ` <br><br>
+
+        <a href="https://github.com/Luanlhp777/mobile09" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `
+    },
 
 ]
