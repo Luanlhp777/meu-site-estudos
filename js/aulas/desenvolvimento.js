@@ -643,5 +643,160 @@ const aulasDesenvolvimento = [
         
         
         <a href="https://github.com/Luanlhp777/projetoCatalogoV2" target="_blank" class="btn-github">Ver código no Github</a>`
-    }
+    },
+    {
+        data: "2026-08-21",
+        titulo: "Projeto Integrado - Catálogo de Produtos v3",
+        conteudo: ` Na aula de hoje demos continuidade ao Projeto Catálogo de Produtos, trabalhando na Parte 3 da aplicação Full Stack e completando as operações de alteração e exclusão de produtos tanto no Back-end quanto no Front-end.<br><br>
+
+        Com essa evolução, o projeto passou a trabalhar com as quatro operações principais de um CRUD:<br><br>
+
+        CREATE → POST<br>
+        READ → GET<br>
+        UPDATE → PUT<br>
+        DELETE → DELETE<br><br>
+
+        No Back-end, mantivemos as funções já existentes para listar e cadastrar produtos e criamos a função alterarProduto(). Nessa operação, o ID do produto é recebido pela URL através de req.params.id.<br><br>
+
+        Depois, utilizamos find() para localizar o produto correspondente dentro do vetor.<br><br>
+
+        Caso o produto não seja encontrado, o servidor retorna status HTTP 404.<br><br>
+
+        Se o produto existir, os dados de nome, descrição e preço são atualizados, mantendo também as validações já existentes para nome e preço.<br><br>
+
+        Também criamos a função excluirProduto().<br><br>
+
+        Para excluir um produto, utilizamos findIndex() para encontrar sua posição dentro do vetor e depois splice() para removê-lo.<br><br>
+
+        As novas funções alterarProduto() e excluirProduto() também foram adicionadas ao module.exports para que possam ser utilizadas pelas rotas da aplicação. <br><br>
+
+        No arquivo produtoRoutes.js, mantivemos as rotas:<br><br>
+
+        GET /<br>
+        POST /<br><br>
+
+        e adicionamos:<br><br>
+
+        PUT /:id<br>
+        DELETE /:id<br><br>
+
+        A rota PUT é utilizada para atualizar um produto existente, enquanto DELETE é utilizada para excluir um produto.<br><br>
+
+        No Front-end, criamos o estado produtoEmEdicao, responsável por armazenar o produto selecionado pelo usuário para alteração.<br><br>
+
+        Também foi criada uma função alterarProduto(), que envia os novos dados para o Back-end utilizando fetch() com o método PUT.<br><br>
+
+        O ID do produto é incluído na URL da API.<br><br>
+
+        Depois que o Back-end retorna o produto atualizado, utilizamos map() para percorrer o estado atual e substituir somente o produto que foi alterado.<br><br>
+
+        Também foi criada a função excluirProduto(), que utiliza fetch() com o método DELETE.<br><br>
+
+        Após a exclusão ser confirmada pelo Back-end, utilizamos filter() para gerar uma nova lista sem o produto removido.<br><br>
+
+        Caso o produto excluído esteja sendo editado naquele momento, o estado produtoEmEdicao também é limpo.<br><br>
+
+        O componente FormProduto passou a receber novas props relacionadas à edição.<br><br>
+
+        Foi adicionada a prop produtoEmEdicao e a função aoAlterar.<br><br>
+
+        Também utilizamos useEffect() para detectar quando um produto é selecionado para edição e preencher automaticamente os campos do formulário com seus dados.<br><br>
+
+        Com isso, o mesmo formulário passou a funcionar de duas formas:<br><br>
+
+        - cadastro de novo produto;<br>
+        - alteração de produto existente.<br><br>
+
+        Também foi criada uma opção para cancelar a edição e limpar novamente o formulário.<br><br>
+
+        O texto do botão também muda dependendo do modo atual da aplicação.<br><br>
+
+        As validações de nome e preço continuaram sendo utilizadas normalmente.<br><br>
+
+        O componente ListaProdutos também foi atualizado para receber as funções aoEditar e aoExcluir.<br><br>
+
+        Essas funções são repassadas para cada componente Produto.<br><br>
+
+        No componente Produto foram adicionados dois novos botões:<br><br>
+
+        - Editar;<br>
+        - Excluir.<br><br>
+
+        O botão Editar envia o produto selecionado para o formulário.<br><br>
+
+        O botão Excluir envia o ID do produto para a função responsável pela remoção.<br><br>
+
+        Também foram adicionados novos estilos no CSS para os botões de ação e para o modo de edição do formulário, mantendo o tema visual e a responsividade da aplicação.<br><br>
+
+        Ao final da aula, o sistema passou a permitir:<br><br>
+
+        - listar produtos;<br>
+        - cadastrar produtos;<br>
+        - buscar produtos;<br>
+        - validar o formulário;<br>
+        - alterar produtos;<br>
+        - excluir produtos.<br><br>
+
+        O fluxo de edição ficou:<br><br>
+
+        Usuário<br>
+        → escolhe um produto<br>
+        → clica em Editar<br>
+        → produto é armazenado em produtoEmEdicao<br>
+        → formulário é preenchido<br>
+        → usuário altera os dados<br>
+        → fetch() com PUT<br>
+        → Back-end atualiza o produto<br>
+        → resposta retorna ao React<br>
+        → map() atualiza o estado<br>
+        → interface é atualizada<br><br>
+
+        Já a exclusão funciona assim:<br><br>
+
+        Usuário<br>
+        → clica em Excluir<br>
+        → fetch() com DELETE<br>
+        → Back-end remove o produto<br>
+        → Front-end recebe a confirmação<br>
+        → filter() remove o item do estado<br>
+        → lista é atualizada<br><br>
+
+        Com essa etapa, o Projeto Catálogo de Produtos passou a possuir um CRUD completo integrado entre React, Node.js e Express.<br><br>
+
+        Os dados ainda continuam armazenados apenas em memória, portanto são perdidos quando o servidor é reiniciado. A persistência definitiva ainda será trabalhada em uma etapa posterior. <br><br>
+
+        Conceitos trabalhados:<br><br>
+        - CRUD;<br>
+        - CREATE;<br>
+        - READ;<br>
+        - UPDATE;<br>
+        - DELETE;<br>
+        - React;<br>
+        - Node.js;<br>
+        - Express;<br>
+        - API REST;<br>
+        - GET;<br>
+        - POST;<br>
+        - PUT;<br>
+        - DELETE;<br>
+        - req.params.id;<br>
+        - find();<br>
+        - findIndex();<br>
+        - splice();<br>
+        - map();<br>
+        - filter();<br>
+        - fetch();<br>
+        - useState;<br>
+        - useEffect;<br>
+        - props;<br>
+        - estado de edição;<br>
+        - alteração de dados;<br>
+        - exclusão de dados;<br>
+        - status HTTP 404;<br>
+        - atualização dinâmica da interface;<br>
+        - integração Front-end e Back-end;<br>
+        - dados temporários em memória.<br><br>
+        
+        <a href="https://github.com/Luanlhp777/projetoCatalogoV3" target="_blank" class="btn-github">Ver código no Github</a>`
+    },
 ]

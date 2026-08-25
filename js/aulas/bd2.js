@@ -201,4 +201,273 @@ const aulasBd2 = [
         
         `
     },
+    {
+        data: "2026-08-24",
+        titulo: "Aplicação NoSQL",
+        conteudo: ` Na aula de hoje trabalhamos com uma aplicação Full Stack utilizando banco de dados NoSQL, com foco principal no MongoDB e na integração entre Front-end, Back-end e persistência real dos dados.<br><br>
+
+        O projeto desenvolvido foi um sistema de gerenciamento de tarefas utilizando React no Front-end, Node.js + Express no Back-end e MongoDB como banco de dados. A comunicação entre Node.js e MongoDB foi feita com Mongoose. <br><br>
+
+        O principal objetivo da aula foi entender, na prática, como funciona um banco NoSQL orientado a documentos.<br><br>
+
+        Diferente dos projetos anteriores, em que os dados ficavam armazenados apenas em vetores na memória do servidor, agora os documentos são gravados no MongoDB e permanecem disponíveis mesmo depois que o servidor é reiniciado.<br><br>
+
+        O banco utilizado foi:<br><br>
+
+        tarefas_db<br><br>
+
+        com conexão local através de:<br><br>
+
+        mongodb://127.0.0.1:27017/tarefas_db<br><br>
+
+        No MongoDB, os dados são organizados em documentos e coleções, em vez de tabelas e linhas como nos bancos relacionais tradicionais.<br><br>
+
+        Cada tarefa pode armazenar informações como:<br><br>
+
+        - título;<br>
+        - responsável;<br>
+        - prioridade;<br>
+        - tags;<br>
+        - status de conclusão;<br>
+        - detalhes extras.<br><br>
+
+        No Back-end, foi utilizado o Mongoose para criar um Schema que representa a estrutura principal dos documentos.<br><br>
+
+        Entre os campos utilizados estão:<br><br>
+
+        titulo<br>
+        responsavel<br>
+        prioridade<br>
+        tags<br>
+        concluida<br>
+        detalhesExtras<br><br>
+
+        O campo tags foi definido como um array de Strings:<br><br>
+
+        tags: [String]<br><br>
+
+        Isso permite que uma única tarefa possua várias tags associadas a ela.<br><br>
+
+        Outro conceito importante estudado foi a flexibilidade dos documentos NoSQL.<br><br>
+
+        O campo detalhesExtras utiliza:<br><br>
+
+        mongoose.Schema.Types.Mixed<br><br>
+
+        permitindo armazenar informações adicionais com estrutura variável.<br><br>
+
+        Por exemplo, um documento pode possuir:<br><br>
+
+        {<br>
+        "anotacaoLivre": "Revisar atividade",<br>
+        "atualizadoEm": "..."<br>
+        }<br><br>
+
+        Isso demonstrou na prática a característica flexível dos bancos orientados a documentos, em que determinadas informações podem variar entre os registros.<br><br>
+
+        Também trabalhamos com CRUD completo.<br><br>
+
+        As operações utilizadas foram:<br><br>
+
+        CREATE → POST<br>
+        READ → GET<br>
+        UPDATE → PUT<br>
+        PATCH → atualização parcial<br>
+        DELETE → DELETE<br><br>
+
+        Para cadastrar uma nova tarefa, utilizamos:<br><br>
+
+        POST /api/tarefas<br><br>
+
+        No Back-end, o documento é criado através de:<br><br>
+
+        Tarefa.create(req.body)<br><br>
+
+        Após a criação, a API retorna o status HTTP 201 Created.<br><br>
+
+        Para listar as tarefas, utilizamos:<br><br>
+
+        GET /api/tarefas<br><br>
+
+        Os documentos são recuperados através de:<br><br>
+
+        Tarefa.find()<br><br>
+
+        Também trabalhamos com atualização completa utilizando:<br><br>
+
+        PUT /api/tarefas/:id<br><br>
+
+        Nesse caso, o Mongoose utiliza:<br><br>
+
+        findByIdAndUpdate()<br><br>
+
+        para localizar o documento pelo _id gerado pelo MongoDB e atualizar seus dados.<br><br>
+
+        A opção:<br><br>
+
+        new: true<br><br>
+
+        faz com que a API retorne o documento já atualizado.<br><br>
+
+        Além do PUT, utilizamos PATCH para realizar uma alteração parcial no documento.<br><br>
+
+        A rota:<br><br>
+
+        PATCH /api/tarefas/:id<br><br>
+
+        é utilizada para alterar especificamente o status da tarefa, permitindo marcar como:<br><br>
+
+        - concluída;<br>
+        - não concluída.<br><br>
+
+        Para excluir uma tarefa, utilizamos:<br><br>
+
+        DELETE /api/tarefas/:id<br><br>
+
+        e o Mongoose executa:<br><br>
+
+        findByIdAndDelete()<br><br>
+
+        removendo o documento da coleção.<br><br>
+
+        Outro conceito importante foi o identificador _id.<br><br>
+
+        No MongoDB, cada documento recebe automaticamente um identificador único, utilizado para localizar registros durante operações de alteração e exclusão.<br><br>
+
+        Também utilizamos:<br><br>
+
+        timestamps: true<br><br>
+
+        no Schema.<br><br>
+
+        Com isso, o MongoDB registra automaticamente informações como:<br><br>
+
+        createdAt<br>
+        updatedAt<br><br>
+
+        permitindo saber quando determinado documento foi criado ou alterado.<br><br>
+
+        No Front-end, utilizamos React com os hooks useState() e useEffect().<br><br>
+
+        O useState() foi utilizado para controlar informações como:<br><br>
+
+        - tarefas;<br>
+        - id da tarefa em edição;<br>
+        - título;<br>
+        - responsável;<br>
+        - prioridade;<br>
+        - tags;<br>
+        - observação;<br>
+        - mensagens de status.<br><br>
+
+        Já o useEffect() é utilizado quando a aplicação é carregada para executar a função que busca as tarefas cadastradas no banco.<br><br>
+
+        A estrutura utilizada segue a lógica:<br><br>
+
+        useEffect(() => {<br>
+            carregarTarefas();<br>
+        }, []);<br><br>
+
+        A comunicação entre React e a API é realizada através da Fetch API.<br><br>
+
+        O endereço utilizado pelo Front-end é:<br><br>
+
+        http://localhost:5000/api/tarefas<br><br>
+
+        O fluxo completo da aplicação ficou:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        React<br>
+        ↓<br>
+        fetch()<br>
+        ↓<br>
+        API REST<br>
+        ↓<br>
+        Node.js + Express<br>
+        ↓<br>
+        Mongoose<br>
+        ↓<br>
+        MongoDB<br>
+        ↓<br>
+        Coleção de tarefas<br>
+        ↓<br>
+        Documento<br>
+        ↓<br>
+        Resposta JSON<br>
+        ↓<br>
+        React atualiza a interface<br><br>
+
+        A interface permite:<br><br>
+
+        - cadastrar tarefas;<br>
+        - listar tarefas;<br>
+        - editar;<br>
+        - cancelar uma edição;<br>
+        - concluir ou reabrir tarefas;<br>
+        - excluir;<br>
+        - informar prioridade;<br>
+        - cadastrar tags;<br>
+        - adicionar observações extras;<br>
+        - visualizar informações estruturadas em JSON/BSON;<br>
+        - exibir mensagens de status.<br><br>
+
+        Também trabalhamos com prioridades, utilizando os valores:<br><br>
+
+        Baixa<br>
+        Media<br>
+        Alta<br><br>
+
+        sendo Media o valor padrão.<br><br>
+
+        Essa aula representou uma evolução importante em relação aos projetos anteriores, pois passamos de dados temporários armazenados em memória para uma aplicação com persistência real utilizando MongoDB.<br><br>
+
+        Com isso, conseguimos visualizar na prática a integração completa entre as três camadas:<br><br>
+
+        Front-end<br>
+        → Back-end<br>
+        → Banco de dados<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - NoSQL;<br>
+        - MongoDB;<br>
+        - banco orientado a documentos;<br>
+        - documentos;<br>
+        - coleções;<br>
+        - BSON;<br>
+        - JSON;<br>
+        - persistência de dados;<br>
+        - Node.js;<br>
+        - Express;<br>
+        - Mongoose;<br>
+        - Schema;<br>
+        - Model;<br>
+        - mongoose.Schema.Types.Mixed;<br>
+        - arrays em documentos;<br>
+        - _id;<br>
+        - timestamps;<br>
+        - createdAt;<br>
+        - updatedAt;<br>
+        - CRUD;<br>
+        - POST;<br>
+        - GET;<br>
+        - PUT;<br>
+        - PATCH;<br>
+        - DELETE;<br>
+        - Tarefa.create();<br>
+        - Tarefa.find();<br>
+        - findByIdAndUpdate();<br>
+        - findByIdAndDelete();<br>
+        - API REST;<br>
+        - async/await;<br>
+        - React;<br>
+        - useState();<br>
+        - useEffect();<br>
+        - Fetch API;<br>
+        - integração Front-end e Back-end;<br>
+        - campos flexíveis;<br>
+        - persistência real dos dados.<br><br>
+
+        <a href="https://github.com/Luanlhp777/aplicacaoNoSQL" target="_blank" class="btn-github">Ver código no GitHub</a>`
+    },
 ]
