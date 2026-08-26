@@ -834,7 +834,196 @@ const aulasMobile = [
     {
         data: "2026-08-25",
         titulo: "Exercício 4 Planejamento de Mesada",
-        conteudo: ` <br><br>
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de Desenvolvimento Mobile I utilizando Flutter e Dart, realizando o Exercício 4 — “Planejamento de Mesada”. O foco principal foi trabalhar entrada de dados, operações matemáticas, gerenciamento de estado e atualização dinâmica da interface. <br><br>
+
+        A aplicação desenvolvida simula um planejamento financeiro simples. O usuário informa quatro valores:<br><br>
+
+        - valor total da mesada;<br>
+        - quanto pretende guardar;<br>
+        - quanto gasta com lanches;<br>
+        - quanto gasta com jogos ou lazer.<br><br>
+
+        A partir desses dados, o aplicativo calcula:<br><br>
+
+        - total comprometido;<br>
+        - valor restante da mesada.<br><br>
+
+        A estrutura do aplicativo começa com main(), runApp(), MaterialApp e a classe MainApp utilizando StatelessWidget.<br><br>
+
+        A tela principal foi criada com a classe TelaMesada, que utiliza StatefulWidget. Isso é necessário porque os resultados mudam durante a execução e precisam ser atualizados na interface.<br><br>
+
+        Dentro da classe _TelaMesadaState foram criados quatro TextEditingController:<br><br>
+
+        - mesadaController;<br>
+        - guardarController;<br>
+        - lanchesController;<br>
+        - lazerController.<br><br>
+
+        Esses controllers são utilizados para acessar os valores digitados nos TextField. <br><br>
+
+        Também foram criadas duas variáveis do tipo double:<br><br>
+
+        totalGasto<br>
+        valorRestante<br><br>
+
+        Essas variáveis armazenam os resultados dos cálculos.<br><br>
+
+        A principal função desenvolvida foi:<br><br>
+
+        calcularMesada()<br><br>
+
+        Dentro dela, os valores digitados são convertidos de texto para números utilizando:<br><br>
+
+        double.tryParse()<br><br>
+
+        Também utilizamos:<br><br>
+
+        ?? 0<br><br>
+
+        para definir zero caso algum valor não possa ser convertido corretamente.<br><br>
+
+        O total utilizado no planejamento é calculado através da soma:<br><br>
+
+        gastos = guardar + lanches + lazer<br><br>
+
+        Depois, o valor restante é calculado através de:<br><br>
+
+        restante = mesada - gastos<br><br>
+
+        Por exemplo:<br><br>
+
+        Mesada: R$ 500,00<br>
+        Guardar: R$ 100,00<br>
+        Lanches: R$ 50,00<br>
+        Lazer: R$ 80,00<br><br>
+
+        Total comprometido:<br>
+        100 + 50 + 80 = R$ 230,00<br><br>
+
+        Valor restante:<br>
+        500 - 230 = R$ 270,00<br><br>
+
+        Após realizar os cálculos, utilizamos setState() para atualizar:<br><br>
+
+        totalGasto<br>
+        valorRestante<br><br>
+
+        O setState() informa ao Flutter que o estado foi alterado e que a interface precisa ser reconstruída para exibir os novos resultados.<br><br>
+
+        Também foi criada a função limparCampos().<br><br>
+
+        Essa função utiliza o método clear() para apagar os valores digitados nos quatro campos e depois utiliza setState() para redefinir os resultados para zero.<br><br>
+
+        Outro conceito reforçado foi o método dispose().<br><br>
+
+        Os quatro TextEditingController são liberados através de:<br><br>
+
+        dispose()<br><br>
+
+        quando a tela deixa de ser utilizada. Isso evita que recursos permaneçam ocupados desnecessariamente.<br><br>
+
+        Na construção da interface foram utilizados quatro TextField.<br><br>
+
+        Cada campo utiliza:<br><br>
+
+        keyboardType: TextInputType.number<br><br>
+
+        indicando entrada numérica.<br><br>
+
+        Também foram utilizadas propriedades de InputDecoration, como:<br><br>
+
+        - labelText;<br>
+        - OutlineInputBorder;<br>
+        - prefixIcon.<br><br>
+
+        Os ícones utilizados representam visualmente cada tipo de informação:<br><br>
+
+        - dinheiro para valor da mesada;<br>
+        - economia para valor que será guardado;<br>
+        - alimentação para gastos com lanches;<br>
+        - videogame para gastos com lazer.<br><br>
+
+        Os botões foram organizados dentro de uma Row.<br><br>
+
+        O botão “Calcular” utiliza:<br><br>
+
+        ElevatedButton.icon<br><br>
+
+        e executa a função calcularMesada().<br><br>
+
+        O botão “Limpar” utiliza:<br><br>
+
+        OutlinedButton.icon<br><br>
+
+        e executa limparCampos().<br><br>
+
+        Os resultados são exibidos através de widgets Text.<br><br>
+
+        Para apresentar os valores monetários com duas casas decimais, utilizamos:<br><br>
+
+        toStringAsFixed(2)<br><br>
+
+        Assim, os resultados aparecem no formato:<br><br>
+
+        Total gasto: R$ 230.00<br>
+        Valor restante: R$ 270.00<br><br>
+
+        O fluxo da aplicação ficou:<br><br>
+
+        Usuário informa os valores<br>
+                ↓<br>
+        TextField<br>
+                ↓<br>
+        TextEditingController<br>
+                ↓<br>
+        Botão Calcular<br>
+                ↓<br>
+        calcularMesada()<br>
+                ↓<br>
+        double.tryParse()<br>
+                ↓<br>
+        Soma dos valores<br>
+                ↓<br>
+        Subtração da mesada<br>
+                ↓<br>
+        setState()<br>
+                ↓<br>
+        Resultados atualizados<br><br>
+
+        Com esse exercício, reforçamos os conceitos de entrada numérica, conversão de dados, operações matemáticas, estado e construção de interfaces interativas com Flutter.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Flutter;<br>
+        - Dart;<br>
+        - StatelessWidget;<br>
+        - StatefulWidget;<br>
+        - gerenciamento de estado;<br>
+        - TextEditingController;<br>
+        - TextField;<br>
+        - TextInputType.number;<br>
+        - InputDecoration;<br>
+        - OutlineInputBorder;<br>
+        - prefixIcon;<br>
+        - double.tryParse();<br>
+        - operador ??;<br>
+        - variáveis double;<br>
+        - operações matemáticas;<br>
+        - soma;<br>
+        - subtração;<br>
+        - valores monetários;<br>
+        - setState();<br>
+        - clear();<br>
+        - dispose();<br>
+        - ElevatedButton.icon;<br>
+        - OutlinedButton.icon;<br>
+        - Row;<br>
+        - Column;<br>
+        - Padding;<br>
+        - SizedBox;<br>
+        - Text;<br>
+        - TextStyle;<br>
+        - toStringAsFixed(2);<br>
+        - atualização dinâmica da interface.<br><br>
 
         <a href="https://github.com/Luanlhp777/mobile09" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
