@@ -874,5 +874,272 @@ const aulasWeb2 = [
         - dados temporários em memória.<br><br>
         
         <a href="https://github.com/Luanlhp777/projetoCatalogoV3" target="_blank" class="btn-github">Ver código no Github</a>`
-    }
+    },
+    {
+        data: "2026-08-26",
+        titulo: "React com JSON + Server",
+        conteudo: ` Na aula de hoje trabalhamos com React integrado ao JSON Server, com o objetivo de praticar o consumo de APIs REST sem depender de um Back-end real já pronto.<br><br>
+
+        O projeto utiliza um arquivo chamado db.json como fonte de dados, e o JSON Server transforma esse arquivo em uma API REST simulada. Dessa forma, foi possível desenvolver e testar o Front-end de maneira independente, mantendo uma estrutura parecida com a utilizada em aplicações reais. <br><br>
+
+        As principais tecnologias utilizadas foram:<br><br>
+
+        React | JavaScript | Vite | JSON Server | Fetch API | Node.js | npm | Git | GitHub<br><br>
+
+        O JSON Server foi utilizado como Back-end simulado.<br><br>
+
+        Para iniciar o servidor, utilizamos:<br><br>
+
+        npm run server<br><br>
+
+        A API fica disponível em:<br><br>
+
+        http://localhost:3001<br><br>
+
+        e o endpoint utilizado para trabalhar com as tarefas é:<br><br>
+
+        http://localhost:3001/tarefas<br><br>
+
+        Na primeira etapa da aula, o foco foi o consumo de dados utilizando o método HTTP GET.<br><br>
+
+        A aplicação realiza uma requisição para:<br><br>
+
+        GET /tarefas<br><br>
+
+        e o JSON Server retorna os dados existentes no arquivo db.json em formato JSON.<br><br>
+
+        O fluxo funciona da seguinte forma:<br><br>
+
+        React<br>
+        ↓<br>
+        tarefaService.js<br>
+        ↓<br>
+        fetch()<br>
+        ↓<br>
+        GET /tarefas<br>
+        ↓<br>
+        JSON Server<br>
+        ↓<br>
+        db.json<br>
+        ↓<br>
+        Resposta JSON<br>
+        ↓<br>
+        React<br>
+        ↓<br>
+        Interface atualizada<br><br>
+
+        Para realizar as requisições utilizamos a Fetch API através de:<br><br>
+
+        fetch()<br><br>
+
+        Como a comunicação com a API não acontece de forma instantânea, também trabalhamos com programação assíncrona utilizando:<br><br>
+
+        async<br>
+        await<br><br>
+
+        Outro conceito importante foi o useState().<br><br>
+
+        O useState() é utilizado para armazenar os dados dentro do componente React.<br><br>
+
+        Um exemplo conceitual é:<br><br>
+
+        const [tarefas, setTarefas] = useState([]);<br><br>
+
+        Inicialmente, tarefas possui um array vazio.<br><br>
+
+        Depois que os dados chegam da API, setTarefas() atualiza o estado e o React renderiza novamente a interface com as informações recebidas.<br><br>
+
+        Também utilizamos useEffect().<br><br>
+
+        O useEffect() permite executar determinada ação quando o componente é carregado.<br><br>
+
+        Nesse projeto, ele é utilizado para buscar as tarefas automaticamente quando a aplicação inicia.<br><br>
+
+        O fluxo é:<br><br>
+
+        Componente carregado<br>
+                ↓<br>
+        useEffect()<br>
+                ↓<br>
+        Service<br>
+                ↓<br>
+        GET /tarefas<br>
+                ↓<br>
+        JSON Server<br>
+                ↓<br>
+        Dados recebidos<br>
+                ↓<br>
+        Estado atualizado<br>
+                ↓<br>
+        Lista renderizada<br><br>
+
+        Um dos principais conceitos trabalhados foi a criação de uma camada de Service.<br><br>
+
+        Foi utilizado um arquivo como:<br><br>
+
+        tarefaService.js<br><br>
+
+        para concentrar a comunicação com a API.<br><br>
+
+        Assim, em vez de colocar todas as chamadas fetch() diretamente dentro dos componentes, utilizamos a organização:<br><br>
+
+        Componentes React<br>
+            ↓<br>
+        Service<br>
+            ↓<br>
+        API<br><br>
+
+        Essa separação melhora a organização do projeto e reduz o acoplamento entre a interface e a fonte dos dados.<br><br>
+
+        Na segunda etapa, o projeto evoluiu para trabalhar com operações de CRUD.<br><br>
+
+        Foram utilizados os métodos:<br><br>
+
+        GET | POST | PATCH | DELETE<br><br>
+
+        As rotas trabalhadas foram:<br><br>
+
+        GET /tarefas<br>
+        → listar tarefas<br><br>
+
+        POST /tarefas<br>
+        → criar uma nova tarefa<br><br>
+
+        PATCH /tarefas/:id<br>
+        → atualizar parcialmente uma tarefa<br><br>
+
+        DELETE /tarefas/:id<br>
+        → excluir uma tarefa<br><br>
+
+        Na operação CREATE, utilizamos:<br><br>
+
+        POST /tarefas<br><br>
+
+        O React envia os dados da nova tarefa para o JSON Server e o novo objeto é registrado no arquivo db.json.<br><br>
+
+        Na operação READ, utilizamos:<br><br>
+
+        GET /tarefas<br><br>
+
+        para buscar todas as tarefas cadastradas.<br><br>
+
+        Na operação UPDATE, utilizamos PATCH:<br><br>
+
+        PATCH /tarefas/:id<br><br>
+
+        O PATCH permite alterar apenas alguns campos de um objeto, sem precisar substituir todo o registro.<br><br>
+
+        Na operação DELETE, utilizamos:<br><br>
+
+        DELETE /tarefas/:id<br><br>
+
+        para remover a tarefa correspondente da base simulada.<br><br>
+
+        As operações ficaram organizadas da seguinte maneira:<br><br>
+
+        CREATE → POST<br>
+        READ   → GET<br>
+        UPDATE → PATCH<br>
+        DELETE → DELETE<br><br>
+
+        Outro ponto importante da aula foi compreender a independência entre Front-end e Back-end.<br><br>
+
+        Durante o desenvolvimento, utilizamos:<br><br>
+
+        React<br>
+        ↓<br>
+        Service<br>
+        ↓<br>
+        JSON Server<br><br>
+
+        Porém, em uma aplicação real, essa estrutura poderia posteriormente ser substituída por:<br><br>
+
+        React<br>
+        ↓<br>
+        Service<br>
+        ↓<br>
+        Back-end real<br>
+        ↓<br>
+        Banco de Dados<br><br>
+
+        A principal vantagem é que os componentes React não precisam saber exatamente como o Back-end está implementado.<br><br>
+
+        Se futuramente o JSON Server for substituído por uma API desenvolvida em Node.js, por exemplo, grande parte das alterações pode ficar concentrada dentro do Service.<br><br>
+
+        Com isso, a arquitetura fica semelhante a:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        React<br>
+        ↓<br>
+        Evento<br>
+        ↓<br>
+        Service<br>
+        ↓<br>
+        Fetch API<br>
+        ↓<br>
+        JSON Server<br>
+        ↓<br>
+        db.json<br>
+        ↓<br>
+        Resposta JSON<br>
+        ↓<br>
+        Atualização do estado<br>
+        ↓<br>
+        Interface atualizada<br><br>
+
+        Também foi necessário executar duas aplicações separadamente durante o desenvolvimento.<br><br>
+
+        Em um terminal:<br><br>
+
+        npm run server<br><br>
+
+        para iniciar o JSON Server.<br><br>
+
+        Em outro terminal:<br><br>
+
+        npm run dev<br><br>
+
+        para iniciar a aplicação React através do Vite.<br><br>
+
+        Com essa aula, praticamos como consumir e manipular dados de uma API no React, utilizando uma estrutura que se aproxima de aplicações Front-end reais.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - React;<br>
+        - JavaScript;<br>
+        - Vite;<br>
+        - JSON Server;<br>
+        - API REST;<br>
+        - JSON;<br>
+        - db.json;<br>
+        - dados mockados;<br>
+        - Fetch API;<br>
+        - fetch();<br>
+        - async/await;<br>
+        - useState();<br>
+        - useEffect();<br>
+        - gerenciamento de estado;<br>
+        - renderização de listas;<br>
+        - camada Service;<br>
+        - separação de responsabilidades;<br>
+        - integração Front-end e API;<br>
+        - métodos HTTP;<br>
+        - GET;<br>
+        - POST;<br>
+        - PATCH;<br>
+        - DELETE;<br>
+        - CRUD;<br>
+        - endpoints;<br>
+        - programação assíncrona;<br>
+        - independência entre Front-end e Back-end.<br><br>
+        
+        <a href="https://github.com/Luanlhp777/reactComJSONServer" target="_blank" class="btn-github">Ver código no Github</a>`
+    },
+    {
+        data: "2026-08-27",
+        titulo: "** Em construção **",
+        conteudo: ` <br><br>
+        
+        <a href="" target="_blank" class="btn-github">Ver código no Github</a>`
+    },
 ]
