@@ -1137,9 +1137,335 @@ const aulasWeb2 = [
     },
     {
         data: "2026-08-27",
-        titulo: "** Em construção **",
-        conteudo: ` <br><br>
+        titulo: "Substituição do JSON Server pelo Node.js e Express",
+        conteudo: ` Na aula de hoje demos continuidade ao projeto React com tarefas, porém realizamos uma mudança importante na arquitetura. Substituímos o JSON Server por um Back-end próprio desenvolvido com Node.js e Express.<br><br>
+
+        A principal ideia foi manter o Front-end em React consumindo uma API REST, mas agora essa API não é mais criada automaticamente pelo JSON Server. Passamos a desenvolver manualmente as rotas, regras de manipulação dos dados e persistência no arquivo db.json.<br><br>
+
+        No repositório foi criada uma pasta BACKEND contendo:<br><br>
+
+        - db.json;<br>
+        - package.json;<br>
+        - package-lock.json;<br>
+        - server.js.<br><br>
+
+        Isso separa de forma mais clara o Front-end e o Back-end da aplicação. <br><br>
+
+        No arquivo server.js utilizamos:<br><br>
+
+        const express = require('express');<br>
+        const fs = require('fs');<br>
+        const path = require('path');<br>
+        const cors = require('cors');<br><br>
+
+        O Express é responsável pela criação do servidor e das rotas da API.<br><br>
+
+        O módulo fs é utilizado para ler e gravar informações no arquivo db.json.<br><br>
+
+        O módulo path ajuda a montar corretamente o caminho do arquivo.<br><br>
+
+        Já o CORS permite a comunicação entre o Front-end React e o Back-end executados em endereços ou portas diferentes.<br><br>
+
+        O servidor foi configurado para funcionar na porta:<br><br>
+
+        3000<br><br>
+
+        Também foram adicionados dois middlewares importantes:<br><br>
+
+        app.use(cors());<br><br>
+
+        app.use(express.json());<br><br>
+
+        O cors() libera a comunicação entre aplicações diferentes durante o desenvolvimento.<br><br>
+
+        O express.json() permite que o servidor receba dados JSON enviados pelo Front-end. <br><br>
+
+        Para trabalhar com o arquivo db.json, criamos duas funções principais.<br><br>
+
+        A primeira foi:<br><br>
+
+        lerBanco()<br><br>
+
+        Ela utiliza:<br><br>
+
+        fs.readFileSync()<br><br>
+
+        para ler o arquivo e depois:<br><br>
+
+        JSON.parse()<br><br>
+
+        para transformar o conteúdo JSON em um objeto ou array JavaScript que possa ser manipulado pelo Back-end.<br><br>
+
+        Também criamos:<br><br>
+
+        salvarBanco(dados)<br><br>
+
+        Essa função utiliza:<br><br>
+
+        fs.writeFileSync()<br><br>
+
+        e:<br><br>
+
+        JSON.stringify()<br><br>
+
+        para converter novamente os dados JavaScript para JSON e gravá-los no arquivo db.json.<br><br>
+
+        Assim, passamos a controlar manualmente a persistência que anteriormente era realizada automaticamente pelo JSON Server.<br><br>
+
+        Depois disso, implementamos as rotas da API.<br><br>
+
+        Para listar todas as tarefas utilizamos:<br><br>
+
+        GET /tarefas<br><br>
+
+        A rota executa lerBanco(), obtém as tarefas existentes no arquivo e retorna os dados através de:<br><br>
+
+        res.json(tarefas)<br><br>
+
+        Caso ocorra algum erro, o servidor retorna status 500.<br><br>
+
+        O fluxo fica:<br><br>
+
+        React<br>
+        ↓<br>
+        GET /tarefas<br>
+        ↓<br>
+        Express<br>
+        ↓<br>
+        lerBanco()<br>
+        ↓<br>
+        fs.readFileSync()<br>
+        ↓<br>
+        db.json<br>
+        ↓<br>
+        JSON.parse()<br>
+        ↓<br>
+        Resposta JSON<br>
+        ↓<br>
+        React<br><br>
+
+        Também criamos a rota:<br><br>
+
+        POST /tarefas<br><br>
+
+        responsável por cadastrar uma nova tarefa.<br><br>
+
+        Ao receber os dados do Front-end, é criado um objeto semelhante a:<br><br>
+
+        {<br>
+            id: Date.now(),<br>
+            titulo: req.body.titulo,<br>
+            concluida: false<br>
+        }<br><br>
+
+        O ID é gerado utilizando:<br><br>
+
+        Date.now()<br><br>
+
+        A tarefa começa com:<br><br>
+
+        concluida: false<br><br>
+
+        Depois, utilizamos:<br><br>
+
+        tarefas.push(novaTarefa)<br><br>
+
+        para adicionar a tarefa ao array.<br><br>
+
+        Em seguida:<br><br>
+
+        salvarBanco(tarefas)<br><br>
+
+        grava novamente os dados no db.json.<br><br>
+
+        Ao finalizar corretamente, o servidor retorna:<br><br>
+
+        201 Created<br><br>
+
+        junto com a nova tarefa criada.<br><br>
+
+        Também implementamos atualização parcial utilizando:<br><br>
+
+        PATCH /tarefas/:id<br><br>
+
+        Nessa rota, o ID é recebido através de:<br><br>
+
+        req.params<br><br>
+
+        e o novo valor de concluida é obtido através de:<br><br>
+
+        req.body<br><br>
+
+        Depois utilizamos:<br><br>
+
+        find()<br><br>
+
+        para localizar a tarefa correspondente.<br><br>
+
+        Caso a tarefa não seja encontrada, retornamos:<br><br>
+
+        404 Not Found<br><br>
+
+        Caso exista, seu campo concluida pode ser atualizado.<br><br>
+
+        Depois da alteração, salvarBanco() grava novamente o conteúdo no arquivo.<br><br>
+
+        A exclusão foi implementada através de:<br><br>
+
+        DELETE /tarefas/:id<br><br>
+
+        O ID novamente é recebido pela URL.<br><br>
+
+        Para remover a tarefa utilizamos:<br><br>
+
+        filter()<br><br>
+
+        criando uma nova lista sem a tarefa cujo ID corresponde ao informado.<br><br>
+
+        Também comparamos o tamanho da lista antes e depois da operação.<br><br>
+
+        Caso nenhuma tarefa tenha sido removida, o servidor retorna:<br><br>
+
+        404 Not Found<br><br>
+
+        Quando a exclusão acontece corretamente, utilizamos:<br><br>
+
+        204 No Content<br><br>
+
+        Esse status indica que a operação foi concluída com sucesso e não existe conteúdo para devolver na resposta. <br><br>
+
+        Com isso, as principais operações trabalhadas ficaram:<br><br>
+
+        GET /tarefas<br>
+        → listar tarefas<br><br>
+
+        POST /tarefas<br>
+        → cadastrar tarefa<br><br>
+
+        PATCH /tarefas/:id<br>
+        → alterar parcialmente uma tarefa<br><br>
+
+        DELETE /tarefas/:id<br>
+        → excluir tarefa<br><br>
+
+        A grande diferença em relação à aula anterior é que antes o fluxo era:<br><br>
+
+        React<br>
+        ↓<br>
+        Fetch API<br>
+        ↓<br>
+        JSON Server<br>
+        ↓<br>
+        db.json<br><br>
+
+        Agora passou a ser:<br><br>
+
+        React<br>
+        ↓<br>
+        Fetch API<br>
+        ↓<br>
+        Node.js<br>
+        ↓<br>
+        Express<br>
+        ↓<br>
+        Rotas<br>
+        ↓<br>
+        fs<br>
+        ↓<br>
+        db.json<br><br>
+
+        Com o JSON Server, grande parte do CRUD era criada automaticamente.<br><br>
+
+        Agora precisamos implementar manualmente:<br><br>
+
+        - servidor;<br>
+        - rotas;<br>
+        - métodos HTTP;<br>
+        - leitura dos dados;<br>
+        - gravação dos dados;<br>
+        - criação de IDs;<br>
+        - atualização;<br>
+        - exclusão;<br>
+        - códigos de status;<br>
+        - tratamento de erros.<br><br>
+
+        Isso permitiu compreender melhor o que acontece por trás de uma API REST.<br><br>
+
+        Apesar de continuarmos utilizando db.json como armazenamento, agora o arquivo é manipulado diretamente pelo nosso próprio Back-end utilizando o módulo fs do Node.js.<br><br>
+
+        O fluxo completo da aplicação ficou:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        React<br>
+        ↓<br>
+        Evento<br>
+        ↓<br>
+        Service / Fetch API<br>
+        ↓<br>
+        Requisição HTTP<br>
+        ↓<br>
+        Node.js + Express<br>
+        ↓<br>
+        Rota<br>
+        ↓<br>
+        lerBanco()<br>
+        ↓<br>
+        db.json<br>
+        ↓<br>
+        Processamento<br>
+        ↓<br>
+        salvarBanco()<br>
+        ↓<br>
+        Resposta HTTP/JSON<br>
+        ↓<br>
+        React<br>
+        ↓<br>
+        Estado atualizado<br>
+        ↓<br>
+        Interface atualizada<br><br>
+
+        Com essa aula, avançamos da utilização de um Back-end simulado para a criação de uma API própria com Node.js e Express, mantendo a integração com o React e compreendendo de forma mais profunda o funcionamento das requisições HTTP e da persistência de dados.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Node.js;<br>
+        - Express;<br>
+        - API REST;<br>
+        - React;<br>
+        - integração Front-end e Back-end;<br>
+        - substituição do JSON Server;<br>
+        - servidor HTTP;<br>
+        - rotas;<br>
+        - middlewares;<br>
+        - cors();<br>
+        - express.json();<br>
+        - módulo fs;<br>
+        - módulo path;<br>
+        - db.json;<br>
+        - fs.readFileSync();<br>
+        - fs.writeFileSync();<br>
+        - JSON.parse();<br>
+        - JSON.stringify();<br>
+        - req.body;<br>
+        - req.params;<br>
+        - res.json();<br>
+        - GET;<br>
+        - POST;<br>
+        - PATCH;<br>
+        - DELETE;<br>
+        - Date.now();<br>
+        - push();<br>
+        - find();<br>
+        - filter();<br>
+        - status HTTP 201;<br>
+        - status HTTP 204;<br>
+        - status HTTP 404;<br>
+        - status HTTP 500;<br>
+        - tratamento de erros;<br>
+        - persistência em arquivo JSON;<br>
+        - CRUD;<br>
+        - separação entre Front-end e Back-end.<br><br>
         
-        <a href="" target="_blank" class="btn-github">Ver código no Github</a>`
+        <a href="https://github.com/Luanlhp777/reactComJSONServer" target="_blank" class="btn-github">Ver código no Github</a>`
     },
 ]
