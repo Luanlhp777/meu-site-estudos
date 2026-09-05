@@ -1468,4 +1468,391 @@ const aulasWeb2 = [
         
         <a href="https://github.com/Luanlhp777/reactComJSONServer" target="_blank" class="btn-github">Ver código no Github</a>`
     },
+    {
+        data: "2026-09-04",
+        titulo: "Aplicação Full Stack - Cadastro de Podutos",
+        conteudo: ` Na aula de hoje demos continuidade aos estudos de aplicações Full Stack, desenvolvendo um projeto de Cadastro de Produtos com React no Front-end, Node.js e Express no Back-end e MySQL como banco de dados.<br><br>
+
+        O objetivo principal foi praticar a integração entre as diferentes camadas da aplicação e evoluir um projeto que anteriormente utilizava uma API simulada para uma arquitetura com Back-end próprio e banco de dados real. <br><br>
+
+        A estrutura geral do projeto ficou separada em:<br><br>
+
+        - frontend;<br>
+        - backend;<br>
+        - banco de dados.<br><br>
+
+        Essa organização reforça a separação de responsabilidades entre as camadas.<br><br>
+
+        A arquitetura proposta ficou:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        React<br>
+        ↓<br>
+        Service<br>
+        ↓<br>
+        Fetch API<br>
+        ↓<br>
+        API REST<br>
+        ↓<br>
+        Node.js + Express<br>
+        ↓<br>
+        mysql2<br>
+        ↓<br>
+        Stored Procedures<br>
+        ↓<br>
+        MySQL<br><br><br>
+
+        No Front-end utilizamos:<br><br>
+
+        - React;<br>
+        - JavaScript;<br>
+        - Vite;<br>
+        - Fetch API;<br>
+        - HTML;<br>
+        - CSS.<br><br>
+
+        No Back-end utilizamos:<br><br>
+
+        - Node.js;<br>
+        - Express;<br>
+        - JavaScript;<br>
+        - mysql2;<br>
+        - CORS.<br><br>
+
+        No banco de dados utilizamos:<br><br>
+
+        - MySQL;<br>
+        - SQL;<br>
+        - Stored Procedures.<br><br>
+
+        O Front-end foi organizado utilizando componentes separados.<br><br>
+
+        Entre os principais componentes estão:<br><br>
+
+        Header<br>
+        FormProduto<br>
+        ListaProduto<br>
+        Footer<br><br>
+
+        Também existe uma camada de serviço localizada em:<br><br>
+
+        src/services/produtoService.js<br><br>
+
+        Essa camada concentra as requisições HTTP realizadas pelo React.<br><br>
+
+        A ideia é evitar que os componentes precisem conhecer diretamente todos os detalhes da API.<br><br>
+
+        O fluxo fica:<br><br>
+
+        Componente React<br>
+            ↓<br>
+        produtoService.js<br>
+            ↓<br>
+        Fetch API<br>
+            ↓<br>
+        Back-end<br><br>
+
+        No componente principal utilizamos useState() para controlar informações como:<br><br>
+
+        produtos<br>
+        erro<br>
+        carregando<br><br>
+
+        Também utilizamos useEffect() para carregar os produtos automaticamente quando a aplicação é iniciada.<br><br>
+
+        O fluxo de carregamento fica:<br><br>
+
+        Aplicação inicia<br>
+            ↓<br>
+        useEffect()<br>
+            ↓<br>
+        Service<br>
+            ↓<br>
+        GET /produtos<br>
+            ↓<br>
+        Back-end<br>
+            ↓<br>
+        MySQL<br>
+            ↓<br>
+        Produtos retornados<br>
+            ↓<br>
+        useState()<br>
+            ↓<br>
+        Interface atualizada<br><br>
+
+        No Back-end utilizamos Node.js e Express.<br><br>
+
+        O servidor funciona na porta:<br><br>
+
+        3000<br><br>
+
+        e a API fica disponível em:<br><br>
+
+        http://localhost:3000<br><br>
+
+        Também utilizamos:<br><br>
+
+        app.use(express.json());<br><br>
+
+        para permitir que o Back-end receba dados JSON enviados pelo Front-end.<br><br>
+
+        Outro middleware utilizado foi:<br><br>
+
+        app.use(cors());<br><br>
+
+        O CORS permite que o Front-end executado pelo Vite consiga realizar requisições para o Back-end durante o desenvolvimento.<br><br>
+
+        A comunicação com o banco de dados é realizada através do pacote:<br><br>
+
+        mysql2<br><br>
+
+        O banco utilizado no projeto é:<br><br>
+
+        aula_crud<br><br>
+
+        O Back-end realiza as operações no banco através de Stored Procedures.<br><br>
+
+        As procedures utilizadas são:<br><br>
+
+        sp_listar_produtos<br>
+        sp_cadastrar_produto<br>
+        sp_atualizar_produto<br>
+        sp_excluir_produto<br><br>
+
+        Com isso, o fluxo de acesso ao banco fica:<br><br>
+
+        API<br>
+        ↓<br>
+        mysql2<br>
+        ↓<br>
+        Stored Procedure<br>
+        ↓<br>
+        Tabela produtos<br><br>
+
+        O projeto trabalha com o CRUD de produtos.<br><br>
+
+        As operações disponíveis no Back-end são:<br><br>
+
+        GET /produtos<br>
+        → listar produtos<br><br>
+
+        POST /produtos<br>
+        → cadastrar produto<br><br>
+
+        PUT /produtos/:id<br>
+        → atualizar produto<br><br>
+
+        DELETE /produtos/:id<br>
+        → excluir produto<br><br>
+
+        Essas operações representam:<br><br>
+
+        CREATE → POST<br>
+        READ   → GET<br>
+        UPDATE → PUT<br>
+        DELETE → DELETE<br><br>
+
+        Para listar os produtos utilizamos:<br><br>
+
+        GET /produtos<br><br>
+
+        A API executa:<br><br>
+
+        CALL sp_listar_produtos()<br><br>
+
+        e retorna os produtos cadastrados no banco.<br><br>
+
+        Para cadastrar um novo produto utilizamos:<br><br>
+
+        POST /produtos<br><br>
+
+        Um exemplo de dados enviados é:<br><br>
+
+        {<br>
+        "nome": "Notebook",<br>
+        "preco": 3500.00<br>
+        }<br><br>
+
+        O Back-end executa:<br><br>
+
+        CALL sp_cadastrar_produto(?, ?)<br><br>
+
+        e registra o produto no MySQL.<br><br>
+
+        Para atualizar um produto utilizamos:<br><br>
+
+        PUT /produtos/:id<br><br>
+
+        Por exemplo:<br><br>
+
+        PUT /produtos/1<br><br>
+
+        com um corpo semelhante a:<br><br>
+
+        {<br>
+        "nome": "Notebook Gamer",<br>
+        "preco": 4500.00<br>
+        }<br><br>
+
+        Nesse caso, é executada:<br><br>
+
+        CALL sp_atualizar_produto(?, ?, ?)<br><br>
+
+        Para excluir um produto utilizamos:<br><br>
+
+        DELETE /produtos/:id<br><br>
+
+        e o Back-end executa:<br><br>
+
+        CALL sp_excluir_produto(?)<br><br>
+
+        No Front-end também existe uma confirmação antes de realizar a exclusão, evitando remover um produto acidentalmente.<br><br>
+
+        Um dos principais pontos da aula foi justamente a evolução da arquitetura.<br><br>
+
+        Anteriormente, o projeto utilizava:<br><br>
+
+        React<br>
+        ↓<br>
+        Service<br>
+        ↓<br>
+        JSON Server<br><br>
+
+        Agora estamos evoluindo para:<br><br>
+
+        React<br>
+        ↓<br>
+        Service<br>
+        ↓<br>
+        Node.js + Express<br>
+        ↓<br>
+        MySQL<br><br>
+
+        Essa mudança aproxima o projeto de uma aplicação Full Stack real.<br><br>
+
+        A camada de Service facilita bastante essa transição, pois os componentes React continuam chamando funções responsáveis pelas requisições, enquanto os detalhes da API ficam centralizados em produtoService.js.<br><br>
+
+        Também trabalhamos com a ideia de contrato de API.<br><br>
+
+        O Front-end precisa utilizar exatamente os mesmos métodos HTTP, endpoints e estruturas definidos pelo Back-end.<br><br>
+
+        O repositório ainda está em desenvolvimento e existe um ponto importante sendo ajustado.<br><br>
+
+        Existe uma chamada antiga no Front-end utilizando:<br><br>
+
+        PATCH /produtos/:id<br><br>
+
+        para alterar um campo chamado:<br><br>
+
+        concluida<br><br>
+
+        Essa lógica veio de uma etapa anterior do projeto.<br><br>
+
+        Porém, o Back-end atual utiliza:<br><br>
+
+        PUT /produtos/:id<br><br>
+
+        para atualizar nome e preço dos produtos.<br><br>
+
+        Portanto, Front-end e Back-end ainda precisam ser totalmente padronizados para utilizar o mesmo contrato de API.<br><br>
+
+        O próprio projeto registra como pontos ainda em evolução:<br><br>
+
+        - integração completa entre Front-end e Back-end;<br>
+        - adequação das operações do Front-end às rotas reais;<br>
+        - remoção de referências restantes ao JSON Server;<br>
+        - revisão da atualização de produtos;<br>
+        - tratamento de erros;<br>
+        - ajustes finais de interface e funcionamento.<br><br>
+
+        A aplicação ainda está em desenvolvimento, mas já possui:<br><br>
+
+        - estrutura React;<br>
+        - componentes separados;<br>
+        - formulário;<br>
+        - listagem de produtos;<br>
+        - useState;<br>
+        - useEffect;<br>
+        - camada Service;<br>
+        - Back-end em Node.js;<br>
+        - Express;<br>
+        - CORS;<br>
+        - conexão com MySQL;<br>
+        - cadastro;<br>
+        - listagem;<br>
+        - atualização no Back-end;<br>
+        - exclusão;<br>
+        - Stored Procedures.<br><br>
+
+        O fluxo completo estudado ficou:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        Interface React<br>
+        ↓<br>
+        Evento<br>
+        ↓<br>
+        Service<br>
+        ↓<br>
+        Fetch API<br>
+        ↓<br>
+        Requisição HTTP<br>
+        ↓<br>
+        Node.js + Express<br>
+        ↓<br>
+        Rota<br>
+        ↓<br>
+        mysql2<br>
+        ↓<br>
+        Stored Procedure<br>
+        ↓<br>
+        MySQL<br>
+        ↓<br>
+        Resposta da API<br>
+        ↓<br>
+        Atualização do estado<br>
+        ↓<br>
+        Interface React atualizada<br><br>
+
+        Com essa aula, avançamos na construção de uma aplicação Full Stack, integrando os conhecimentos estudados separadamente em React, APIs REST, Node.js, Express e MySQL.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - aplicação Full Stack;<br>
+        - React;<br>
+        - JavaScript;<br>
+        - Vite;<br>
+        - Node.js;<br>
+        - Express;<br>
+        - MySQL;<br>
+        - mysql2;<br>
+        - SQL;<br>
+        - Stored Procedures;<br>
+        - API REST;<br>
+        - CRUD;<br>
+        - Fetch API;<br>
+        - async/await;<br>
+        - useState();<br>
+        - useEffect();<br>
+        - componentes;<br>
+        - Service;<br>
+        - CORS;<br>
+        - express.json();<br>
+        - JSON;<br>
+        - GET;<br>
+        - POST;<br>
+        - PUT;<br>
+        - DELETE;<br>
+        - endpoints;<br>
+        - contrato de API;<br>
+        - integração Front-end e Back-end;<br>
+        - integração Back-end e banco de dados;<br>
+        - gerenciamento de estado;<br>
+        - tratamento de erros;<br>
+        - separação de responsabilidades;<br>
+        - arquitetura em camadas;<br>
+        - persistência de dados;<br>
+        - integração Full Stack.<br><br>
+        <a href="https://github.com/Luanlhp777/cadastroProdutos" target="_blank" class="btn-github">Ver código no Github</a>`
+    }
 ]

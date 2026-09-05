@@ -1060,10 +1060,412 @@ const aulasDesenvolvimento = [
         <a href="https://github.com/Luanlhp777/reactComJSONServer" target="_blank" class="btn-github">Ver código no Github</a>`
     },
     {
-        data: "2026-08-28",
-        titulo: "** Em construção **",
-        conteudo: ` <br><br>
+        data: "2026-09-02",
+        titulo: "Contrato de API",
+        conteudo: ` Na aula de hoje trabalhamos com o conceito de Contrato de API, desenvolvendo uma API REST de produtos utilizando Node.js, Express e MySQL. O objetivo principal foi entender como uma aplicação define regras claras de comunicação entre cliente, servidor e banco de dados. <br><br>
+
+    O projeto implementa um CRUD completo de produtos e utiliza Stored Procedures no MySQL para executar as operações no banco de dados.<br><br>
+
+    As principais tecnologias utilizadas foram:<br><br>
+
+    - Node.js;<br>
+    - Express;<br>
+    - JavaScript;<br>
+    - MySQL;<br>
+    - mysql2;<br>
+    - SQL;<br>
+    - JSON;<br>
+    - Git;<br>
+    - GitHub.<br><br>
+
+    A arquitetura trabalhada ficou:<br><br>
+
+    Cliente<br>
+    ↓<br>
+    Requisição HTTP<br>
+    ↓<br>
+    Express<br>
+    ↓<br>
+    Rota da API<br>
+    ↓<br>
+    mysql2<br>
+    ↓<br>
+    Stored Procedure<br>
+    ↓<br>
+    MySQL<br>
+    ↓<br>
+    Resposta JSON<br><br>
+
+    No banco de dados foi criado:<br><br>
+
+    aula_crud<br><br>
+
+    Dentro dele foi criada a tabela:<br><br>
+
+    produtos<br><br>
+
+    com os campos:<br><br>
+
+    id<br>
+    nome<br>
+    preco<br><br>
+
+    O campo id utiliza AUTO_INCREMENT e é a chave primária. O nome é VARCHAR(100) e o preço utiliza DECIMAL(10,2). <br><br>
+
+    Um conceito importante da aula foi o uso de Stored Procedures.<br><br>
+
+    Foram criadas quatro procedures:<br><br>
+
+    sp_listar_produtos<br>
+    sp_cadastrar_produto<br>
+    sp_atualizar_produto<br>
+    sp_excluir_produto<br><br>
+
+    Cada uma ficou responsável por uma operação específica do CRUD.<br><br>
+
+    Para listar os produtos foi criada:<br><br>
+
+    sp_listar_produtos()<br><br>
+
+    Ela executa um SELECT na tabela produtos e retorna:<br><br>
+
+    id<br>
+    nome<br>
+    preco<br><br>
+
+    ordenados pelo id.<br><br>
+
+    Para cadastrar um produto foi criada:<br><br>
+
+    sp_cadastrar_produto(?, ?)<br><br>
+
+    Ela recebe:<br><br>
+
+    nome<br>
+    preco<br><br>
+
+    e executa um INSERT na tabela.<br><br>
+
+    Depois do cadastro, utilizamos:<br><br>
+
+    LAST_INSERT_ID()<br><br>
+
+    para retornar o ID gerado automaticamente pelo MySQL.<br><br>
+
+    Para atualizar um produto foi criada:<br><br>
+
+    sp_atualizar_produto(?, ?, ?)<br><br>
+
+    Ela recebe:<br><br>
+
+    id<br>
+    nome<br>
+    preco<br><br>
+
+    e executa um UPDATE no registro correspondente.<br><br>
+
+    Depois utilizamos:<br><br>
+
+    ROW_COUNT()<br><br>
+
+    para descobrir quantas linhas foram afetadas pela operação.<br><br>
+
+    Essa informação permite verificar se o produto realmente existia.<br><br>
+
+    Também criamos:<br><br>
+
+    sp_excluir_produto(?)<br><br>
+
+    que recebe o ID e executa um DELETE.<br><br>
+
+    Novamente utilizamos:<br><br>
+
+    ROW_COUNT()<br><br>
+
+    para verificar se algum produto foi realmente removido.<br><br>
+
+    Na parte do Back-end, o arquivo app.js utiliza:<br><br>
+
+    const express = require('express');<br>
+    const mysql = require('mysql2');<br><br>
+
+    O Express é responsável pelo servidor e pelas rotas HTTP.<br><br>
+
+    Já o mysql2 é responsável pela comunicação entre o Node.js e o banco MySQL. <br><br>
+
+    Também utilizamos o middleware:<br><br>
+
+    app.use(express.json());<br><br>
+
+    Esse middleware permite que a API receba dados JSON através do corpo das requisições.<br><br>
+
+    A conexão com o banco foi realizada utilizando:<br><br>
+
+    mysql.createConnection()<br><br>
+
+    com as informações de:<br><br>
+
+    host<br>
+    user<br>
+    password<br>
+    port<br>
+    database<br><br>
+
+    No projeto, a API trabalha com o banco:<br><br>
+
+    aula_crud<br><br>
+
+    Depois da conexão, utilizamos:<br><br>
+
+    conexao.connect()<br><br>
+
+    para verificar se o Node.js conseguiu acessar corretamente o MySQL.<br><br>
+
+    As rotas da API ficaram definidas como:<br><br>
+
+    GET /produtos<br>
+    → listar produtos<br><br>
+
+    POST /produtos<br>
+    → cadastrar produto<br><br>
+
+    PUT /produtos/:id<br>
+    → atualizar produto<br><br>
+
+    DELETE /produtos/:id<br>
+    → excluir produto<br><br>
+
+    Essas operações representam o CRUD:<br><br>
+
+    CREATE → POST<br>
+    READ   → GET<br>
+    UPDATE → PUT<br>
+    DELETE → DELETE<br><br>
+
+    Na rota GET:<br><br>
+
+    GET /produtos<br><br>
+
+    a aplicação executa:<br><br>
+
+    CALL sp_listar_produtos()<br><br>
+
+    Depois, os produtos retornados pelo MySQL são enviados para o cliente em formato JSON.<br><br>
+
+    Em caso de sucesso, utilizamos:<br><br>
+
+    200 OK<br><br>
+
+    Na rota POST:<br><br>
+
+    POST /produtos<br><br>
+
+    os dados são recebidos através de:<br><br>
+
+    req.body<br><br>
+
+    Utilizamos:<br><br>
+
+    const { nome, preco } = req.body;<br><br>
+
+    Depois a API executa:<br><br>
+
+    CALL sp_cadastrar_produto(?, ?)<br><br>
+
+    passando nome e preço como parâmetros.<br><br>
+
+    Quando o cadastro é realizado corretamente, retornamos:<br><br>
+
+    201 Created<br><br>
+
+    junto com uma resposta contendo a mensagem de sucesso e o produto criado.<br><br>
+
+    Um exemplo de entrada é:<br><br>
+
+    {<br>
+    "nome": "Notebook",<br>
+    "preco": 3500<br>
+    }<br><br>
+
+    Na atualização utilizamos:<br><br>
+
+    PUT /produtos/:id<br><br>
+
+    O ID é obtido através de:<br><br>
+
+    req.params.id<br><br>
+
+    Já os novos valores de nome e preço vêm através de:<br><br>
+
+    req.body<br><br>
+
+    Depois executamos:<br><br>
+
+    CALL sp_atualizar_produto(?, ?, ?)<br><br>
+
+    passando:<br><br>
+
+    id<br>
+    nome<br>
+    preco<br><br>
+
+    A Stored Procedure retorna linhasAfetadas.<br><br>
+
+    Quando:<br><br>
+
+    linhasAfetadas === 0<br><br>
+
+    a API retorna:<br><br>
+
+    404 Not Found<br><br>
+
+    indicando que o produto não foi localizado.<br><br>
+
+    Caso o registro seja atualizado corretamente, retornamos:<br><br>
+
+    200 OK<br><br>
+
+    Na exclusão utilizamos:<br><br>
+
+    DELETE /produtos/:id<br><br>
+
+    O ID novamente é obtido pela URL através de:<br><br>
+
+    req.params.id<br><br>
+
+    Depois executamos:<br><br>
+
+    CALL sp_excluir_produto(?)<br><br>
+
+    Caso ROW_COUNT() retorne zero, significa que nenhum produto foi encontrado e a API responde:<br><br>
+
+    404 Not Found<br><br>
+
+    Caso a exclusão seja realizada, retornamos:<br><br>
+
+    200 OK<br><br>
+
+    com uma mensagem informando que o produto foi excluído com sucesso.<br><br>
+
+    Também trabalhamos com tratamento de erros.<br><br>
+
+    Nas operações de banco, caso aconteça algum erro interno, a API utiliza:<br><br>
+
+    500 Internal Server Error<br><br>
+
+    Os principais códigos HTTP utilizados foram:<br><br>
+
+    200 → operação realizada com sucesso<br>
+    201 → recurso criado<br>
+    404 → produto não encontrado<br>
+    500 → erro interno do servidor<br><br>
+
+    Um dos conceitos centrais da aula foi justamente o Contrato de API.<br><br>
+
+    O contrato define previamente como o cliente deve conversar com o servidor.<br><br>
+
+    Por exemplo:<br><br>
+
+    POST /produtos<br><br>
+
+    Entrada esperada:<br><br>
+
+    {<br>
+    "nome": "Mouse",<br>
+    "preco": 89.90<br>
+    }<br><br>
+
+    Saída esperada:<br><br>
+
+    {<br>
+    "mensagem": "Produto cadastrado com sucesso",<br>
+    "produto": {<br>
+        "id": 1,<br>
+        "nome": "Mouse",<br>
+        "preco": 89.9<br>
+    }<br>
+    }<br><br>
+
+    Isso permite que diferentes partes do sistema saibam exatamente:<br><br>
+
+    - qual endpoint utilizar;<br>
+    - qual método HTTP utilizar;<br>
+    - quais dados enviar;<br>
+    - quais dados receber;<br>
+    - quais códigos HTTP esperar.<br><br>
+
+    Dessa forma, Front-end e Back-end podem ser desenvolvidos de maneira mais organizada seguindo uma estrutura de comunicação previamente definida.<br><br>
+
+    O fluxo completo da aplicação ficou:<br><br>
+
+    Cliente<br>
+    ↓<br>
+    Método HTTP<br>
+    ↓<br>
+    Endpoint<br>
+    ↓<br>
+    Express<br>
+    ↓<br>
+    req.body / req.params<br>
+    ↓<br>
+    mysql2<br>
+    ↓<br>
+    Stored Procedure<br>
+    ↓<br>
+    MySQL<br>
+    ↓<br>
+    Resultado<br>
+    ↓<br>
+    Código HTTP<br>
+    ↓<br>
+    Resposta JSON<br>
+    ↓<br>
+    Cliente<br><br>
+
+    Com essa aula, avançamos na integração entre Back-end e banco de dados, deixando de trabalhar somente com dados em memória ou arquivos JSON e passando a utilizar um banco MySQL com Stored Procedures.<br><br>
+
+    Conceitos trabalhados:<br><br>
+    - API REST;<br>
+    - contrato de API;<br>
+    - Node.js;<br>
+    - Express;<br>
+    - MySQL;<br>
+    - mysql2;<br>
+    - SQL;<br>
+    - banco de dados relacional;<br>
+    - tabela;<br>
+    - chave primária;<br>
+    - AUTO_INCREMENT;<br>
+    - Stored Procedures;<br>
+    - CRUD;<br>
+    - GET;<br>
+    - POST;<br>
+    - PUT;<br>
+    - DELETE;<br>
+    - endpoints;<br>
+    - rotas;<br>
+    - req.body;<br>
+    - req.params;<br>
+    - JSON;<br>
+    - express.json();<br>
+    - mysql.createConnection();<br>
+    - conexao.query();<br>
+    - callbacks;<br>
+    - parâmetros SQL;<br>
+    - LAST_INSERT_ID();<br>
+    - ROW_COUNT();<br>
+    - INSERT;<br>
+    - SELECT;<br>
+    - UPDATE;<br>
+    - DELETE;<br>
+    - status 200;<br>
+    - status 201;<br>
+    - status 404;<br>
+    - status 500;<br>
+    - tratamento de erros;<br>
+    - integração entre Node.js e MySQL;<br>
+    - comunicação entre cliente, API e banco de dados.<br><br>
         
-        <a href="" target="_blank" class="btn-github">Ver código no Github</a>`
+    <a href="https://github.com/Luanlhp777/contratoDeAPI" target="_blank" class="btn-github">Ver código no Github</a>`
     },
 ]

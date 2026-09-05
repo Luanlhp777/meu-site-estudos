@@ -1,8 +1,8 @@
 const aulasMobile = [
-    {
-        data: "2026-07-28",
-        titulo: "Flutter",
-        conteudo: ` Na aula de hoje iniciamos o desenvolvimento mobile com Flutter e Dart, criando o primeiro aplicativo da disciplina. O objetivo foi compreender a estrutura básica de um projeto Flutter e como os widgets são organizados para montar a interface da aplicação.<br><br>
+        {
+                data: "2026-07-28",
+                titulo: "Flutter",
+                conteudo: ` Na aula de hoje iniciamos o desenvolvimento mobile com Flutter e Dart, criando o primeiro aplicativo da disciplina. O objetivo foi compreender a estrutura básica de um projeto Flutter e como os widgets são organizados para montar a interface da aplicação.<br><br>
 
         Inicialmente, importamos o pacote material.dart, que disponibiliza os componentes visuais do Material Design. Em seguida, criamos a função main(), responsável por iniciar o programa, e utilizamos runApp() para executar o widget principal da aplicação.<br><br>
 
@@ -38,11 +38,11 @@ const aulasMobile = [
         - estrutura completa de um projeto Flutter;<br>
         - versionamento do projeto no GitHub.<br><br>
         <a href="https://github.com/Luanlhp777/mobile01" target="_blank" class="btn-github">Ver código no GitHub</a> `
-    },
-    {
-        data: "2026-08-03",
-        titulo: "Organização de Widgets com Flutter",
-        conteudo: `Na aula de hoje demos continuidade ao desenvolvimento mobile com Flutter e Dart, trabalhando com novos widgets para organizar melhor os elementos na tela.<br><br>
+        },
+        {
+                data: "2026-08-03",
+                titulo: "Organização de Widgets com Flutter",
+                conteudo: `Na aula de hoje demos continuidade ao desenvolvimento mobile com Flutter e Dart, trabalhando com novos widgets para organizar melhor os elementos na tela.<br><br>
 
         O projeto continua utilizando a estrutura básica do Flutter com a função main(), responsável por iniciar a aplicação através de runApp(), e a classe MainApp estendendo StatelessWidget. <br><br>
 
@@ -124,11 +124,11 @@ const aulasMobile = [
         - composição e árvore de widgets.<br><br>
         <a href="https://github.com/Luanlhp777/mobile02" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
-    },
-    {
-        data: "2026-08-04",
-        titulo: "Estilização e Organização de Widgets",
-        conteudo: `Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile utilizando Flutter e Dart, reforçando principalmente a organização de widgets na tela e a personalização visual da interface.<br><br>
+        },
+        {
+                data: "2026-08-04",
+                titulo: "Estilização e Organização de Widgets",
+                conteudo: `Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile utilizando Flutter e Dart, reforçando principalmente a organização de widgets na tela e a personalização visual da interface.<br><br>
 
         O projeto mantém a estrutura básica de uma aplicação Flutter, utilizando a função main() para iniciar o aplicativo com runApp() e uma classe MainApp que estende StatelessWidget. Dentro do método build(), utilizamos MaterialApp como estrutura principal da aplicação. <br><br>
 
@@ -194,11 +194,11 @@ const aulasMobile = [
 
         <a href="https://github.com/Luanlhp777/mobile03" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
-    },
-    {
-        data: "2026-08-10",
-        titulo: "Atividade Avaliativa com Flutter",
-        conteudo: `Na aula de hoje realizamos uma atividade avaliativa em Flutter e Dart, aplicando na prática os conceitos de organização de layout, estilização de textos e composição de widgets estudados nas aulas anteriores.<br><br>
+        },
+        {
+                data: "2026-08-10",
+                titulo: "Atividade Avaliativa com Flutter",
+                conteudo: `Na aula de hoje realizamos uma atividade avaliativa em Flutter e Dart, aplicando na prática os conceitos de organização de layout, estilização de textos e composição de widgets estudados nas aulas anteriores.<br><br>
 
         O projeto foi estruturado como uma aplicação Flutter completa dentro da pasta atividade01. No arquivo main.dart, utilizamos a função main() para iniciar o aplicativo com runApp() e criamos a classe MainApp estendendo StatelessWidget. <br><br>
 
@@ -260,11 +260,11 @@ const aulasMobile = [
 
         <a href="https://github.com/Luanlhp777/mobile04" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
-    },
-    {
-        data: "2026-08-11",
-        titulo: "StatefulWidget, Inputs e Operações Matemáticas",
-        conteudo: ` Na aula de hoje avançamos no desenvolvimento com Flutter e Dart criando uma aplicação de calculadora simples, capaz de receber dois números e realizar operações de soma, subtração, multiplicação e divisão.<br><br>
+        },
+        {
+                data: "2026-08-11",
+                titulo: "StatefulWidget, Inputs e Operações Matemáticas",
+                conteudo: ` Na aula de hoje avançamos no desenvolvimento com Flutter e Dart criando uma aplicação de calculadora simples, capaz de receber dois números e realizar operações de soma, subtração, multiplicação e divisão.<br><br>
 
         A principal novidade foi o uso de StatefulWidget. Diferente das aulas anteriores, em que trabalhamos principalmente com StatelessWidget, agora a tela precisa armazenar e atualizar informações durante a execução do aplicativo. Por isso, foi criada a classe TelaSoma estendendo StatefulWidget e uma classe de estado chamada _TelaSomaState.<br><br>
 
@@ -363,11 +363,11 @@ const aulasMobile = [
 
         <a href="https://github.com/Luanlhp777/mobile05" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
-    },
-    {
-        data: "2026-08-17",
-        titulo: "Exercício 1 E-sports",
-        conteudo: ` Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile com Flutter e Dart, realizando exercícios práticos para reforçar os principais conceitos trabalhados nas aulas anteriores. O repositório possui um projeto chamado exercicios e também um material em PDF com exercícios de Flutter Básico. <br><br>
+        },
+        {
+                data: "2026-08-17",
+                titulo: "Exercício 1 E-sports",
+                conteudo: ` Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile com Flutter e Dart, realizando exercícios práticos para reforçar os principais conceitos trabalhados nas aulas anteriores. O repositório possui um projeto chamado exercicios e também um material em PDF com exercícios de Flutter Básico. <br><br>
 
         No exercício implementado no arquivo main.dart, desenvolvemos uma aplicação chamada “Campeonato de E-sports”. A proposta foi criar uma interface capaz de receber dados sobre vitórias, derrotas e quantidade de pontos por vitória e, a partir dessas informações, calcular resultados automaticamente. <br><br>
 
@@ -500,11 +500,11 @@ const aulasMobile = [
 
         <a href="https://github.com/Luanlhp777/mobile06" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
-    },
-    {
-        data: "2026-08-18",
-        titulo: "Exercício 2 Influencer por um dia",
-        conteudo: ` Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile com Flutter e Dart, realizando um novo exercício prático para reforçar o uso de StatefulWidget, entrada de dados, cálculos, funções e atualização dinâmica da interface.<br><br>
+        },
+        {
+                data: "2026-08-18",
+                titulo: "Exercício 2 Influencer por um dia",
+                conteudo: ` Na aula de hoje demos continuidade aos estudos de desenvolvimento mobile com Flutter e Dart, realizando um novo exercício prático para reforçar o uso de StatefulWidget, entrada de dados, cálculos, funções e atualização dinâmica da interface.<br><br>
 
         O exercício desenvolvido foi uma aplicação chamada “Influencer por um Dia”. A proposta é permitir que o usuário informe sua quantidade atual de seguidores, quantos seguidores ganha por dia e durante quantos dias deseja realizar uma simulação. A partir desses valores, o aplicativo calcula quantos seguidores serão ganhos e qual será o total final. <br><br>
 
@@ -629,11 +629,11 @@ const aulasMobile = [
 
         <a href="https://github.com/Luanlhp777/mobile07" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
-    },
-    {
-        data: "2026-08-24",
-        titulo: "Exercício 3 Estatísticas do Time",
-        conteudo: ` Na aula de hoje demos continuidade aos estudos de Desenvolvimento Mobile I com Flutter e Dart, realizando o Exercício 3, chamado “Estatísticas do Time”. O foco principal foi trabalhar entrada de dados numéricos, cálculos de médias, gerenciamento de estado e atualização dinâmica da interface. <br><br>
+        },
+        {
+                data: "2026-08-24",
+                titulo: "Exercício 3 Estatísticas do Time",
+                conteudo: ` Na aula de hoje demos continuidade aos estudos de Desenvolvimento Mobile I com Flutter e Dart, realizando o Exercício 3, chamado “Estatísticas do Time”. O foco principal foi trabalhar entrada de dados numéricos, cálculos de médias, gerenciamento de estado e atualização dinâmica da interface. <br><br>
 
         A aplicação desenvolvida permite informar três dados:<br><br>
 
@@ -830,11 +830,11 @@ const aulasMobile = [
 
         <a href="https://github.com/Luanlhp777/mobile08" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
-    },
-    {
-        data: "2026-08-25",
-        titulo: "Exercício 4 Planejamento de Mesada",
-        conteudo: ` Na aula de hoje demos continuidade aos estudos de Desenvolvimento Mobile I utilizando Flutter e Dart, realizando o Exercício 4 — “Planejamento de Mesada”. O foco principal foi trabalhar entrada de dados, operações matemáticas, gerenciamento de estado e atualização dinâmica da interface. <br><br>
+        },
+        {
+                data: "2026-08-25",
+                titulo: "Exercício 4 Planejamento de Mesada",
+                conteudo: ` Na aula de hoje demos continuidade aos estudos de Desenvolvimento Mobile I utilizando Flutter e Dart, realizando o Exercício 4 — “Planejamento de Mesada”. O foco principal foi trabalhar entrada de dados, operações matemáticas, gerenciamento de estado e atualização dinâmica da interface. <br><br>
 
         A aplicação desenvolvida simula um planejamento financeiro simples. O usuário informa quatro valores:<br><br>
 
@@ -1027,6 +1027,236 @@ const aulasMobile = [
 
         <a href="https://github.com/Luanlhp777/mobile09" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
-    },
+        },
+        {
+                data: "2026-08-31",
+                titulo: "Atividade Missão Espacial | Flutter",
+                conteudo: ` Na aula de hoje realizamos uma atividade prática de Desenvolvimento Mobile I utilizando Flutter e Dart. O projeto desenvolvido foi um “Simulador de Missão Espacial”, criado para trabalhar entrada de dados, cálculos matemáticos, estruturas condicionais, gerenciamento de estado, validações e atualização dinâmica da interface. A atividade também está registrada no repositório junto ao PDF da Atividade Avaliativa 2. <br><br>
+
+        A aplicação simula uma missão espacial a partir de quatro informações fornecidas pelo usuário:<br><br>
+
+        - distância da viagem em quilômetros;<br>
+        - velocidade da nave em km/h;<br>
+        - consumo de combustível em litros por hora;<br>
+        - quantidade inicial de combustível em litros.<br><br>
+
+        A estrutura do aplicativo começa com main(), runApp(), MaterialApp e MainApp utilizando StatelessWidget. A tela principal, chamada MissaoEspacial, utiliza StatefulWidget porque os resultados da simulação precisam mudar dinamicamente conforme os valores informados pelo usuário. <br><br>
+
+        Para controlar os campos de entrada foram utilizados quatro TextEditingController:<br><br>
+
+        distanciaController<br>
+        velocidadeController<br>
+        consumoController<br>
+        combustivelController<br><br>
+
+        Os valores digitados são convertidos de String para double utilizando:<br><br>
+
+        double.tryParse()<br><br>
+
+        Também utilizamos:<br><br>
+
+        ?? 0<br><br>
+
+        para definir zero caso o conteúdo de algum campo não possa ser convertido corretamente.<br><br>
+
+        A principal função criada foi: calcularTempoViagem()<br><br>
+
+        Ela recebe os valores dos controllers e realiza todos os cálculos e verificações necessários para simular a missão.<br><br>
+
+        O primeiro cálculo realizado é o tempo de viagem:<br><br>
+
+        tempo = distância / velocidade<br><br>
+
+        Por exemplo:<br><br>
+
+        Distância = 10.000 km<br>
+        Velocidade = 1.000 km/h<br><br>
+
+        10.000 / 1.000 = 10 horas<br><br>
+
+        Antes de realizar essa divisão, existe uma validação para verificar se a velocidade é maior que zero.<br><br>
+
+        Caso: velocidade <= 0<br><br>
+
+        a aplicação apresenta: “A velocidade deve ser maior que zero.”<br><br>
+
+        Além disso, os resultados são zerados e a função é encerrada com return, evitando uma divisão inválida.<br><br>
+
+        Depois calculamos a quantidade de combustível necessária para completar a missão:<br><br>
+
+        combustível necessário = tempo × consumo<br><br>
+
+        Por exemplo:<br><br>
+
+        Tempo = 10 horas<br>
+        Consumo = 50 litros/hora<br><br>
+
+        10 × 50 = 500 litros<br><br>
+
+        Em seguida, calculamos quanto combustível permanecerá disponível:<br><br>
+
+        combustível restante =<br>
+        combustível inicial - combustível necessário<br><br>
+
+        Se a nave possuir 1.000 litros inicialmente e consumir 500 litros:<br><br>
+
+        1.000 - 500 = 500 litros restantes.<br><br>
+
+        A aplicação também verifica se existe combustível suficiente para realizar a missão.<br><br>
+
+        Quando: combustivelRestante >= 0<br><br>
+
+        é apresentada uma mensagem informando a quantidade restante.<br><br>
+
+        Caso o resultado seja negativo, a aplicação informa: “Combustível insuficiente para a missão.”<br><br>
+
+        Outro cálculo trabalhado foi a energia da nave. No código da atividade foi utilizada a expressão:<br><br>
+
+        energia = (2000 × velocidade × velocidade) / 2<br><br>
+
+        ou, de forma equivalente:<br><br>
+
+        energia = (2000 × velocidade²) / 2<br><br>
+
+        O valor calculado é armazenado na variável energiaCinetica e posteriormente apresentado em Joules na interface. <br><br>
+
+        Além dos cálculos principais, também implementamos regras especiais utilizando estruturas condicionais.<br><br>
+
+        Quando: velocidade > 50000<br><br>
+
+        a aplicação acrescenta a mensagem: “Velocidade de dobra ativada.”<br><br>
+
+        Também verificamos a duração da missão.<br><br>
+
+        Quando: tempo > 100<br><br>
+
+        é acrescentada a mensagem: “Missão muito longa.”<br><br>
+
+        Com isso, praticamos o uso de diferentes estruturas if para criar regras de negócio baseadas nos resultados dos cálculos.<br><br>
+
+        Os resultados da aplicação são armazenados nas seguintes variáveis:<br><br>
+
+        double tempo = 0;<br>
+        double combustivelNecessario = 0;<br>
+        double combustivelRestante = 0;<br>
+        double energiaCinetica = 0;<br><br>
+
+        String mensagem = "";<br><br>
+
+        Depois dos cálculos, utilizamos setState() para alterar esses valores.<br><br>
+
+        O setState() informa ao Flutter que houve uma mudança no estado da aplicação, fazendo com que a interface seja reconstruída e apresente os novos resultados.<br><br>
+
+        Também criamos a função: limparCampos()<br><br>
+
+        Ela utiliza clear() para apagar os quatro campos de entrada e setState() para retornar todos os resultados para zero e remover a mensagem apresentada anteriormente.<br><br>
+
+        Outro conceito reforçado foi o método dispose().<br><br>
+
+        Quando o widget deixa de existir, utilizamos:<br><br>
+
+        distanciaController.dispose();<br>
+        velocidadeController.dispose();<br>
+        consumoController.dispose();<br>
+        combustivelController.dispose();<br><br>
+
+        Isso libera os recursos utilizados pelos controllers.<br><br>
+
+        Na construção da interface utilizamos componentes do Material Design, como:<br><br>
+
+        - MaterialApp;<br>
+        - Scaffold;<br>
+        - AppBar;<br>
+        - Padding;<br>
+        - Column;<br>
+        - Row;<br>
+        - TextField;<br>
+        - InputDecoration;<br>
+        - OutlineInputBorder;<br>
+        - Icon;<br>
+        - ElevatedButton.icon;<br>
+        - OutlinedButton.icon;<br>
+        - Text;<br>
+        - SizedBox.<br><br>
+
+        O botão “Calcular” executa calcularTempoViagem(), enquanto o botão “Limpar” executa limparCampos().<br><br>
+
+        Os resultados são exibidos através de widgets Text e formatados utilizando: toStringAsFixed(2) permitindo mostrar os valores com duas casas decimais.<br><br>
+
+        O fluxo geral da aplicação ficou:<br><br>
+
+        Usuário informa os dados<br>
+                ↓<br>
+        TextField<br>
+                ↓<br>
+        TextEditingController<br>
+                ↓<br>
+        double.tryParse()<br>
+                ↓<br>
+        calcularTempoViagem()<br>
+                ↓<br>
+        Validação da velocidade<br>
+                ↓<br>
+        Cálculo do tempo<br>
+                ↓<br>
+        Cálculo do combustível necessário<br>
+                ↓
+        Cálculo do combustível restante<br>
+                ↓<br>
+        Cálculo da energia<br>
+                ↓<br>
+        Estruturas condicionais<br>
+                ↓<br>
+        setState()<br>
+                ↓<br>
+        Interface atualizada<br>
+                ↓<br>
+        Resultados da missão exibidos<br><br>
+
+        Com essa atividade, conseguimos reunir vários conceitos estudados nas aulas anteriores em uma única aplicação, trabalhando desde a entrada e conversão dos dados até cálculos, validações, regras condicionais e atualização visual dos resultados.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Flutter;<br>
+        - Dart;<br>
+        - Material Design;<br>
+        - StatelessWidget;<br>
+        - StatefulWidget;<br>
+        - State;<br>
+        - gerenciamento de estado;<br>
+        - setState();<br>
+        - TextField;<br>
+        - TextEditingController;<br>
+        - TextInputType.number;<br>
+        - double.tryParse();<br>
+        - operador ??;<br>
+        - variáveis double;<br>
+        - String;<br>
+        - funções;<br>
+        - cálculos matemáticos;<br>
+        - divisão;<br>
+        - multiplicação;<br>
+        - subtração;<br>
+        - estruturas condicionais;<br>
+        - if;<br>
+        - else;<br>
+        - validação de dados;<br>
+        - return;
+        - regras de negócio;<br>
+        - clear();<br>
+        - dispose();<br>
+        - ElevatedButton.icon;<br>
+        - OutlinedButton.icon;<br>
+        - Row;<br>
+        - Column;<br>
+        - Padding;<br>
+        - SizedBox;<br>
+        - Text;<br>
+        - toStringAsFixed(2);<br>
+        - interpolação de Strings;<br>
+        - atualização dinâmica da interface.<br><br>
+
+        <a href="https://github.com/Luanlhp777/simuladorMissaoEspacial" target="_blank" class="btn-github">Ver código no GitHub</a>
+        `
+        },
 
 ]
