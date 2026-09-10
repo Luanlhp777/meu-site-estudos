@@ -1854,5 +1854,147 @@ const aulasWeb2 = [
         - persistência de dados;<br>
         - integração Full Stack.<br><br>
         <a href="https://github.com/Luanlhp777/cadastroProdutos" target="_blank" class="btn-github">Ver código no Github</a>`
+    },
+    {
+        data: "2026-09-09",
+        titulo: "Front-end do Projeto Consulta CEP",
+        conteudo: ` Na aula de Desenvolvimento Web trabalhamos a parte de Front-end do projeto de consulta de CEP utilizando React com Vite. O objetivo foi criar uma interface capaz de receber um CEP, realizar a busca e exibir o endereço de forma organizada.<br><br>
+
+        A estrutura do projeto foi dividida principalmente em:<br><br>
+
+        - components;<br>
+        - pages;<br>
+        - App.jsx;<br>
+        - main.jsx;<br>
+        - arquivos CSS.<br><br>
+
+        Na pasta components foram criados elementos reutilizáveis como Navbar, Footer e CepCard. Já em pages foram criadas as páginas Home e Detalhes.<br><br>
+
+        No App.jsx utilizamos React Router com:<br><br>
+
+        BrowserRouter<br>
+        Routes<br>
+        Route<br><br>
+
+        Foram definidas duas rotas:<br><br>
+
+        / → Home<br>
+        /detalhes/:cep → Detalhes<br><br>
+
+        A segunda rota utiliza um parâmetro dinâmico para identificar o CEP pesquisado. <br><br>
+
+        Na página Home utilizamos useState() para controlar:<br><br>
+
+        - cep;<br>
+        - data;<br>
+        - loading;<br>
+        - error.<br><br>
+
+        O campo de CEP é um input controlado, utilizando:<br><br>
+
+        value={cep}<br><br>
+
+        e:<br><br>
+
+        onChange={(e) => setCep(e.target.value)}<br><br>
+
+        A função buscarCep() realiza a consulta utilizando:<br><br>
+
+        fetch()<br>
+        async<br>
+        await<br><br>
+
+        Também trabalhamos com:<br><br>
+
+        try<br>
+        catch<br>
+        finally<br><br>
+
+        para tratar erros e controlar o carregamento. <br><br>
+
+        No código atual, a aplicação pode trabalhar com uma API local ou diretamente com o ViaCEP. A constante USE_MOCK_API define qual opção será utilizada.<br><br>
+
+        Quando a busca retorna dados corretamente, eles são armazenados em:<br><br>
+
+        setData(json)<br><br>
+
+        e exibidos através do componente:<br><br>
+
+        CepCard<br><br>
+
+        O CepCard recebe o endereço por props e mostra informações como:<br><br>
+
+        - CEP;<br>
+        - Rua;<br>
+        - Bairro;<br>
+        - Cidade.<br><br>
+
+        Também utiliza Link para navegar para a página de detalhes. <br><br>
+
+        Na página Detalhes utilizamos:<br><br>
+
+        useParams()<br><br>
+
+        para recuperar o CEP presente na URL.<br><br>
+
+        Também utilizamos useEffect() para carregar os dados automaticamente quando a página é aberta.<br><br>
+
+        Nessa tela são exibidos:<br><br>
+
+        - Rua;<br>
+        - Bairro;<br>
+        - Cidade;<br>
+        - Estado;<br>
+        - DDD.<br><br>
+
+        Também existe um link para voltar à página inicial. <br><br>
+
+        O fluxo geral ficou:<br><br>
+
+        Usuário digita o CEP<br>
+                ↓<br>
+        useState()<br>
+                ↓<br>
+        buscarCep()<br>
+                ↓<br>
+        fetch()<br>
+                ↓<br>
+        API<br>
+                ↓<br>
+        JSON<br>
+                ↓<br>
+        setData()<br>
+                ↓<br>
+        CepCard<br>
+                ↓<br>
+        Link<br>
+                ↓<br>
+        Página Detalhes<br><br>
+
+        Com essa aula, praticamos a construção de uma interface React integrada a uma API e reforçamos conceitos de componentes, estados, navegação e requisições assíncronas.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - React;<br>
+        - Vite;<br>
+        - useState();<br>
+        - useEffect();<br>
+        - props;<br>
+        - componentes;<br>
+        - pages;<br>
+        - Fetch API;<br>
+        - async/await;<br>
+        - try/catch/finally;<br>
+        - React Router;<br>
+        - BrowserRouter;<br>
+        - Routes;<br>
+        - Route;<br>
+        - Link;<br>
+        - useParams();<br>
+        - rotas dinâmicas;<br>
+        - renderização condicional;<br>
+        - tratamento de erros;<br>
+        - integração Front-end com API.<br><br>
+
+        <a href="https://github.com/Luanlhp777/projetoViaCep/tree/main/projetocep-react" target="_blank" class="btn-github">Ver código no Github</a>`
     }
 ]

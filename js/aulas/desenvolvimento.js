@@ -1468,4 +1468,257 @@ const aulasDesenvolvimento = [
         
     <a href="https://github.com/Luanlhp777/contratoDeAPI" target="_blank" class="btn-github">Ver código no Github</a>`
     },
+    {
+        data: "2026-09-09",
+        titulo: "Back-end do Projeto Consulta CEP",
+        conteudo: ` Na aula de Desenvolvimento de Sistemas trabalhamos especificamente a parte de Back-end do projeto de consulta de CEP. O objetivo foi criar uma API simples com Node.js e Express capaz de receber um CEP pela URL, procurar esse valor em uma base local de dados e devolver o endereço correspondente em formato JSON.<br><br>
+
+        Nesta aula vamos considerar somente o Back-end. A parte de Front-end em React será registrada separadamente na aula de Desenvolvimento Web.<br><br>
+
+        No repositório, o Back-end está organizado dentro da pasta:<br><br>
+
+        API CEP/<br><br>
+
+        Nessa estrutura temos principalmente:<br><br>
+
+        - server.js;<br>
+        - package.json;<br>
+        - package-lock.json;<br>
+        - pasta data/;<br>
+        - arquivo ceps.json.<br><br>
+
+        O arquivo principal da aplicação é:<br><br>
+
+        API CEP/server.js<br><br>
+
+        Nele utilizamos três módulos:<br><br>
+
+        express<br>
+        cors<br>
+        fs<br><br>
+
+        O Express foi utilizado para criar o servidor e definir a rota da API.<br><br>
+
+        O CORS foi habilitado para permitir que outra aplicação, como o Front-end em React, consiga acessar essa API mesmo estando executando em outra porta.<br><br>
+
+        O módulo fs do Node.js foi utilizado para ler o arquivo JSON que funciona como nossa base de dados. <br><br>
+
+        O servidor foi configurado para funcionar na porta:<br><br>
+
+        3001<br><br>
+
+        Assim, quando executado, fica disponível em:<br><br>
+
+        http://localhost:3001<br><br>
+
+        A base de dados utilizada nesta etapa não é um banco MySQL ou MongoDB. Os CEPs estão armazenados localmente no arquivo:<br><br>
+
+        data/ceps.json<br><br>
+
+        Esse arquivo contém objetos com informações como:<br><br>
+
+        - cep;<br>
+        - logradouro;<br>
+        - bairro;<br>
+        - localidade;<br>
+        - uf;<br>
+        - ddd.<br><br>
+
+        Entre os exemplos cadastrados estão endereços de São Paulo, Rio de Janeiro e Belo Horizonte. <br><br>
+
+        Para carregar esses dados no Back-end, utilizamos:<br><br>
+
+        fs.readFileSync("./data/ceps.json", "utf-8")<br><br>
+
+        O fs.readFileSync() lê o conteúdo do arquivo.<br><br>
+
+        Como o conteúdo é originalmente texto no formato JSON, utilizamos:<br><br>
+
+        JSON.parse()<br><br>
+
+        para transformar esse texto em um array de objetos JavaScript.<br><br>
+
+        O resultado é armazenado na variável:<br><br>
+
+        ceps<br><br>
+
+        A partir daí, o servidor consegue pesquisar os endereços existentes nesse array.<br><br>
+
+        A principal rota criada na aula foi:<br><br>
+
+        GET /cep/:cep<br><br>
+
+        O :cep representa um parâmetro dinâmico da URL.<br><br>
+
+        Por exemplo:<br><br>
+
+        GET /cep/01001000<br><br>
+
+        Nesse caso, o valor 01001000 é recebido pelo servidor através de:<br><br>
+
+        req.params.cep<br><br>
+
+        Esse conceito permite criar uma única rota capaz de pesquisar diferentes CEPs.<br><br>
+
+        Antes de realizar a pesquisa, o CEP recebido passa por um tratamento:<br><br>
+
+        req.params.cep.replace(/\D /g, "")<br><br>
+
+        Essa expressão remove todos os caracteres que não sejam números.<br><br>
+
+        Assim, caso o valor venha com símbolos de formatação, o Back-end trabalha apenas com os dígitos do CEP.<br><br>
+
+        Depois do tratamento, utilizamos:<br><br>
+
+        find()<br><br>
+
+        para procurar o endereço dentro do array de CEPs.<br><br>
+
+        A lógica utilizada é:<br><br>
+
+        ceps.find(c => c.cep === cepBuscado)<br><br>
+
+        O find() percorre os registros até encontrar aquele cujo campo cep seja igual ao valor informado na URL.<br><br>
+
+        Quando o CEP é encontrado, a API devolve o objeto correspondente através de:<br><br>
+
+        res.json(endereco)<br><br>
+
+        A resposta segue o formato JSON.<br><br>
+
+        Um exemplo conceitual de resposta seria:<br><br>
+
+        {<br>
+        "cep": "01001000",<br>
+        "logradouro": "Praça da Sé",<br>
+        "bairro": "Sé",<br>
+        "localidade": "São Paulo",<br>
+        "uf": "SP",<br>
+        "ddd": "11"<br>
+        }<br><br>
+
+        Com isso, o Back-end funciona como intermediário entre quem faz a requisição e os dados armazenados no arquivo.<br><br>
+
+        Também trabalhamos com tratamento para CEP inexistente.<br><br>
+
+        Caso o find() não encontre nenhum registro, endereco não possuirá um endereço válido.<br><br>
+
+        Nesse caso utilizamos:<br><br>
+
+        if (!endereco)<br><br>
+
+        e retornamos:<br><br>
+
+        404 Not Found<br><br>
+
+        com uma resposta JSON:<br><br>
+
+        {<br>
+        "erro": true,<br>
+        "mensagem": "CEP não encontrado."<br>
+        }<br><br>
+
+        Isso mostra a importância de uma API não retornar apenas os dados, mas também informar corretamente quando um recurso não existe.<br><br>
+
+        O fluxo da busca de CEP ficou:<br><br>
+
+        Cliente<br>
+        ↓<br>
+        GET /cep/:cep<br>
+        ↓<br>
+        Express<br>
+        ↓<br>
+        req.params.cep<br>
+        ↓<br>
+        Tratamento do CEP<br>
+        ↓<br>
+        find()<br>
+        ↓<br>
+        Array carregado do ceps.json<br>
+        ↓<br>
+        CEP encontrado?<br>
+        ↓<br>
+        SIM → res.json(endereco)<br>
+        NÃO → 404 Not Found<br><br>
+
+        O fluxo completo do Back-end pode ser representado assim:<br><br>
+
+        ceps.json<br>
+        ↓<br>
+        fs.readFileSync()<br>
+        ↓<br>
+        JSON.parse()<br>
+        ↓<br>
+        Array de CEPs<br>
+        ↓<br>
+        Servidor Express<br>
+        ↓<br>
+        GET /cep/:cep<br>
+        ↓<br>
+        req.params<br>
+        ↓<br>
+        replace()<br>
+        ↓<br>
+        find()<br>
+        ↓<br>
+        Resposta JSON<br><br>
+
+        Outro conceito importante da aula foi perceber que a aplicação está criando uma API própria de consulta.<br><br>
+
+        Neste momento, o servidor não está consultando diretamente um serviço externo de CEP. Ele consulta a base local presente no arquivo ceps.json do próprio projeto.<br><br>
+
+        Isso permite entender primeiro como funciona a estrutura de uma API, antes de acrescentar integrações externas mais complexas.<br><br>
+
+        Também reforçamos a separação entre Back-end e Front-end.<br><br>
+
+        Na disciplina de Desenvolvimento de Sistemas, o foco desta aula ficou no Back-end:<br><br>
+
+        Node.js<br>
+        ↓<br>
+        Express<br>
+        ↓<br>
+        Rota<br>
+        ↓<br>
+        Processamento<br>
+        ↓<br>
+        Busca nos dados<br>
+        ↓<br>
+        Resposta JSON<br><br>
+
+        Já a interface em React ficará separada na aula de Desenvolvimento Web.<br><br>
+
+        Com essa aula, praticamos a criação de uma API simples, leitura de arquivo JSON, parâmetros de rota, busca em arrays, tratamento de dados e códigos HTTP.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Node.js;<br>
+        - Express;<br>
+        - API;<br>
+        - API REST;<br>
+        - Back-end;<br>
+        - servidor HTTP;<br>
+        - CORS;<br>
+        - módulo fs;<br>
+        - arquivo JSON;<br>
+        - fs.readFileSync();<br>
+        - JSON.parse();<br>
+        - arrays de objetos;<br>
+        - rota GET;<br>
+        - endpoint;<br>
+        - parâmetro de rota;<br>
+        - req.params;<br>
+        - replace();<br>
+        - expressão regular;<br>
+        - tratamento de CEP;<br>
+        - find();<br>
+        - Arrow Function;<br>
+        - comparação de valores;<br>
+        - res.json();<br>
+        - status HTTP 404;<br>
+        - tratamento de erro;<br>
+        - resposta JSON;<br>
+        - separação entre Back-end e Front-end;<br>
+        - consulta de dados por CEP.<br><br>
+
+        <a href="https://github.com/Luanlhp777/projetoViaCep/tree/main/API%20CEP" target="_blank" class="btn-github">Ver código no Github</a>`
+    },
 ]
