@@ -1721,4 +1721,206 @@ const aulasDesenvolvimento = [
 
         <a href="https://github.com/Luanlhp777/projetoViaCep/tree/main/API%20CEP" target="_blank" class="btn-github">Ver código no Github</a>`
     },
+    {
+        data: "2026-09-11",
+        titulo: "Construção do Back-end utilizando padrão MVC",
+        conteudo: `Na aula de hoje trabalhamos a construção do Back-end utilizando o padrão MVC com Node.js, Express e MySQL.<br><br>
+
+        O objetivo foi organizar melhor o projeto separando as responsabilidades em:<br><br>
+
+        Model<br>
+        View<br>
+        Controller<br><br>
+
+        A estrutura principal ficou:<br><br>
+
+        View<br>
+        ↓<br>
+        Controller<br>
+        ↓<br>
+        Model<br>
+        ↓<br>
+        MySQL<br><br>
+
+        O Model ficou responsável pelo acesso ao banco de dados.<br><br>
+
+        Arquivo:<br><br>
+
+        models/ClienteModel.js<br><br>
+
+        Nele foram criadas funções para:<br><br>
+
+        - cadastrar clientes;<br>
+        - listar clientes;<br>
+        - atualizar clientes.<br><br>
+
+        Para cadastrar, utilizamos:<br><br>
+
+        INSERT INTO Cliente (nome, cpf) VALUES (?, ?)<br><br>
+
+        A consulta de todos os clientes utiliza:<br><br>
+
+        SELECT * FROM Cliente<br><br>
+
+        E a atualização utiliza:<br><br>
+
+        UPDATE Cliente<br>
+        SET nome = ?, cpf = ?<br>
+        WHERE id = ?<br><br>
+
+        Também utilizamos async/await para trabalhar com as operações assíncronas do banco.<br><br>
+
+        A conexão com MySQL ficou separada em:<br><br>
+
+        config/db.js<br><br>
+
+        Nesse arquivo utilizamos o pacote mysql2 e configuramos:<br><br>
+
+        host<br>
+        user<br>
+        password<br>
+        database<br>
+        port<br><br>
+
+        O banco utilizado é:<br><br>
+
+        mvc<br><br>
+
+        e a conexão é exportada utilizando:<br><br>
+
+        connection.promise()<br><br>
+
+        Isso permite utilizar async/await nas consultas.<br><br>
+
+        O Controller ficou em:<br><br>
+
+        controllers/clienteController.js<br><br>
+
+        Ele recebe as requisições HTTP, valida os dados e chama as funções do Model.<br><br>
+
+        No cadastro, por exemplo, recebemos:<br><br>
+
+        nome<br>
+        cpf<br><br>
+
+        através de:<br><br>
+
+        req.body<br><br>
+
+        Caso algum dos campos não seja informado, o Controller retorna:<br><br>
+
+        400 Bad Request<br><br>
+
+        Se o cadastro for realizado corretamente, retorna:<br><br>
+
+        201 Created<br><br>
+
+        Também existe uma função para listar os clientes, retornando:<br><br>
+
+        200 OK<br><br>
+
+        e tratamento de erro utilizando:<br><br>
+
+        500 Internal Server Error<br><br>
+
+        A função de atualização já começou a ser estruturada no Controller, recebendo:<br><br>
+
+        id → req.params<br>
+        nome e cpf → req.body<br><br>
+
+        mas ainda não foi concluída.<br><br>
+
+        No arquivo app.js configuramos o servidor Express.<br><br>
+
+        Utilizamos:<br><br>
+
+        express.json()<br><br>
+
+        para receber dados JSON.<br><br>
+
+        Também utilizamos:<br><br>
+
+        express.static()<br><br>
+
+        para disponibilizar os arquivos da pasta public.<br><br>
+
+        A rota implementada no servidor foi:<br><br>
+
+        POST /api/clientes<br><br>
+
+        Ela chama:<br><br>
+
+        clienteController.createNewClient<br><br>
+
+        O servidor funciona na porta:<br><br>
+
+        3000<br><br>
+
+        O banco de dados foi criado no arquivo banco.sql.<br><br>
+
+        Foi criado o banco:<br><br>
+
+        mvc<br><br>
+
+        e a tabela:<br><br>
+
+        cliente<br><br>
+
+        com os campos:<br><br>
+
+        id<br>
+        nome<br>
+        cpf<br><br>
+
+        O campo id utiliza AUTO_INCREMENT e é a chave primária.<br><br>
+
+        O fluxo do cadastro ficou:<br><br>
+
+        Cliente<br>
+        ↓<br>
+        POST /api/clientes<br>
+        ↓<br>
+        Controller<br>
+        ↓<br>
+        Validação<br>
+        ↓<br>
+        Model<br>
+        ↓<br>
+        INSERT no MySQL<br>
+        ↓<br>
+        Resposta JSON<br>
+
+        Com essa aula, o principal foco foi entender como organizar um Back-end utilizando MVC, evitando deixar conexão, regras, rotas e comandos SQL todos no mesmo arquivo.<br><br>
+
+        O projeto ainda está em desenvolvimento. O cadastro já está ligado à rota, enquanto listagem, atualização e exclusão ainda fazem parte da continuação do CRUD.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - MVC;<br>
+        - Node.js;<br>
+        - Express;<br>
+        - MySQL;<br>
+        - mysql2;<br>
+        - Model;<br>
+        - Controller;<br>
+        - View;<br>
+        - API REST;<br>
+        - CRUD;<br>
+        - async/await;<br>
+        - req.body;<br>
+        - req.params;<br>
+        - express.json();<br>
+        - express.static();<br>
+        - INSERT;<br>
+        - SELECT;<br>
+        - UPDATE;<br>
+        - parâmetros SQL;<br>
+        - status 200;<br>
+        - status 201;<br>
+        - status 400;<br>
+        - status 500;<br>
+        - separação de responsabilidades;<br>
+        - integração entre Back-end e banco de dados.<br><br>
+
+        <a href="https://github.com/Luanlhp777/baseMVC" target="_blank" class="btn-github">Ver código no Github</a>`
+    }
 ]
