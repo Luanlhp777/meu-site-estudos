@@ -470,4 +470,184 @@ const aulasBd2 = [
 
         <a href="https://github.com/Luanlhp777/aplicacaoNoSQL" target="_blank" class="btn-github">Ver código no GitHub</a>`
     },
+    {
+        data: "2026-09-14",
+        titulo: "Introdução ao MongoDB",
+        conteudo: ` Na aula de Banco de Dados trabalhamos uma introdução ao MongoDB, entendendo como funciona um banco NoSQL orientado a documentos e comparando sua estrutura com bancos relacionais como o MySQL.<br><br>
+
+        No banco relacional temos:<br><br>
+
+        Banco<br>
+        → Tabelas<br>
+        → Linhas<br>
+        → Colunas<br><br>
+
+        No MongoDB temos:<br><br>
+
+        Database<br>
+        → Collections<br>
+        → Documents<br>
+        → Fields<br><br>
+
+        Também vimos equivalências importantes:<br><br>
+
+        Tabela → Collection<br>
+        Registro → Document<br>
+        Coluna → Field<br>
+        Chave primária → _id<br><br>
+
+        O banco criado para os exercícios foi:<br><br>
+
+        minha_playlist_filmes<br><br>
+
+        com as coleções:<br><br>
+
+        - filmes;<br>
+        - usuarios;<br>
+        - playlists;<br>
+        - sessoes_usuarios.<br><br>
+
+        Na coleção filmes foram utilizados documentos com diferentes tipos de dados, como:<br><br>
+
+        - String;<br>
+        - números;<br>
+        - arrays;<br>
+        - objetos;<br>
+        - subdocumentos.<br><br>
+
+        Os filmes possuem informações como título, ano, estúdio, gêneros, diretores, elenco e avaliação média.<br><br>
+
+        Também trabalhamos com ObjectId, que identifica cada documento no MongoDB e pode ser utilizado para criar referências entre coleções.<br><br>
+
+        Na coleção usuarios, por exemplo, as avaliações possuem:<br><br>
+
+        filme_id<br><br>
+
+        que referencia um filme cadastrado na coleção filmes.<br><br>
+
+        Na coleção playlists foi praticado o conceito de Extended Reference.<br><br>
+
+        Além de armazenar o ObjectId do filme, também foram mantidos dados como:<br><br>
+
+        titulo<br>
+        ano<br><br>
+
+        Isso permite acessar informações frequentes sem precisar consultar novamente toda a coleção de filmes.<br><br>
+
+        Também trabalhamos com consultas utilizando filtros.<br><br>
+
+        Exemplos:<br><br>
+
+        { "ano": 1999 }<br><br>
+
+        para procurar filmes de determinado ano.<br><br>
+
+        { "generos": "Ação" }<br><br>
+
+        para pesquisar valores dentro de arrays.<br><br>
+
+        { "avaliacoes.nota": 5 }<br><br>
+
+        para consultar dados dentro de subdocumentos.<br><br>
+
+        Outro conceito estudado foi o índice TTL.<br><br>
+
+        Foi criada a coleção:<br><br>
+
+        sessoes_usuarios<br><br>
+
+        com campos de data como:<br><br>
+
+        criado_em<br>
+        expira_em<br><br>
+
+        No campo expira_em foi criado um índice TTL, permitindo que documentos temporários sejam removidos automaticamente quando atingem a data de expiração.<br><br>
+
+        Esse recurso pode ser utilizado para:<br><br>
+
+        - sessões;<br>
+        - tokens;<br>
+        - cache;<br>
+        - códigos temporários;<br>
+        - logs.<br><br>
+
+        Também utilizamos o MongoDB Shell através do comando:<br><br>
+
+        mongosh<br><br>
+
+        e comandos como:<br><br>
+
+        use minha_playlist_filmes<br><br>
+
+        show collections<br><br>
+
+        db.filmes.find()<br><br>
+
+        db.sessoes_usuarios.getIndexes()<br><br>
+
+        Além da parte conceitual, também praticamos a administração do MongoDB Server em Linux e o acesso remoto utilizando MongoDB Compass.<br><br>
+
+        O ambiente foi configurado com:<br><br>
+
+        Ubuntu Linux<br>
+        MongoDB Server<br>
+        MongoDB Compass<br>
+        Tailscale<br><br>
+
+        A arquitetura utilizada ficou:<br><br>
+
+        MongoDB Compass no Windows<br>
+                ↓<br>
+        Tailscale<br>
+                ↓<br>
+        Servidor Linux<br>
+                ↓<br>
+        MongoDB<br>
+                ↓<br>
+        Porta 27017<br><br>
+
+        Também foi habilitada autenticação no MongoDB, exigindo usuário e senha para acessar o servidor.<br><br>
+
+        A porta 27017 foi liberada no firewall somente através da interface do Tailscale, evitando exposição pública do banco.<br><br>
+
+        Durante a configuração também trabalhamos com comandos Linux para verificar o serviço do MongoDB, como:<br><br>
+
+        systemctl<br>
+        journalctl<br>
+        ss<br>
+        uname<br><br>
+
+        Com essa aula, praticamos não somente os conceitos básicos de MongoDB, mas também modelagem de documentos, referências, consultas, índices, segurança e administração do servidor.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - MongoDB;<br>
+        - NoSQL;<br>
+        - BSON;<br>
+        - Database;<br>
+        - Collection;<br>
+        - Document;<br>
+        - Field;<br>
+        - ObjectId;<br>
+        - arrays;<br>
+        - subdocumentos;<br>
+        - documentos embutidos;<br>
+        - referências;<br>
+        - Extended Reference;<br>
+        - find();<br>
+        - filtros;<br>
+        - consultas em arrays;<br>
+        - índices;<br>
+        - TTL;<br>
+        - MongoDB Shell;<br>
+        - MongoDB Compass;<br>
+        - autenticação;<br>
+        - MongoDB Server;<br>
+        - Linux;<br>
+        - UFW;<br>
+        - Tailscale;<br>
+        - acesso remoto;<br>
+        - porta 27017.<br><br>
+        
+        <a href="https://github.com/Luanlhp777/introducaoMongoDB" target="_blank" class="btn-github">Ver código no GitHub</a>`
+    },
 ]

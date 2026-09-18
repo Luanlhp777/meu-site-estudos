@@ -1258,5 +1258,126 @@ const aulasMobile = [
         <a href="https://github.com/Luanlhp777/simuladorMissaoEspacial" target="_blank" class="btn-github">Ver código no GitHub</a>
         `
         },
+        {
+                data: "2026-09-14",
+                titulo: "Reaproveitamento de componentes no Flutter",
+                conteudo: ` Na aula de Desenvolvimento Mobile trabalhamos o reaproveitamento de componentes no Flutter, utilizando Dart. O objetivo foi evitar repetição de código e organizar melhor a aplicação criando widgets reutilizáveis.<br><br>
 
+        O projeto desenvolvido foi uma tela de cadastro de produtos com os campos:<br><br>
+
+        - Nome do produto;<br>
+        - Preço;<br>
+        - Quantidade em estoque;<br>
+        - Categoria;<br>
+        - Código de acesso.<br><br>
+
+        Para capturar os valores digitados, utilizamos TextEditingController. Foram criados controllers separados para cada campo, permitindo acessar os dados através de:<br><br>
+
+        controller.text<br><br>
+
+        Também utilizamos:<br><br>
+
+        controller.clear()<br><br>
+
+        para limpar os campos.<br><br>
+
+        Um dos principais pontos da aula foi separar componentes em arquivos próprios.<br><br>
+
+        Na pasta:<br><br>
+
+        lib/widgets/<br><br>
+
+        foram criados:<br><br>
+
+        botoes.dart<br>
+        campo_texto.dart<br><br>
+
+        O componente meuTextField() foi criado para reaproveitar a estrutura dos campos de texto. Ele recebe:<br><br>
+
+        - texto;<br>
+        - ícone;<br>
+        - controller;<br>
+        - opção de senha.<br><br>
+
+        No campo Código de Acesso utilizamos:<br><br>
+
+        senha: true<br><br>
+
+        que ativa:<br><br>
+
+        obscureText<br><br>
+
+        escondendo o conteúdo digitado.<br><br>
+
+        Também foi criado o componente:<br><br>
+
+        meuBotao()<br><br>
+
+        Ele recebe:<br><br>
+
+        - texto do botão;<br>
+        - cor;<br>
+        - função que será executada.<br><br>
+
+        Assim, o mesmo componente foi reutilizado para os botões:<br><br>
+
+        Calcular Total<br>
+        Limpar<br>
+        Salvar<br><br>
+
+        As funções são passadas para o botão através de callback, utilizando VoidCallback.<br><br>
+
+        Na função calcularTotal(), utilizamos:<br><br>
+
+        double.tryParse()<br>
+        int.tryParse()<br><br>
+
+        para converter os valores digitados.<br><br>
+
+        O cálculo realizado foi:<br><br>
+
+        Total = Preço × Quantidade<br><br>
+
+        Depois o resultado é formatado utilizando:<br><br>
+
+        toStringAsFixed(2)<br><br>
+
+        Também criamos a função limpar(), responsável por limpar todos os controllers.<br><br>
+
+        A função salvar() recupera os valores informados no formulário e, nesta etapa do projeto, exibe os dados no console.<br><br>
+
+        A estrutura principal ficou:<br><br>
+
+        main.dart<br>
+        ↓<br>
+        Tela de Cadastro<br>
+        ↓<br>
+        Componentes reutilizáveis<br>
+        ↓<br>
+        meuTextField()<br>
+        meuBotao()<br><br>
+
+        Com essa aula, aprendemos que criar componentes reutilizáveis reduz a duplicação de código e deixa o projeto mais organizado e fácil de manter.<br><br>
+
+        Conceitos trabalhados:<br>
+        - Flutter;<br>
+        - Dart;<br>
+        - widgets;<br>
+        - componentes reutilizáveis;<br>
+        - TextField;<br>
+        - TextEditingController;<br>
+        - ElevatedButton;<br>
+        - parâmetros;<br>
+        - callbacks;<br>
+        - VoidCallback;<br>
+        - obscureText;<br>
+        - double.tryParse();<br>
+        - int.tryParse();<br>
+        - funções;<br>
+        - organização em arquivos;<br>
+        - reutilização de código;<br>
+        - cálculo com valores do formulário.<br><br>
+        
+        <a href="https://github.com/Luanlhp777/mobile10" target="_blank" class="btn-github">Ver código no Github</a>`
+        },
 ]

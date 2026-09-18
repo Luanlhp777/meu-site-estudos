@@ -1996,5 +1996,284 @@ const aulasWeb2 = [
         - integração Front-end com API.<br><br>
 
         <a href="https://github.com/Luanlhp777/projetoViaCep/tree/main/projetocep-react" target="_blank" class="btn-github">Ver código no Github</a>`
-    }
+    },
+    {
+        data: "2026-09-16",
+        titulo: "Front-end do Projeto MVC",
+        conteudo: ` Na aula de hoje trabalhamos o Front-end do projeto Base MVC, criando as páginas responsáveis pela interação do usuário com a API de clientes.<br><br>
+
+        O Front-end ficou dentro da pasta:<br><br>
+
+        public/<br><br>
+
+        com três páginas principais:<br><br>
+
+        - index.html;<br>
+        - update.html;<br>
+        - delete.html.<br><br>
+
+        A página index.html foi criada para cadastrar clientes.<br><br>
+
+        Ela possui um formulário com os campos:<br><br>
+
+        Nome<br>
+        CPF<br><br>
+
+        Ao enviar o formulário, utilizamos:<br><br>
+
+        event.preventDefault()<br><br>
+
+        para impedir o recarregamento padrão da página.<br><br>
+
+        Depois capturamos os valores digitados e enviamos para a API com Fetch API:<br><br>
+
+        POST /api/clientes<br><br>
+
+        Os dados são enviados em formato JSON:<br><br>
+
+        {<br>
+        "nome": "...",<br>
+        "cpf": "..."<br>
+        }<br><br>
+
+        Também utilizamos:<br><br>
+
+        Content-Type: application/json<br><br>
+
+        e:<br><br>
+
+        JSON.stringify()<br><br>
+
+        para transformar os dados em JSON antes do envio.<br><br>
+
+        Quando o cadastro é realizado com sucesso, a página mostra uma mensagem ao usuário e limpa os campos do formulário.<br><br>
+
+        Na página update.html trabalhamos a atualização de clientes.<br><br>
+
+        Ela possui os campos:<br><br>
+
+        ID<br>
+        Nome<br>
+        CPF<br><br>
+
+        Ao enviar o formulário, fazemos uma requisição:<br><br>
+
+        PUT /api/clientes/:id<br><br>
+
+        O ID informado pelo usuário é colocado diretamente na URL da requisição.<br><br>
+
+        Nessa página utilizamos:<br><br>
+
+        async/await<br>
+        try/catch<br>
+        response.ok<br><br>
+
+        para controlar a requisição e tratar erros.<br><br>
+
+        Caso a atualização seja concluída, é exibida a mensagem:<br><br>
+
+        Cliente atualizado!<br><br>
+
+        Caso aconteça algum problema, a mensagem de erro retornada pela API é apresentada na tela.<br><br>
+
+        A página delete.html ficou responsável pela exclusão de clientes.<br><br>
+
+        O usuário informa o ID do cliente e clica no botão:<br><br>
+
+        Excluir Cliente<br><br>
+
+        A aplicação realiza:<br><br>
+
+        DELETE /api/clientes/:id<br><br>
+
+        Antes da requisição, existe uma validação para impedir que o usuário tente excluir sem informar um ID.<br><br>
+
+        A resposta da API também é utilizada para exibir mensagens de sucesso ou erro.<br><br>
+
+        Com isso, o Front-end passou a se comunicar com o Back-end através das principais operações HTTP:<br><br>
+
+        POST → cadastrar<br>
+        PUT → atualizar<br>
+        DELETE → excluir<br><br>
+
+        O Express disponibiliza os arquivos da pasta public utilizando:<br><br>
+
+        express.static()<br><br>
+
+        permitindo acessar as páginas diretamente pelo navegador.<br><br>
+
+        O fluxo estudado ficou:<br><br>
+
+        Usuário<br>
+        ↓<br>
+        HTML<br>
+        ↓<br>
+        Evento JavaScript<br>
+        ↓<br>
+        Fetch API<br>
+        ↓<br>
+        API REST<br>
+        ↓<br>
+        Controller<br>
+        ↓<br>
+        Model<br>
+        ↓<br>
+        MySQL<br>
+        ↓<br>
+        Resposta<br>
+        ↓<br>
+        Mensagem na interface<br><br>
+
+        Também utilizamos CSS dentro das próprias páginas para estilizar formulários, inputs, botões e mensagens.<br><br>
+
+        Com essa aula, praticamos a integração entre Front-end e Back-end em uma aplicação MVC, utilizando HTML, CSS e JavaScript puro para consumir a API REST do projeto.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - HTML;<br>
+        - CSS;<br>
+        - JavaScript;<br>
+        - formulários;<br>
+        - eventos;<br>
+        - preventDefault();<br>
+        - DOM;<br>
+        - getElementById();<br>
+        - Fetch API;<br>
+        - POST;<br>
+        - PUT;<br>
+        - DELETE;<br>
+        - JSON;<br>
+        - JSON.stringify();<br>
+        - async/await;<br>
+        - try/catch;s<br>
+        - response.ok;<br>
+        - integração Front-end e Back-end;<br>
+        - API REST;<br>
+        - arquitetura MVC;<br>
+        - mensagens de sucesso e erro.<br><br>
+        
+        <a href="https://github.com/Luanlhp777/baseMVC" target="_blank" class="btn-github">Ver código no Github</a>`
+    },
+    {
+        data: "2026-09-17",
+        titulo: "Introdução ao Tailwind CSS",
+        conteudo: ` Na aula de Desenvolvimento Web trabalhamos uma introdução ao Tailwind CSS integrado ao React e Vite. O objetivo foi aprender a estilizar componentes utilizando classes utilitárias diretamente no JSX, reduzindo a necessidade de criar muitas regras CSS separadas.<br><br>
+
+        O projeto foi organizado em vários componentes React, entre eles:<br><br>
+
+        - Header;<br>
+        - Hero;<br>
+        - HeroContent;<br>
+        - HeroCodeCard;<br>
+        - Recursos;<br>
+        - RecursoCard;<br>
+        - Sobre;<br>
+        - Footer.<br><br>
+
+        Essa divisão permitiu praticar componentização e organização da interface.<br><br>
+
+        Um dos principais conceitos estudados foi o modelo utility-first do Tailwind.<br><br>
+
+        Em vez de criar uma classe CSS personalizada para cada elemento, utilizamos classes prontas como:<br><br>
+
+        bg-black<br>
+        text-white<br>
+        px-6<br>
+        py-16<br>
+        rounded-2xl<br>
+        shadow-md<br>
+        flex<br>
+        grid<br><br>
+
+        Assim, grande parte da aparência da página é definida diretamente no className dos componentes React.<br><br>
+
+        Também trabalhamos com Flexbox e CSS Grid através das classes do Tailwind.<br><br>
+
+        Exemplo:<br><br>
+
+        grid grid-cols-1 md:grid-cols-3<br><br>
+
+        Nesse caso, a interface utiliza uma coluna em telas menores e passa para três colunas a partir do breakpoint md.<br><br>
+
+        Isso introduziu o conceito de responsividade com Tailwind.<br><br>
+
+        Também utilizamos classes como:<br><br>
+
+        hidden<br>
+        md:flex<br><br>
+
+        para alterar a exibição dos elementos de acordo com o tamanho da tela.<br><br>
+
+        Outro ponto trabalhado foi o uso de estados visuais, como:<br><br>
+
+        hover:shadow-xl<br>
+        hover:-translate-y-1<br>
+        transition<br><br>
+
+        Essas classes permitem criar efeitos de interação e transições sem escrever regras CSS específicas.<br><br>
+
+        Também utilizamos gradientes através de classes como:<br><br>
+
+        bg-gradient-to-r<br><br>
+
+        e diferentes classes para cores, espaçamento, bordas, sombras e tipografia.<br><br>
+
+        O projeto também trabalhou com reutilização de componentes através de props.<br><br>
+
+        O componente RecursoCard, por exemplo, recebe informações como:<br><br>
+
+        icone<br>
+        titulo<br>
+        descricao<br><br>
+
+        Isso permite utilizar o mesmo componente várias vezes com conteúdos diferentes, evitando repetição de código.<br><br>
+
+        A integração do Tailwind com o Vite foi feita através do plugin:<br><br>
+
+        @tailwindcss/vite<br><br>
+
+        No arquivo de configuração do Vite é utilizado o plugin do Tailwind, e no CSS principal o framework é carregado com:<br><br>
+
+        @import "tailwindcss";<br><br>
+
+        O fluxo do projeto ficou:<br><br>
+
+        React<br>
+        ↓<br>
+        Componentes<br>
+        ↓<br>
+        JSX<br>
+        ↓<br>
+        className<br>
+        ↓<br>
+        Classes utilitárias Tailwind<br>
+        ↓<br>
+        Interface estilizada e responsiva<br><br>
+
+        Com essa aula, praticamos uma forma diferente de trabalhar CSS, utilizando classes utilitárias diretamente nos componentes React para acelerar a criação e manutenção da interface.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Tailwind CSS;<br>
+        - React;<br>
+        - Vite;<br>
+        - Utility-first CSS;<br>
+        - className;<br>
+        - componentização;<br>
+        - props;<br>
+        - reutilização de componentes;<br>
+        - Flexbox;<br>
+        - CSS Grid;<br>
+        - responsividade;<br>
+        - breakpoints;<br>
+        - hover;<br>
+        - transições;<br>
+        - gradientes;<br>
+        - cores;<br>
+        - tipografia;<br>
+        - espaçamentos;<br>
+        - bordas;<br>
+        - sombras;<br>
+        - integração entre React, Vite e Tailwind CSS.<br><br>
+        
+        <a href="https://github.com/Luanlhp777/introducaoTailwind" target="_blank" class="btn-github">Ver código no Github</a>`
+    },
 ]
