@@ -650,4 +650,154 @@ const aulasBd2 = [
         
         <a href="https://github.com/Luanlhp777/introducaoMongoDB" target="_blank" class="btn-github">Ver código no GitHub</a>`
     },
+    {
+        data: "2026-09-21",
+        titulo: "Atividade MongoDB",
+        conteudo: ` Na aula de Banco de Dados trabalhamos uma atividade prática com MongoDB utilizando como cenário uma aplicação de playlist de músicas.<br><br>
+
+        O banco criado foi:<br><br>
+
+        minha_playlist_musicas<br><br>
+
+        e foi dividido em quatro coleções:<br><br>
+
+        - musicas;<br>
+        - usuarios;<br>
+        - playlists;<br>
+        - sessoes_usuarios.<br><br>
+
+        A coleção musicas armazena informações como:<br><br>
+
+        - título;<br>
+        - ano;<br>
+        - artista;<br>
+        - álbum;<br>
+        - gêneros;<br>
+        - compositores;<br>
+        - duração;<br>
+        - avaliação média.<br><br>
+
+        Foram cadastradas músicas como:<br><br>
+
+        Imagine — John Lennon<br>
+        Billie Jean — Michael Jackson<br><br>
+
+        Nessa coleção utilizamos arrays para armazenar informações como gêneros e compositores.<br><br>
+
+        Também trabalhamos com ObjectId, utilizado pelo MongoDB para identificar cada documento.<br><br>
+
+        Esses IDs também foram usados para criar referências entre coleções.<br><br>
+
+        Na coleção usuarios foram armazenados:<br><br>
+
+        - nome;<br>
+        - email;<br>
+        - avaliações.<br><br>
+
+        As avaliações ficam em um array de documentos contendo:<br><br>
+
+        musica_id<br>
+        nota<br>
+        comentario<br><br>
+
+        O campo musica_id referencia uma música existente na coleção musicas.<br><br>
+
+        Na coleção playlists criamos uma playlist chamada:<br><br>
+
+        Minhas músicas favoritas<br><br>
+
+        Ela possui:<br><br>
+
+        usuario_id<br>
+        nome<br>
+        musicas<br><br>
+
+        Dentro do array musicas armazenamos referências aos documentos de músicas, junto com informações como título e ano.<br><br>
+
+        O relacionamento ficou semelhante a:<br><br>
+
+        usuario<br>
+        ↓<br>
+        playlist<br>
+        ↓<br>
+        musicas<br><br>
+
+        Também foi criada a coleção:<br><br>
+
+        sessoes_usuarios<br><br>
+
+        responsável por armazenar informações de sessão, como:<br><br>
+
+        - usuario_id;<br>
+        - token de autenticação;<br>
+        - dispositivo;<br>
+        - data de criação;<br>
+        - data de expiração.<br><br>
+
+        Nessa coleção utilizamos o tipo Date do MongoDB para os campos:<br><br>
+
+        criado_em<br>
+        expira_em<br><br>
+
+        Um dos principais conceitos da atividade foi entender que, no MongoDB, podemos combinar:<br><br>
+
+        Documentos aninhados<br>
+        +<br>
+        Referências entre documentos<br><br>
+
+        Exemplo de documento aninhado:<br><br>
+
+        usuario<br>
+        └── avaliacoes[]<br><br>
+
+        Exemplo de referência:<br><br>
+
+        playlist.usuario_id<br>
+                ↓<br>
+        usuarios._id<br><br>
+
+        e:<br><br>
+
+        playlist.musicas[].musica_id<br>
+                ↓<br>
+        musicas._id<br><br>
+
+        Também utilizamos arquivos JSON exportados das coleções, permitindo visualizar e reutilizar os dados criados no MongoDB Compass.<br><br>
+
+        O fluxo geral da modelagem ficou:<br><br>
+
+        usuarios<br>
+        │<br>
+        ├── avaliacoes<br>
+        │      ↓<br>
+        │   musicas<br>
+        │<br>
+        ├── playlists<br>
+        │      ↓<br>
+        │   musicas<br>
+        │<br>
+        └── sessoes_usuarios<br><br>
+
+        Com essa aula, praticamos a modelagem de um banco NoSQL orientado a documentos, utilizando coleções, documentos, arrays, ObjectId e referências entre dados.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - MongoDB;<br>
+        - NoSQL;<br>
+        - MongoDB Compass;<br>
+        - Database;<br>
+        - Collections;<br>
+        - Documents;<br>
+        - ObjectId;<br>
+        - JSON;<br>
+        - arrays;<br>
+        - documentos aninhados;<br>
+        - referências;<br>
+        - modelagem NoSQL;<br>
+        - relacionamento entre coleções;<br>
+        - Date;<br>
+        - playlist;<br>
+        - sessões de usuário.<br><br>
+                
+        <a href="https://github.com/Luanlhp777/atividadeMongoDB" target="_blank" class="btn-github">Ver código no Github</a>`
+    }
 ]

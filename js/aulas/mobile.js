@@ -1380,4 +1380,125 @@ const aulasMobile = [
         
         <a href="https://github.com/Luanlhp777/mobile10" target="_blank" class="btn-github">Ver código no Github</a>`
         },
+        {
+                data: "2026-09-21",
+                titulo: "Flutter | Alert e SnackBar",
+                conteudo: ` Na aula de Desenvolvimento Mobile trabalhamos mensagens de feedback ao usuário no Flutter, utilizando SnackBar e AlertDialog. Para praticar esses recursos, desenvolvemos uma calculadora com as quatro operações matemáticas básicas.<br><br>
+
+        A aplicação foi criada com StatefulWidget porque o resultado precisa ser atualizado na tela conforme o usuário realiza as operações.<br><br>
+
+        Foram utilizados dois:<br><br>
+
+        TextEditingController<br><br>
+
+        para capturar os valores digitados nos campos.<br><br>
+
+        Os valores são convertidos utilizando:<br><br>
+
+        double.tryParse()<br><br>
+
+        Caso a conversão falhe, o valor utilizado é 0.<br><br>
+
+        As operações implementadas foram:<br><br>
+
+        - soma;<br>
+        - subtração;<br>
+        - multiplicação;<br>
+        - divisão.<br><br>
+
+        O resultado é armazenado na variável:<br><br>
+
+        resultado<br><br>
+
+        e atualizado através de:<br><br>
+
+        setState()<br><br>
+
+        fazendo com que a interface seja reconstruída com o novo valor.<br><br>
+
+        Na operação de soma utilizamos um SnackBar para mostrar o resultado temporariamente na parte inferior da tela.<br><br>
+
+        O recurso utilizado foi:<br><br>
+
+        ScaffoldMessenger.of(context).showSnackBar()<br><br>
+
+        com duração de 3 segundos.<br><br>
+
+        Na operação de subtração utilizamos um AlertDialog.<br><br>
+
+        Ele é exibido através de:<br><br>
+
+        showDialog()<br><br>
+
+        e possui título, mensagem e um botão "Ok".<br><br>
+
+        Para fechar a janela utilizamos:<br><br>
+
+        Navigator.pop(context)<br><br>
+
+        A principal diferença estudada foi:<br><br>
+
+        SnackBar<br>
+        → mensagem temporária;<br>
+        → não bloqueia a interface.<br><br>
+
+        AlertDialog<br>
+        → janela modal;<br>
+        → exige interação do usuário para fechar.<br><br>
+
+        Na divisão também foi feito tratamento para divisão por zero.<br><br>
+
+        Quando o segundo número é igual a 0:<br><br>
+
+        resultado = double.nan<br><br>
+
+        Caso contrário:<br><br>
+
+        resultado = n1 / n2<br><br>
+
+        Os botões foram organizados em duas linhas com Row e utilizamos:<br><br>
+
+        ElevatedButton.icon<br><br>
+
+        para adicionar ícones às operações.<br><br>
+
+        O fluxo principal ficou:<br><br>
+
+        Usuário digita os números<br>
+                ↓<br>
+        TextEditingController<br>
+                ↓<br>
+        double.tryParse()<br>
+                ↓<br>
+        Operação matemática<br>
+                ↓<br>
+        setState()<br>
+                ↓<br>
+        Resultado atualizado<br>
+                ↓<br>
+        SnackBar ou AlertDialog<br><br>
+
+        Com essa aula, praticamos não apenas cálculos e gerenciamento de estado, mas também diferentes formas de apresentar mensagens e feedback ao usuário em aplicações Flutter.<br><br>
+
+        Conceitos trabalhados:<br><br>
+        - Flutter;<br>
+        - Dart;<br>
+        - StatefulWidget;<br>
+        - State;<br>
+        - setState();<br>
+        - TextField;<br>
+        - TextEditingController;<br>
+        - double.tryParse();<br>
+        - ElevatedButton.icon;<br>
+        - Row;<br>
+        - ScaffoldMessenger;<br>
+        - SnackBar;<br>
+        - showDialog();<br>
+        - AlertDialog;<br>
+        - Navigator.pop();<br>
+        - tratamento de divisão por zero;<br>
+        - feedback ao usuário.<br><br>
+                
+                <a href="https://github.com/Luanlhp777/mobile11" target="_blank" class="btn-github">Ver código no Github</a>`
+        }
 ]
