@@ -2,6 +2,7 @@ import express from "express";
 import { pool } from "./config/db.js";
 import projetoRoutes from "./routes/projeto.routes.js";
 import moduloRoutes from "./routes/modulo.routes.js";
+import disciplinaRoutes from "./routes/disciplina.routes.js";
 
 const app = express();
 
@@ -15,6 +16,8 @@ app.use("/api/projetos", projetoRoutes);
 
 // Rotas de módulos
 app.use("/api/modulos", moduloRoutes);
+
+app.use("/api/disciplinas", disciplinaRoutes);
 
 app.get("/", (req, res) => {
     res.json({
